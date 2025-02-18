@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwk6pb325m8ts"]
+
+[ext_resource type="PackedScene" uid="uid://diy5bt6u5gxss" path="res://project/prefabs/pressable_area_template.tscn" id="1_hcfan"]
+[ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="3_spwyn"]
+
+[node name="Pointer Showcase" type="Node2D"]
+
+[node name="Pressable Area" parent="." instance=ExtResource("1_hcfan")]
+position = Vector2(349, 208)
+
+[node name="Pressable Area2" parent="." instance=ExtResource("1_hcfan")]
+position = Vector2(437, 282)
+
+[node name="Pointer Control" parent="." instance=ExtResource("3_spwyn")]

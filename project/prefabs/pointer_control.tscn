@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://by1f80f206bou"]
+
+[ext_resource type="Script" path="res://project/scripts/pointer-controller/PointerControl2D.gd" id="1_63e7k"]
+
+[node name="Pointer Control" type="Node"]
+script = ExtResource("1_63e7k")
