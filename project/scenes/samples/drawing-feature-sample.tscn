@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyk1cksiqa2hy"]
+
+[ext_resource type="Script" path="res://project/scripts/drawing-paper/UI_DrawingPaper.gd" id="1_c1ai0"]
+[ext_resource type="Texture2D" uid="uid://r8kem0w1eulu" path="res://icon.svg" id="2_qs023"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_01kra"]
+
+[node name="Drawing Sample" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Paper" type="TextureRect" parent="CanvasLayer"]
+custom_minimum_size = Vector2(800, 240)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ImageTexture_01kra")
+script = ExtResource("1_c1ai0")
+_brush_mode = null
+_brush_size = null
+_brush_color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Colors" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -184.0
+offset_right = 464.0
+offset_bottom = -48.0
+grow_vertical = 0
+
+[node name="White" type="Button" parent="CanvasLayer/Colors"]
+layout_mode = 2
+icon = ExtResource("2_qs023")
+
+[node name="Red" type="Button" parent="CanvasLayer/Colors"]
+self_modulate = Color(1, 0.21268, 0.159696, 1)
+layout_mode = 2
+icon = ExtResource("2_qs023")
+
+[node name="Blue" type="Button" parent="CanvasLayer/Colors"]
+self_modulate = Color(4.81307e-07, 0.60307, 0.859105, 1)
+layout_mode = 2
+icon = ExtResource("2_qs023")
+
+[node name="Green" type="Button" parent="CanvasLayer/Colors"]
+self_modulate = Color(5.29438e-07, 0.671764, 0.346131, 1)
+layout_mode = 2
+icon = ExtResource("2_qs023")
+
+[connection signal="pressed" from="CanvasLayer/Colors/White" to="CanvasLayer/Paper" method="set_brush_color" binds= [Color(1, 1, 1, 1)]]
+[connection signal="pressed" from="CanvasLayer/Colors/Red" to="CanvasLayer/Paper" method="set_brush_color" binds= [Color(1, 0.260006, 0.200835, 1)]]
+[connection signal="pressed" from="CanvasLayer/Colors/Blue" to="CanvasLayer/Paper" method="set_brush_color" binds= [Color(0.161729, 0.611735, 0.861909, 1)]]
+[connection signal="pressed" from="CanvasLayer/Colors/Green" to="CanvasLayer/Paper" method="set_brush_color" binds= [Color(0, 0.688783, 0.303393, 1)]]
