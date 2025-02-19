@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://c0hme3dlia8ax"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_45c70"]
+[ext_resource type="Texture2D" uid="uid://d3h8tvbe8m0m0" path="res://project/resources/art/ingredients/Turtle Scute.png" id="2_n53mx"]
+
+[resource]
+script = ExtResource("1_45c70")
+name = "Turtle Scute"
+sprite = ExtResource("2_n53mx")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://lh64xodrjx8h"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_y8xla"]
+[ext_resource type="Texture2D" uid="uid://bopokne8iem6b" path="res://project/resources/art/ingredients/Ingredient - Worms.png" id="2_t0f0v"]
+
+[resource]
+script = ExtResource("1_y8xla")
+name = "Worms"
+sprite = ExtResource("2_t0f0v")
