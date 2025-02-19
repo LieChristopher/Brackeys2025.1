@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b83dh37nxfdup"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_3yhof"]
+[ext_resource type="Texture2D" uid="uid://bq63eyn04dj6" path="res://project/resources/art/ingredients/Raspberry Leaf.png" id="2_3778u"]
+
+[resource]
+script = ExtResource("1_3yhof")
+name = "Raspberry Leaf"
+sprite = ExtResource("2_3778u")

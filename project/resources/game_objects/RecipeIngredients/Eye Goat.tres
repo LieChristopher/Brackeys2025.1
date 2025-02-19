@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://bdjw6b05wfwgu"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_prvh1"]
+[ext_resource type="Texture2D" uid="uid://cw23hitf2r5c" path="res://project/resources/art/ingredients/Goat Eye.png" id="2_ois2h"]
+
+[resource]
+script = ExtResource("1_prvh1")
+name = "Goat Eye"
+sprite = ExtResource("2_ois2h")

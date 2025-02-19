@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RecipeRune" load_steps=2 format=3 uid="uid://qdq7arj5uv4h"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_rune.gd" id="1_btl28"]
+
+[resource]
+script = ExtResource("1_btl28")
+name = "Runeless"
+adjective = ""
+gooiness = 0
