@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://0r01kooufvfd"]
+
+[ext_resource type="Texture2D" uid="uid://chlun7fmbwmt1" path="res://Assets/Images/Props/shopBG.jpg" id="1_21upi"]
+[ext_resource type="Texture2D" uid="uid://dn0wggkigsma1" path="res://Assets/Images/Props/table.png" id="2_bl7kq"]
+[ext_resource type="Texture2D" uid="uid://no0v6kko27je" path="res://Assets/Images/Props/bookmark.png" id="3_selep"]
+[ext_resource type="Texture2D" uid="uid://dkmvwpg2oubwf" path="res://Assets/Images/Props/customer.png" id="4_80jjg"]
+[ext_resource type="Texture2D" uid="uid://b7qxrva1lcdrb" path="res://Assets/Images/Props/recipe.png" id="5_sann7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BG" type="Area2D" parent="."]
+input_pickable = false
+priority = -100
+
+[node name="BGSprite" type="Sprite2D" parent="BG"]
+z_index = -100
+scale = Vector2(1.51578, 1)
+texture = ExtResource("1_21upi")
+centered = false
+
+[node name="Table" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(773.5, 757)
+scale = Vector2(4.24167, 2.37917)
+texture = ExtResource("2_bl7kq")
+
+[node name="Almanac" type="Sprite2D" parent="."]
+position = Vector2(1302, 785)
+rotation = -3.14159
+texture = ExtResource("3_selep")
+
+[node name="Customer" type="Sprite2D" parent="."]
+position = Vector2(750, 414)
+texture = ExtResource("4_80jjg")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 301.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 72
+text = "Day 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 373.0
+offset_top = 590.0
+offset_right = 1170.0
+offset_bottom = 732.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -12
+theme_override_font_sizes/font_size = 48
+text = "Can I interest you with an egg on this fine day?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Label"]
+offset_left = 1086.0
+offset_top = 26.0
+offset_right = 1387.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 72
+text = "Request"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Recipe" type="Sprite2D" parent="."]
+position = Vector2(1248, 368)
+scale = Vector2(3.86685, 4.09503)
+texture = ExtResource("5_sann7")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 57.0
+offset_top = 757.0
+offset_right = 347.0
+offset_bottom = 815.0
+theme_override_font_sizes/font_size = 36
+text = "Alchemy Station"
