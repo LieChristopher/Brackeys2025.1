@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bgftm1vff021a"
+
+[deps]
+
+files=["res://project/resources/translation/import_resources.Makes you stiff as a rock. Like you woke up on the wrong side of the bed..translation", "res://project/resources/translation/import_resources.50.translation", "res://project/resources/translation/import_resources.Horn.translation", "res://project/resources/translation/import_resources.HORN.translation", "res://project/resources/translation/import_resources.Neutral.translation", "res://project/resources/translation/import_resources.TURTLE SCUTE.translation", "res://project/resources/translation/import_resources.Powder.translation", "res://project/resources/translation/import_resources.STONE FISH.translation", "res://project/resources/translation/import_resources.Gooey.translation"]
+
+source_file="res://project/resources/translation/import_resources.csv"
+dest_files=["res://project/resources/translation/import_resources.Makes you stiff as a rock. Like you woke up on the wrong side of the bed..translation", "res://project/resources/translation/import_resources.50.translation", "res://project/resources/translation/import_resources.Horn.translation", "res://project/resources/translation/import_resources.HORN.translation", "res://project/resources/translation/import_resources.Neutral.translation", "res://project/resources/translation/import_resources.TURTLE SCUTE.translation", "res://project/resources/translation/import_resources.Powder.translation", "res://project/resources/translation/import_resources.STONE FISH.translation", "res://project/resources/translation/import_resources.Gooey.translation"]
+
+[params]
+
+compress=true
+delimiter=0

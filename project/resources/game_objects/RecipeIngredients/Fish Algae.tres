@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://bowyp0dls0sqy"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_lbmbq"]
-[ext_resource type="Texture2D" uid="uid://cyfw0c6xhcu47" path="res://project/resources/art/ingredients/Ingredient - Algae Fish.png" id="2_otcjd"]
+[ext_resource type="Texture2D" uid="uid://cyfw0c6xhcu47" path="res://project/arts/internal/sprites/ingredients/Ingredient - Algae Fish.png" id="2_otcjd"]
+
 
 [resource]
 script = ExtResource("1_lbmbq")

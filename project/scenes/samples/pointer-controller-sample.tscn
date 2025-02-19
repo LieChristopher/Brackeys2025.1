@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwk6pb325m8ts"]
+
+[ext_resource type="PackedScene" uid="uid://diy5bt6u5gxss" path="res://project/prefabs/pressable_area_template.tscn" id="1_f3u3g"]
+[ext_resource type="Script" path="res://project/scripts/pointer-controller/DraggableSprite.gd" id="2_xy2g8"]
+[ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="3_ltq14"]
+[ext_resource type="PackedScene" uid="uid://cchwg152iv3ip" path="res://project/prefabs/draggable_area_template (works).tscn" id="4_jmlpv"]
+
+[node name="Pointer Showcase" type="Node2D"]
+
+[node name="Pressable Area" parent="." instance=ExtResource("1_f3u3g")]
+position = Vector2(308, 219)
+
+[node name="Pressable Area2 (draggable)" parent="." instance=ExtResource("1_f3u3g")]
+position = Vector2(729, 237)
+script = ExtResource("2_xy2g8")
+
+[node name="Pointer Control" parent="." instance=ExtResource("3_ltq14")]
+
+[node name="Draggable Area2" parent="." instance=ExtResource("4_jmlpv")]

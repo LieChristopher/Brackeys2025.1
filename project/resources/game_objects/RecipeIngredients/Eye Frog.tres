@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://crowlx6jp017a"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_3ja7l"]
-[ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/resources/art/ingredients/Frog Eyes.png" id="2_n7cro"]
+[ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="2_n7cro"]
+
 
 [resource]
 script = ExtResource("1_3ja7l")
