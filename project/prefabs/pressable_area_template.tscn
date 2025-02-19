@@ -17,6 +17,7 @@ size = Vector2(120, 120)
 [node name="Pressable Area" type="Area2D"]
 script = ExtResource("1_lkojc")
 _tinted_sprites = Array[ExtResource("2_3s85h")]([SubResource("Resource_hwoo3")])
+_debug_print = true
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_tkbhl")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd4wts53q3cf6"]
+
+[ext_resource type="Script" path="res://project/scripts/pointer-controller/DraggableSprite.gd" id="1_4u6eu"]
+[ext_resource type="Script" path="res://project/scripts/pointer-controller/structures/PointerTintColoredSprite.gd" id="2_qshxn"]
+[ext_resource type="Texture2D" uid="uid://r8kem0w1eulu" path="res://icon.svg" id="3_2y48j"]
+
+[sub_resource type="Resource" id="Resource_kb8tg"]
+script = ExtResource("2_qshxn")
+_target = NodePath("")
+_normal_tint = Color(1, 1, 1, 1)
+_pressed_tint = Color(0.745098, 0.745098, 0.745098, 1)
+_disabled_tint = Color(0.411765, 0.411765, 0.411765, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkidr"]
+size = Vector2(133, 124)
+
+[node name="Draggable Area" type="Area2D"]
+script = ExtResource("1_4u6eu")
+_tinted_sprites = Array[ExtResource("2_qshxn")]([SubResource("Resource_kb8tg")])
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(307, 86)
+texture = ExtResource("3_2y48j")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(305, 87)
+shape = SubResource("RectangleShape2D_bkidr")
