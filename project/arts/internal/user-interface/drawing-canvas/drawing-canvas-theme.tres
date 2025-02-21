@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dhy42pe8df1j6"]
+
+[ext_resource type="StyleBox" uid="uid://8y1la7cg2iuq" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/white-color-btn.tres" id="1_ah1ao"]
+
+[resource]
+Button/styles/normal = ExtResource("1_ah1ao")
+Button/styles/pressed = ExtResource("1_ah1ao")

@@ -105,6 +105,7 @@ func _is_inside_circle(x: int, y: int, radius: int) -> bool:
 
 func fill_canvas(color: Color) -> void:
 	_image_canvas.fill(color);
+	_texture_obj.update(_image_canvas);
 
 func set_brush_color(color: Color) -> void:
 	_brush_color = color;
