@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://b08caji58grnx"]
+[gd_scene load_steps=5 format=3 uid="uid://b08caji58grnx"]
 
 [ext_resource type="Shader" path="res://project/scripts/glowing-sprites/OutlineGlow.gdshader" id="1_17r3x"]
 [ext_resource type="Texture2D" uid="uid://bl7e2d41t5qhs" path="res://project/arts/external/NicePng_potions-png_9423693.png" id="2_d01us"]
+[ext_resource type="Script" path="res://project/scripts/glowing-sprites/OutlineGlowControl.gd" id="3_pp2e8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d3i0a"]
 shader = ExtResource("1_17r3x")
 shader_parameter/width = 0.1
 shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_opacity = 1.0
 shader_parameter/pivot_scaler_x = 0.5
 shader_parameter/pivot_scaler_y = 0.5
 
 [node name="Glowing-sprites-sample" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Outlined Scalable Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_d3i0a")
 position = Vector2(537, 375)
 texture = ExtResource("2_d01us")
+script = ExtResource("3_pp2e8")

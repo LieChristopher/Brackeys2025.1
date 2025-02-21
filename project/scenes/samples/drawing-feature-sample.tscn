@@ -1,17 +1,33 @@
-[gd_scene load_steps=13 format=3 uid="uid://dyk1cksiqa2hy"]
+[gd_scene load_steps=29 format=3 uid="uid://dyk1cksiqa2hy"]
 
 [ext_resource type="PackedScene" uid="uid://buy7voa0rxb0i" path="res://project/prefabs/user-interfaces/ui-drawing-paper.tscn" id="1_kp3mf"]
 [ext_resource type="Theme" uid="uid://dhy42pe8df1j6" path="res://project/arts/internal/user-interface/drawing-canvas/drawing-canvas-theme.tres" id="2_5sg2v"]
 [ext_resource type="StyleBox" uid="uid://btmrpahwv35ts" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/red-color-btn.tres" id="3_0ai4v"]
+[ext_resource type="StyleBox" uid="uid://ddd6lok0f3tq8" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/white-color-btn-hover.tres" id="3_7gd0r"]
 [ext_resource type="Texture2D" uid="uid://djyhx3lnmmwi1" path="res://project/arts/external/icons/eraser-icon (iconduck_com).png" id="3_mad12"]
+[ext_resource type="StyleBox" uid="uid://cvjw61ota887t" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/white-color-btn-pressed.tres" id="3_qhq3k"]
 [ext_resource type="StyleBox" uid="uid://b7n8l2bsaruj8" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/blue-color-btn.tres" id="4_2j55v"]
 [ext_resource type="StyleBox" uid="uid://dvckv3dmu3vu0" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/green-color-btn.tres" id="5_46ixx"]
+[ext_resource type="StyleBox" uid="uid://cqkt6ud5ldfma" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/red-color-btn-hover.tres" id="6_vvf46"]
 [ext_resource type="StyleBox" uid="uid://d144whlsokata" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn.tres" id="6_wkrtt"]
 [ext_resource type="Texture2D" uid="uid://ko2ruukb06eg" path="res://project/arts/external/icons/reset-icon (by inkubators, flaticon_com).png" id="7_f12ig"]
+[ext_resource type="StyleBox" uid="uid://bw634mc0g4sit" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/red-color-btn-pressed.tres" id="7_r4hnb"]
 [ext_resource type="StyleBox" uid="uid://3ck3v2ytg0uy" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/yellow-color-btn.tres" id="7_rfqe0"]
 [ext_resource type="StyleBox" uid="uid://cim2ale22wi1w" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/magenta-color-btn.tres" id="8_rf88c"]
+[ext_resource type="StyleBox" uid="uid://kcbqnajp1qo2" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/blue-color-btn-hover.tres" id="9_1nqf2"]
 [ext_resource type="StyleBox" uid="uid://wegg64mpaes7" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/cyan-color-btn.tres" id="9_x6x8o"]
+[ext_resource type="StyleBox" uid="uid://dqk2t5ubc8yhw" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/blue-color-btn-pressed.tres" id="10_iew2t"]
+[ext_resource type="StyleBox" uid="uid://7cr05cq4r2y6" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn-hover.tres" id="12_86g24"]
+[ext_resource type="StyleBox" uid="uid://dkvixof63ulbn" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/green-color-btn-hover.tres" id="12_e0e3j"]
 [ext_resource type="Script" path="res://project/scripts/drawing-paper/UI_BrushSizer.gd" id="12_jku64"]
+[ext_resource type="StyleBox" uid="uid://c03kr16lqx3df" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/green-color-btn-pressed.tres" id="13_h6oiu"]
+[ext_resource type="StyleBox" uid="uid://cst1j1e7se0mn" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn-pressed.tres" id="13_urqwy"]
+[ext_resource type="StyleBox" uid="uid://bdgq4ocqdhxjy" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/yellow-color-btn-hover.tres" id="15_0o718"]
+[ext_resource type="StyleBox" uid="uid://cmqhq7bcmerbj" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/yellow-color-btn-pressed.tres" id="16_wctwi"]
+[ext_resource type="StyleBox" uid="uid://c15n6mhuigyv4" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/magenta-color-btn-hover.tres" id="18_eodjh"]
+[ext_resource type="StyleBox" uid="uid://dk22hoxh6d1u6" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/magenta-color-btn-pressed.tres" id="19_jll7k"]
+[ext_resource type="StyleBox" uid="uid://bgj4elew4rhjm" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/cyan-color-btn-hover.tres" id="21_qttjl"]
+[ext_resource type="StyleBox" uid="uid://csbbe4nhf2e6v" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/cyan-color-btn-pressed.tres" id="22_nu0bi"]
 
 [node name="Drawing Sample" type="Node2D"]
 
@@ -37,6 +53,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("3_7gd0r")
+theme_override_styles/pressed = ExtResource("3_qhq3k")
 icon = ExtResource("3_mad12")
 icon_alignment = 1
 expand_icon = true
@@ -46,6 +66,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("6_vvf46")
+theme_override_styles/pressed = ExtResource("7_r4hnb")
 theme_override_styles/normal = ExtResource("3_0ai4v")
 
 [node name="Blue" type="Button" parent="CanvasLayer/Colors"]
@@ -53,6 +75,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("9_1nqf2")
+theme_override_styles/pressed = ExtResource("10_iew2t")
 theme_override_styles/normal = ExtResource("4_2j55v")
 
 [node name="Green" type="Button" parent="CanvasLayer/Colors"]
@@ -60,6 +84,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("12_e0e3j")
+theme_override_styles/pressed = ExtResource("13_h6oiu")
 theme_override_styles/normal = ExtResource("5_46ixx")
 
 [node name="Yellow" type="Button" parent="CanvasLayer/Colors"]
@@ -67,6 +93,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("15_0o718")
+theme_override_styles/pressed = ExtResource("16_wctwi")
 theme_override_styles/normal = ExtResource("7_rfqe0")
 
 [node name="Magenta" type="Button" parent="CanvasLayer/Colors"]
@@ -74,6 +102,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("18_eodjh")
+theme_override_styles/pressed = ExtResource("19_jll7k")
 theme_override_styles/normal = ExtResource("8_rf88c")
 
 [node name="Cyan" type="Button" parent="CanvasLayer/Colors"]
@@ -81,6 +111,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("21_qttjl")
+theme_override_styles/pressed = ExtResource("22_nu0bi")
 theme_override_styles/normal = ExtResource("9_x6x8o")
 
 [node name="Reset Btn" type="Button" parent="CanvasLayer/Colors"]
@@ -88,6 +120,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_5sg2v")
+theme_override_styles/hover = ExtResource("12_86g24")
+theme_override_styles/pressed = ExtResource("13_urqwy")
 theme_override_styles/normal = ExtResource("6_wkrtt")
 icon = ExtResource("7_f12ig")
 icon_alignment = 1
