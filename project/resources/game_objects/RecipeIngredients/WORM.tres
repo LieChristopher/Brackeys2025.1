@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b6gtef5x5l6l1"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_mogh1"]
+[ext_resource type="Texture2D" path="Ingredient - Worms.png" id="2_8evmp"]
+
+[resource]
+script = ExtResource("1_mogh1")
+name = "WORM"
+sprite = ExtResource("2_8evmp")
+LethalVital = 3
+StinkyFragrant = 0
+BodyMind = -3
+description = "Worms found in farmland, and beneath earthy soil. A local delicacy. But when turned into paste has the effect of reducing the effects of toxins and close small wounds."
+aspectValueList = Array[int]([0, 0, 0])

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://g0fmwqxqsauj"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_qjqau"]
+[ext_resource type="Texture2D" path="Turtle Scute.png" id="2_uxn6u"]
+
+[resource]
+script = ExtResource("1_qjqau")
+name = "TURTLE SCUTE"
+sprite = ExtResource("2_uxn6u")
+LethalVital = 5
+StinkyFragrant = -2
+BodyMind = -5
+description = "A popular ingredient known for it's energizing properties. A little smelly but an effective energizing agent . Turning it to fine powder amplifies the effect of physical changes"
+aspectValueList = Array[int]([0, 0, 0])

@@ -2,12 +2,12 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://cqcbms6rt50xr"
+uid="uid://d2f6vovj73s0k"
 valid=false
 
 [deps]
 
-source_file="res://project/resources/translation/recipes.csv"
+source_file="res://project/resources/import/runes.csv"
 
 [params]
 
