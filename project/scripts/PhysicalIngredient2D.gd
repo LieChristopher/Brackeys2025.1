@@ -3,6 +3,9 @@ extends Node2D
 
 @export var _ingredient_id: RecipeIngredient = null;
 
+func _ready() -> void:
+	print(_ingredient_id)
+
 # Runtime variable data.
 var _intersected_area: Area2D = null;
 var _drop_area: IngredientDropArea2D = null;

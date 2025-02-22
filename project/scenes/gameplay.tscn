@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=16 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bh5n8k13hs61f" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
 [ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="5_qvt0x"]
 [ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="6_6rbcy"]
+[ext_resource type="Resource" uid="uid://cpdpyugla8q1" path="res://project/resources/game_objects/RecipeIngredients/FANG.tres" id="6_njw20"]
+[ext_resource type="Resource" uid="uid://b1eehrjm21jxu" path="res://project/resources/game_objects/RecipeIngredients/FISH SCALE.tres" id="7_b510t"]
 [ext_resource type="PackedScene" uid="uid://cfbyjw2lwgigk" path="res://project/prefabs/ingredient_drop_area.tscn" id="8_4kkyh"]
 [ext_resource type="Texture2D" uid="uid://cns1itri6mmtl" path="res://project/arts/internal/sprites/Drop-Indicator.png" id="9_2o8hy"]
 [ext_resource type="PackedScene" uid="uid://dgmjwhupccgw2" path="res://project/scenes/pause_menu.tscn" id="9_08ny0"]
@@ -73,9 +75,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Physical Ingredient (Beast Fang)" parent="Node" instance=ExtResource("4_lhp4y")]
 position = Vector2(920, 130)
+_ingredient_id = ExtResource("6_njw20")
 
 [node name="Physical Ingredient (Fish Scale)" parent="Node" instance=ExtResource("4_lhp4y")]
 position = Vector2(1082, 128)
+_ingredient_id = ExtResource("7_b510t")
 
 [node name="Sprite" parent="Node/Physical Ingredient (Fish Scale)/Draggable Area" index="0"]
 texture = ExtResource("5_qvt0x")

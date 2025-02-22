@@ -30,8 +30,9 @@ var array = [];
 	##area.get_node("CollisionShape2D").queue_free()
 	#pass # Replace with function body.
 
-func add_ingredient(ingredient: PhysicalIngredient2D) -> void:
-	array.push_back(ingredient);
+func add_ingredient(ingredientDrop: PhysicalIngredient2D) -> void:
+	print(ingredientDrop._ingredient_id)
+	array.push_back(ingredientDrop._ingredient_id);
 	print(array);
 
 func _on_button_pressed() -> void:

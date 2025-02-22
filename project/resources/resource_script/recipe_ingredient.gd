@@ -15,12 +15,12 @@ class_name RecipeIngredient
 #func _init() -> void:
 	#pass
 
-func _init(varName: String, varSpritePath: String, varLethalVital: int, varStinkyFragrant: int, varBodyMind: int, varDescription: String) -> void:
-	name = varName
-	sprite = Texture2D.new()
-	sprite.resource_path = varSpritePath
-	LethalVital = varLethalVital
-	StinkyFragrant = varStinkyFragrant
-	BodyMind = varBodyMind
-	description = varDescription
-	aspectValueList = [LethalVital,StinkyFragrant,BodyMind]
+#func _init(varName: String, varSpritePath: String, varLethalVital: int, varStinkyFragrant: int, varBodyMind: int, varDescription: String) -> void:
+	#name = varName
+	#sprite = Texture2D.new()
+	#sprite.resource_path = varSpritePath
+	#LethalVital = varLethalVital
+	#StinkyFragrant = varStinkyFragrant
+	#BodyMind = varBodyMind
+	#description = varDescription
+	#aspectValueList = [LethalVital,StinkyFragrant,BodyMind]
