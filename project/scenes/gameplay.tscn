@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bq63eyn04dj6" path="res://project/arts/internal/sprites/ingredients/Raspberry Leaf.png" id="13_bsf0q"]
 [ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="15_b0wn8"]
 [ext_resource type="Resource" uid="uid://b1eehrjm21jxu" path="res://project/resources/game_objects/RecipeIngredients/FISH SCALE.tres" id="15_o43xy"]
+
 [ext_resource type="Resource" uid="uid://b41a3w7dek54u" path="res://project/resources/game_objects/RecipeIngredients/GOAT EYE.tres" id="15_yp56a"]
 [ext_resource type="Texture2D" uid="uid://cw23hitf2r5c" path="res://project/arts/internal/sprites/ingredients/Goat Eye.png" id="16_24l3m"]
 [ext_resource type="Resource" uid="uid://4aedinxw2v1t" path="res://project/resources/game_objects/RecipeIngredients/FROG EYES.tres" id="17_lrq5b"]
@@ -27,6 +28,7 @@
 [ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="18_mhleu"]
 [ext_resource type="Resource" uid="uid://d3lev24x6lypb" path="res://project/resources/game_objects/RecipeIngredients/POISON IVY.tres" id="19_henek"]
 [ext_resource type="Texture2D" uid="uid://gnnmynnyhpis" path="res://project/arts/internal/sprites/ingredients/Poison Ivy.png" id="20_b013x"]
+
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="20_wfedy"]
 [ext_resource type="Resource" uid="uid://338me5n68mvn" path="res://project/resources/game_objects/RecipeIngredients/STONE FISH.tres" id="21_kwb71"]
 [ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="21_w3vu6"]

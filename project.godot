@@ -25,6 +25,7 @@ audio_manager="*res://project/scripts/audio-system/audio_manager.tscn"
 
 directories/dch_directory={
 "character_oldMan": "res://project/scripts/dialogic/character_oldMan.dch",
+"character_overlay": "res://project/scenes/samples/FullBackground/character_overlay.dch",
 "character_player": "res://project/scripts/dialogic/character_player.dch",
 "character_poorGuy": "res://project/scripts/dialogic/character_poorGuy.dch",
 "character_richGirl": "res://project/scripts/dialogic/character_richGirl.dch"
@@ -52,8 +53,8 @@ directories/dtl_directory={
 "richGirl_Day02_START": "res://project/scripts/dialogic/richGirl_Day02_START.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://project/scenes/portrait/New_File.tres"]
-layout/default_style="res://project/scenes/portrait/New_File.tres"
+layout/style_list=["res://project/scenes/samples/FullBackground/DialogueStyle.tres"]
+layout/default_style="res://project/scenes/samples/FullBackground/DialogueStyle.tres"
 variables={
 "InteractionCounter": {
 "oldMan": 1,
@@ -63,8 +64,9 @@ variables={
 "MoodGood": {
 "oldMan": true,
 "poorGuy": true,
-"richGirl": false
+"richGirl": true
 },
+"gameOver": false,
 "success": true
 }
 extensions_folder="res://addons/dialogic_additions"

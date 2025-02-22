@@ -1,5 +1,40 @@
-join  center
+set {InteractionCounter.oldMan} = 2
+join character_overlay center [animation="Instant In"]
+join character_oldMan center
+character_oldMan: Bout time. Gimme it.
+Godman Dave sprays the perfume on himself. His glistening skin and incredible pecs show the peak male form.
 if {success} == true:
-	Success
+	set {MoodGood.oldMan} = true
+	character_oldMan: WHOA-HO-HO. MAMA! I smell amazin'. Like a newborn baby showered in flowers and surrounded by angels.
+	character_oldMan: You's good! Real good! This is some good stuff!
+	character_oldMan: Guess you's was tellin' da truth after all Mr. Top o' da class man!
+	character_oldMan: Alright! You's earned yourself a free permit to set up shop 'ere for as long as you's like!
+	character_oldMan: And I'll even supply you's with all da ingredients you's need! So long as you's keep supplyin' me with dis stuff!
+	character_oldMan: Do you's and I's have a deal?
+	character_oldMan: GREAT! WONDERFUL! WONDISSIMO! Great choice!
+	character_oldMan: You's got dis one's seal o' approval!
+	character_oldMan: I'll tell all my people's here that you's here is an incredible alchemist! You'll be da defacto hot stuff round here.
+	character_oldMan: Now I gotta get goin' before all da ladies get mad.
+	leave character_oldMan
+	Godman Dave starts running off
+	character_oldMan: Don't let me down, kid!
+	character_oldMan: HOLD ON LADIES! GODMAN DAVE is on the way! HEHE! RAUR!
 else:
-	FAIL
+	set {MoodGood.oldMan} = false
+	character_oldMan: BLEGH! I smell like grass! Not da good kind either!
+	character_oldMan: I smell like cow dung IN DA GRASS.
+	character_oldMan: *Sniff* *Sniff* Oh wait that's just me.
+	character_oldMan: BUT! Point is bucko. You's mucked up. BIG TIME!
+	character_oldMan: You's knows what dat means.
+	Godman Dave points his finger at you menacingly
+	character_oldMan: YOU'S GETTIN' BLASTED TO SMITHEREENS!!
+	character_oldMan: SAYONARA BUCKO!
+	Godman Dave raises a second finger at you menacingly
+	character_oldMan: KABLOOEEY!
+	character_oldMan: ......
+	character_oldMan: SIKE! GOTCH YOU's!
+	character_oldMan: Don't get you's panties in a bunch! Dis' magnanimous self is gonna give ya another chance!
+	character_oldMan: You's may have ruined my happy time wit' da ladies dis' time. But I's ain't gonna give up till I smell like dem' angels and swimmin' in ladies! RAUR! HEHE!
+	character_oldMan: Alright MISTAH TOP O' DA CLASS! ONE screw up is all you's get!
+	character_oldMan: No more slip up's! CAPICHE! See ya dis one's got a date wit da showers! PHOOE!
+	leave character_oldMan

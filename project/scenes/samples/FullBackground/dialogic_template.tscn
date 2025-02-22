@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://tk1a06g3l0y5"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_layout_base.gd" id="1_5xthy"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/node_background_holder.gd" id="2_81adh"]
+
+[node name="DialogicTemplate" type="Node"]
+script = ExtResource("1_5xthy")
+
+[node name="DialogicNode_BackgroundHolder" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_81adh")

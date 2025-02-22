@@ -1,5 +1,26 @@
-join  center
-if {} == "":
-	<Empty Text Event>
+join character_overlay center [animation="Instant In"]
+You hear a familiar set of footsteps approaching
+join character_oldMan center
+character_oldMan: HEY! Mr. Top o' da class alchemist.
+if {MoodGood.oldMan} == true:
+	character_oldMan: A beautiful mornin' isn't it! Perfect for gettin' it on wit da ladies! Hehe!
+	character_oldMan: Speakin o' dat' I got you's my next request!
+	character_oldMan: And you's can't say no! Remember. YOUR SHACK. ON MY LAND. EH!?
 else:
-	<Empty Text Event>
+	character_oldMan: Yesterday didn't go so hot. Eh? Sorry bout da whole kablooey thing.
+	character_oldMan: Dat's my go to option for folks dat displease me.
+	character_oldMan: But I's did say you's'll get another chance. So here I's am. Time for your redemption! 
+character_oldMan: Alright let's get straight to da point! I want you to make me a potion dat'll make my body the stuff of LEGENDS.
+character_oldMan: Ladies'll be latchin' on to me like fleas on a dog!
+character_oldMan: ........
+character_oldMan: OH! KAY! Dat sounded a lot better in my head. But dat's besides the point.
+character_oldMan: Did you's got what I mean!? Make me I-RRE-SISTABLE.
+character_oldMan: I's already got da body of a GOD! All dat's left is ta make it EVEN MORE! DAVELIKE!
+character_oldMan: Whuzzat? I's already charmin'?
+character_oldMan: Don't try ta flatter me you's lyin' maggot.
+character_oldMan: I may be INCREDIBLE and MAGNANIMOUS but even I knows when I's been beat.
+character_oldMan: Dem noble lady and blond prick have gots all the people swoonin' over dem' like flies!
+character_oldMan: AND DIS' GODMAN DAVE WON'T AND CAN'T BE OUTDUN!
+character_oldMan: SO GET TA BREWIN! OR ELSE IT'S KABLOOEY FOR YOU!
+character_oldMan: CAPICHE! GET WHAT I MEAN!
+character_oldMan: Don't disappoint me kid! I'm countin on ya!

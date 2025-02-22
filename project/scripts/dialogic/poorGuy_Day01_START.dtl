@@ -1,2 +1,41 @@
-join  center
-<Empty Text Event>
+set {gameOver} = false
+join character_overlay center [animation="Instant In"]
+join character_poorGuy center
+character_poorGuy: Oh great heavens! The gods have answered me thus! At long last! A cure for all of mine problems!
+character_poorGuy: Gods! This stall looks like it's ran by an shoddy student drop out! But this shall do!
+character_poorGuy: Mineself has heard from the behooven ugly wretch Dave that you could solve all of mine problems!
+character_poorGuy: HAH! What kind of problems a being like mineself could possibly have you ask? Such an ignorant question!
+character_poorGuy: I was once royalty!...I had it all...Cooks would serve me the finest marbled meat from the farlands. 
+character_poorGuy: Maids would bathe mine glorious body in the finest of goat milks and honey
+character_poorGuy: Mineself! Was a prince! The great and beautiful Prince Louie Mor Netterman!
+character_poorGuy: And mine father was the great and powerful king of Land der Verdammten, King Gut Mor Netterman!
+character_poorGuy: What? What do you mean you've never heard of our divinity? Then perhaps your peasant background is to blame for your ignorance!
+character_poorGuy: You think me a liar!? A flawless being such as mineself has no reason to lie!
+character_poorGuy: How did a being such as mineself, fall from grace you ask?
+character_poorGuy: Bold of you to ask given your status...But mineself will humor you.
+character_poorGuy: ...My kingdom...was razed to ashes by savages...
+character_poorGuy: But then! In the midst of the blazing hellfire! From the horizon!
+character_poorGuy: A lovely madamoiselle on a white horse whose divinity loses not to mineself saved mine life from such a pitiful end!
+character_poorGuy: And so mineself vowed to find her. Even to the edge of the earth to repay mine debt.
+character_poorGuy: And so I came to this village. For the gods ordained that I would find her here but alas...to no avail...
+character_poorGuy: Mineself now goes by the name Louie Gutaussehender Mann des Dorfes. Louie or Gorgeous shall suffice.
+character_poorGuy: Though mine appearance is no longer as glorious. Still I shine like the morning sun!
+character_poorGuy: For mineself was blessed with this divine and royal appearance!
+character_poorGuy: Oh...if only mineself could be royalty again!
+A recipe catches Louie's mesmerizing and glorious gaze
+character_poorGuy: ...What is this? Kingly rights? What manner of concotion is this?
+character_poorGuy: You say tis a concoction from that bestows one the divine right to rule!?
+character_poorGuy: Surely a sign from the heavens! Providence from the gods themselves! Mine destiny!
+character_poorGuy: Countless restless nights spent dreaming of reclaiming my birthright and reviving my kingdom. Mine father's legacy!
+character_poorGuy: Though I lack the funds for even bread. I implore you! To donate to a worthy cause!
+character_poorGuy: MINESELF'S!
+character_poorGuy: What was that? Did mine ears hear that right?
+character_poorGuy: If mineself promises to make anoint you as chief alchemist of Land der Verdammten, you shall offer me this potion as tribute?
+character_poorGuy: Oh heavens! Bless this man! You have mine word! Should this potion succeed I shall anoint you, chief alchemist of Land der Verdammten!
+character_poorGuy: But wait! No..I musn't be too hasty...I must not give in to such devillish temptation...
+character_poorGuy: Alchemist! I shall bestow upon you a trial to earn mine trust!
+character_poorGuy: Have you heard of this far eastern term: "Eeykayman"? They are males that lesser people would fawn over as if gods. 
+character_poorGuy: I request you to make mineself a concoction that will transform mine visage into one of these so called "Eeykayman"...
+character_poorGuy: To further elevate mine DIVINITY!
+character_poorGuy: I shall return once more to receive your tribute.
+character_poorGuy: I bid thee farewell for now. Do not disappoint.
