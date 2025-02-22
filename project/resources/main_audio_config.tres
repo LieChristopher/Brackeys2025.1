@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AudioConfigData" load_steps=2 format=3 uid="uid://lr7ymiebb1ya"]
+
+[ext_resource type="Script" path="res://project/scripts/audio-system/AudioConfigData.gd" id="1_6gfdk"]
+
+[resource]
+script = ExtResource("1_6gfdk")
+_master_v = 0.0
+_bgm_v = 0.0
+_sfx_v = 0.0
