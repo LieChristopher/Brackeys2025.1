@@ -1,0 +1,4 @@
+if {InteractionCounter.OldMan} == 0:
+elif {InteractionCounter.OldMan} == 1:
+	if {MoodGood.OldMan} == true:
+	else:

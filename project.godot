@@ -30,16 +30,29 @@ directories/dch_directory={
 "character_richGirl": "res://project/scripts/dialogic/character_richGirl.dch"
 }
 directories/dtl_directory={
-"timeline_oldMan_Day1_End": "res://project/scripts/dialogic/timeline_oldMan_Day1_End.dtl",
-"timeline_oldMan_Day1_Start": "res://project/scripts/dialogic/timeline_oldMan_Day1_Start.dtl",
-"timeline_poorGuy_Day1_Start": "res://project/scripts/dialogic/timeline_poorGuy_Day1_Start.dtl",
-"timeline_richGirl_Day1_End": "res://project/scripts/dialogic/timeline_richGirl_Day1_End.dtl",
-"timeline_richGirl_Day1_Start": "res://project/scripts/dialogic/timeline_richGirl_Day1_Start.dtl"
+"timeline_EndTemplate": "res://project/scripts/dialogic/timeline_EndTemplate.dtl",
+"timeline_StartTemplate": "res://project/scripts/dialogic/timeline_StartTemplate.dtl",
+"timeline_oldMan_End": "res://project/scripts/dialogic/timeline_oldMan_End.dtl",
+"timeline_oldMan_Start": "res://project/scripts/dialogic/timeline_oldMan_Start.dtl",
+"timeline_poorGuy_End": "res://project/scripts/dialogic/timeline_poorGuy_End.dtl",
+"timeline_poorGuy_Start": "res://project/scripts/dialogic/timeline_poorGuy_Start.dtl",
+"timeline_richGirl_End": "res://project/scripts/dialogic/timeline_richGirl_End.dtl",
+"timeline_richGirl_Start": "res://project/scripts/dialogic/timeline_richGirl_Start.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
+"InteractionCounter": {
+"OldMan": 0,
+"PoorGuy": 0,
+"RichGirl": 0
+},
+"MoodGood": {
+"OldMan": true,
+"PoorGuy": true,
+"RichGirl": true
+},
 "Names": {
 "Var": "",
 "oldMan": "Boisterous Old Man"
