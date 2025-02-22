@@ -7,6 +7,11 @@ extends Node2D
 var _intersected_area: Area2D = null;
 var _drop_area: IngredientDropArea2D = null;
 
+func _ready() -> void:
+	#self.get_node("Sprite").texture = _ingredient_id.sprite.resource_path
+	#self.texture = str(_ingredient_id.sprite.resource_path)
+	pass
+
 func _on_draggable_area_entered(area: Area2D) -> void:
 	_intersected_area = area;
 

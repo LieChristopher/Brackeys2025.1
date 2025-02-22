@@ -1,14 +1,26 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=26 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="3_3woh7"]
-[ext_resource type="PackedScene" uid="uid://bh5n8k13hs61f" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
-[ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="5_qvt0x"]
-[ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="6_6rbcy"]
+[ext_resource type="PackedScene" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
+[ext_resource type="Resource" uid="uid://cgd7wqtfgxf3m" path="res://project/resources/game_objects/RecipeIngredients/HORN.tres" id="6_dwu51"]
+[ext_resource type="Texture2D" uid="uid://cijfh7y0gwx4k" path="res://project/arts/internal/sprites/ingredients/Horn.png" id="7_g8ano"]
+[ext_resource type="Resource" uid="uid://bqnufgurlhqqy" path="res://project/resources/game_objects/RecipeIngredients/BEANS.tres" id="8_0emjp"]
 [ext_resource type="PackedScene" uid="uid://cfbyjw2lwgigk" path="res://project/prefabs/ingredient_drop_area.tscn" id="8_4kkyh"]
+[ext_resource type="Resource" uid="uid://cpdpyugla8q1" path="res://project/resources/game_objects/RecipeIngredients/FANG.tres" id="8_cmfqj"]
 [ext_resource type="Texture2D" uid="uid://cns1itri6mmtl" path="res://project/arts/internal/sprites/Drop-Indicator.png" id="9_2o8hy"]
 [ext_resource type="PackedScene" uid="uid://dgmjwhupccgw2" path="res://project/scenes/pause_menu.tscn" id="9_08ny0"]
+[ext_resource type="Texture2D" uid="uid://c0nf0h48buywk" path="res://project/arts/internal/sprites/ingredients/Beans.png" id="9_rs8v0"]
+[ext_resource type="Resource" uid="uid://be3d2ysjyrhlh" path="res://project/resources/game_objects/RecipeIngredients/ALGAE FISH.tres" id="10_p1vxy"]
+[ext_resource type="Texture2D" uid="uid://cyfw0c6xhcu47" path="res://project/arts/internal/sprites/ingredients/Algae Fish.png" id="11_lpl0m"]
+[ext_resource type="Resource" uid="uid://ci5f7wv8x5h3p" path="res://project/resources/game_objects/RecipeIngredients/RASPBERRY LEAF.tres" id="12_ctwdm"]
+[ext_resource type="Texture2D" uid="uid://bq63eyn04dj6" path="res://project/arts/internal/sprites/ingredients/Raspberry Leaf.png" id="13_bsf0q"]
+[ext_resource type="Resource" uid="uid://hulo0yc1xb6g" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest.tres" id="16_v4brw"]
+[ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="18_mhleu"]
+[ext_resource type="Resource" uid="uid://ub4uqms0p2fr" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest2.tres" id="18_v2bts"]
+[ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="20_wfedy"]
+[ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="21_w3vu6"]
 
 [sub_resource type="Animation" id="Animation_l4vn4"]
 resource_name = "ANIM_IndicatorBleeping"
@@ -66,28 +78,84 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Pause menu" parent="." instance=ExtResource("9_08ny0")]
 process_mode = 3
+visible = false
 z_index = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Physical Ingredient (Beast Fang)" parent="Node" instance=ExtResource("4_lhp4y")]
+[node name="Physical Ingredient (Beans)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(1126, 138)
+_ingredient_id = ExtResource("8_0emjp")
+
+[node name="Draggable Area" parent="Node/Physical Ingredient (Beans)" index="0"]
+position = Vector2(-128, 107)
+
+[node name="Sprite" parent="Node/Physical Ingredient (Beans)/Draggable Area" index="0"]
+position = Vector2(1, 13)
+texture = ExtResource("9_rs8v0")
+
+[node name="Collider" parent="Node/Physical Ingredient (Beans)/Draggable Area" index="1"]
+position = Vector2(-2, 12)
+scale = Vector2(0.725504, 0.784503)
+
+[node name="Physical Ingredient (Horn)" parent="Node" instance=ExtResource("4_lhp4y")]
 position = Vector2(920, 130)
+_ingredient_id = ExtResource("6_dwu51")
 
-[node name="Physical Ingredient (Fish Scale)" parent="Node" instance=ExtResource("4_lhp4y")]
+[node name="Draggable Area" parent="Node/Physical Ingredient (Horn)" index="0"]
+position = Vector2(-32, 5)
+
+[node name="Sprite" parent="Node/Physical Ingredient (Horn)/Draggable Area" index="0"]
+texture = ExtResource("7_g8ano")
+
+[node name="Collider" parent="Node/Physical Ingredient (Horn)/Draggable Area" index="1"]
+scale = Vector2(0.725504, 0.784503)
+
+[node name="Physical Ingredient (Algae Fish)" parent="Node" instance=ExtResource("4_lhp4y")]
 position = Vector2(1082, 128)
+_ingredient_id = ExtResource("10_p1vxy")
 
-[node name="Sprite" parent="Node/Physical Ingredient (Fish Scale)/Draggable Area" index="0"]
-texture = ExtResource("5_qvt0x")
+[node name="Draggable Area" parent="Node/Physical Ingredient (Algae Fish)" index="0"]
+position = Vector2(15, 6)
+scale = Vector2(0.736884, 0.713329)
 
-[node name="Physical Ingredient (Frog Eye)" parent="Node" instance=ExtResource("4_lhp4y")]
-position = Vector2(940, 265)
+[node name="Sprite" parent="Node/Physical Ingredient (Algae Fish)/Draggable Area" index="0"]
+texture = ExtResource("11_lpl0m")
 
-[node name="Sprite" parent="Node/Physical Ingredient (Frog Eye)/Draggable Area" index="0"]
-texture = ExtResource("6_6rbcy")
+[node name="Physical Ingredient (Raspberry Leaf)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(2046, 268)
+_ingredient_id = ExtResource("12_ctwdm")
+
+[node name="Draggable Area" parent="Node/Physical Ingredient (Raspberry Leaf)" index="0"]
+position = Vector2(-1157, -28)
+
+[node name="Sprite" parent="Node/Physical Ingredient (Raspberry Leaf)/Draggable Area" index="0"]
+position = Vector2(1, 13)
+texture = ExtResource("13_bsf0q")
+
+[node name="Collider" parent="Node/Physical Ingredient (Raspberry Leaf)/Draggable Area" index="1"]
+position = Vector2(-2, 12)
+scale = Vector2(0.725504, 0.784503)
+
+[node name="Physical Ingredient (Fang)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(1023, 134)
+_ingredient_id = ExtResource("8_cmfqj")
+
+[node name="Draggable Area" parent="Node/Physical Ingredient (Fang)" index="0"]
+position = Vector2(-32, -13)
+
+[node name="Sprite" parent="Node/Physical Ingredient (Fang)/Draggable Area" index="0"]
+position = Vector2(1, 13)
+
+[node name="Collider" parent="Node/Physical Ingredient (Fang)/Draggable Area" index="1"]
+position = Vector2(-2, 12)
+scale = Vector2(0.725504, 0.784503)
 
 [node name="Drop Indicator Cauldron" parent="." node_paths=PackedStringArray("_indicator", "_anim") instance=ExtResource("8_4kkyh")]
-position = Vector2(227, 268)
+unique_name_in_owner = true
+position = Vector2(227, 269)
+_target_potion = ExtResource("18_v2bts")
 _indicator = NodePath("Sprite")
 _anim = NodePath("AnimationPlayer")
 
@@ -110,21 +178,66 @@ offset_bottom = 650.0
 text = "clear cauldron"
 metadata/_edit_use_anchors_ = true
 
+[node name="Make Cauldron potion Button" type="Button" parent="."]
+offset_left = 7.0
+offset_top = 444.0
+offset_right = 273.0
+offset_bottom = 539.0
+text = "make potion from cauldron array"
+metadata/_edit_use_anchors_ = true
+
 [node name="Drop Area Rune" parent="." instance=ExtResource("8_4kkyh")]
+unique_name_in_owner = true
 position = Vector2(636, 513)
+_target_potion = ExtResource("16_v4brw")
+_neutral_rune = ExtResource("18_mhleu")
+_goo_rune = ExtResource("20_wfedy")
+_powder_rune = ExtResource("21_w3vu6")
 
 [node name="Collider" parent="Drop Area Rune" index="0"]
 shape = SubResource("CircleShape2D_8s0c7")
 
+[node name="Make Powder Button" type="Button" parent="."]
+offset_left = 451.0
+offset_top = 278.0
+offset_right = 740.0
+offset_bottom = 373.0
+text = "Make Powder RecipeIngredientRune"
+metadata/_edit_use_anchors_ = true
+
+[node name="Make Goo Button" type="Button" parent="."]
+offset_left = 508.0
+offset_top = 170.0
+offset_right = 769.0
+offset_bottom = 265.0
+text = "Make Goo RecipeIngredientRune"
+metadata/_edit_use_anchors_ = true
+
+[node name="Make Neutral Button" type="Button" parent="."]
+offset_left = 166.0
+offset_top = 557.0
+offset_right = 392.0
+offset_bottom = 652.0
+text = "Make Neutral RecipeIngredientRune"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="on_pointer_pressed" from="Pointer Control" to="Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_pressed"]
 [connection signal="on_pointer_released" from="Pointer Control" to="Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_released"]
-[connection signal="pressed" from="Clear Cauldron Button" to="Drop Indicator Cauldron" method="_on_button_pressed"]
+[connection signal="pressed" from="Clear Cauldron Button" to="Drop Indicator Cauldron" method="_on_clear_cauldron_button_pressed"]
+[connection signal="pressed" from="Make Cauldron potion Button" to="Drop Indicator Cauldron" method="_on_make_cauldron_potion_button_pressed"]
+[connection signal="pressed" from="Make Powder Button" to="Drop Area Rune" method="_on_make_powder_button_pressed"]
+[connection signal="pressed" from="Make Goo Button" to="Drop Area Rune" method="_on_make_goo_button_pressed"]
+[connection signal="pressed" from="Make Neutral Button" to="Drop Area Rune" method="_on_make_neutral_button_pressed"]
 
-[editable path="Node/Physical Ingredient (Beast Fang)"]
-[editable path="Node/Physical Ingredient (Beast Fang)/Draggable Area"]
-[editable path="Node/Physical Ingredient (Fish Scale)"]
-[editable path="Node/Physical Ingredient (Fish Scale)/Draggable Area"]
-[editable path="Node/Physical Ingredient (Frog Eye)"]
-[editable path="Node/Physical Ingredient (Frog Eye)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Beans)"]
+[editable path="Node/Physical Ingredient (Beans)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Horn)"]
+[editable path="Node/Physical Ingredient (Horn)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Algae Fish)"]
+[editable path="Node/Physical Ingredient (Algae Fish)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Raspberry Leaf)"]
+[editable path="Node/Physical Ingredient (Raspberry Leaf)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Fang)"]
+[editable path="Node/Physical Ingredient (Fang)/Draggable Area"]
 [editable path="Drop Indicator Cauldron"]
 [editable path="Drop Area Rune"]
