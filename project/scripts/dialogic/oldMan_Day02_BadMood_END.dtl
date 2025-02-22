@@ -1,0 +1,36 @@
+join character_overlay center [animation="Instant In"]
+join character_oldMan center
+character_oldMan: OHOHOHOHOOOO. GIMME DAT!
+character_oldMan: I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
+Godman Dave consumes the potion with gusto His less than flattering body starts to contort and transform
+if {success} == true:
+	character_oldMan: WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... ROCK SOLID!
+	character_oldMan: GIMME A MIRROR! Lemme have a look at dat' looker.
+	character_oldMan: *Godman Dave grabs the mirror. And tears streak down his face*
+	character_oldMan: I's.....I's can't believe it... I'M-I'm.....
+	character_oldMan: IRRREEESISTAAABLEEEEEE!!!
+	Dave flexes and contorts his flabby pectoral muscles
+	character_oldMan: You's really redeemed yourself kid!
+	character_oldMan: Just you's wait I'll be da' bees knees of the town wit dese GUNS!
+	Dave flexes his glutes
+	character_oldMan: I knew I was right ta put trust in you's.
+	character_oldMan: HOLD ON LADIES! GODMAN DAVE is on the way! HEHE! RAUR!
+	character_oldMan: CALL ME EL MACHO GUSTO, HANSAMO!
+	leave character_oldMan
+	Godman Dave starts running off shouting nonsensical things as he does
+	character_oldMan: WHOOOO! Let's see em get away from GODMAN DAVE now!
+else:
+	set {gameOver} = true
+	character_oldMan: WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... WiErd.....
+	character_oldMan: WhAt DA' hEck hAppENeD tA mE!
+	character_oldMan: GImMe A mIRrOr!
+	character_oldMan: *Godman Dave grabs the mirror*
+	..........
+	Dave slowly raises his finger towards you
+	character_oldMan: I'S sAiD I'll bLasT yOu's tA KINGDOM COME! IF yOu's MuCKed Up AgAin!
+	character_oldMan: AnD BLaSt yOu'S Ta SMitHeReenS I wiLL!
+	Dave points his menacingly fat fingers at you
+	character_oldMan: SaY yOu's goOdBye tA yOu's dUmP oF a ShAcK aNd yOU's sELf.
+	character_oldMan: AlSo sAY hELLo Ta mY BrOThEr. STEVE wHeN yOu's GeT dERe'
+	character_oldMan: KABLOOOOEEEEEY!
+	You close your eyes and experience the warmth of an EXPLOSION OF A THOUSAND SUNS

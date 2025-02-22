@@ -18,11 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://bq63eyn04dj6" path="res://project/arts/internal/sprites/ingredients/Raspberry Leaf.png" id="13_bsf0q"]
 [ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="15_b0wn8"]
 [ext_resource type="Resource" uid="uid://b1eehrjm21jxu" path="res://project/resources/game_objects/RecipeIngredients/FISH SCALE.tres" id="15_o43xy"]
-[ext_resource type="Resource" uid="uid://bcgx44431k2hg" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest.tres" id="16_v4brw"]
+[ext_resource type="Resource" uid="uid://hulo0yc1xb6g" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest.tres" id="16_v4brw"]
 [ext_resource type="Resource" uid="uid://4aedinxw2v1t" path="res://project/resources/game_objects/RecipeIngredients/FROG EYES.tres" id="17_lrq5b"]
 [ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="18_ap7kt"]
 [ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="18_mhleu"]
-[ext_resource type="Resource" uid="uid://b1j3sawsmsuyn" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest2.tres" id="18_v2bts"]
+[ext_resource type="Resource" uid="uid://ub4uqms0p2fr" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest2.tres" id="18_v2bts"]
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="20_wfedy"]
 [ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="21_w3vu6"]
 

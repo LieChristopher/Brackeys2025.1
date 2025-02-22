@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=22 format=3 uid="uid://bo4ol08dxu5hb"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=26 format=3 uid="uid://bo4ol08dxu5hb"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_4iyr2"]
-[ext_resource type="PackedScene" uid="uid://fhjxcxjatidr" path="res://project/scenes/samples/test_dialogic.tscn" id="1_mqthk"]
+[ext_resource type="Texture2D" uid="uid://fxnflk3lfcgx" path="res://project/arts/internal/sprites/scenes/Customer BG Overlay.png" id="1_m2h2l"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_goqwf"]
+[ext_resource type="PackedScene" uid="uid://cixia31cpor3i" path="res://project/scenes/samples/FullBackground/custom_full_background.tscn" id="3_5wu4r"]
 [ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_bokjp"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_pan2h"]
 [ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="5_i6pg8"]
@@ -12,13 +13,29 @@
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_fgid3"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_toxqo"]
 
+[sub_resource type="GDScript" id="GDScript_l6eww"]
+
+[sub_resource type="PackedScene" id="PackedScene_y8a12"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("TestDialogic", "script", "Node", "SceneBackground2", "z_index", "offset_right", "offset_bottom", "scale", "texture", "expand_mode", "metadata/_edit_use_anchors_", "TextureRect"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 2, 0, -1, 1, 1, 0, 0, 0, 0, 11, 3, -1, 7, 4, 1, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0),
+"variants": [SubResource("GDScript_l6eww"), 10, 1920.0, 1080.0, Vector2(0.598435, 0.606806), ExtResource("1_m2h2l"), 2, true],
+"version": 3
+}
+
 [sub_resource type="Resource" id="Resource_dhr0t"]
 script = ExtResource("1_4iyr2")
+scene = SubResource("PackedScene_y8a12")
 overrides = {}
 
 [sub_resource type="Resource" id="Resource_e60ov"]
 script = ExtResource("1_4iyr2")
-scene = ExtResource("2_goqwf")
+scene = ExtResource("3_5wu4r")
 overrides = {}
 
 [sub_resource type="Resource" id="Resource_nagxj"]
@@ -61,10 +78,15 @@ script = ExtResource("1_4iyr2")
 scene = ExtResource("2_goqwf")
 overrides = {}
 
+[sub_resource type="Resource" id="Resource_dtsqa"]
+script = ExtResource("1_4iyr2")
+scene = ExtResource("2_goqwf")
+overrides = {}
+
 [resource]
 script = ExtResource("10_toxqo")
 name = "New_File"
-layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17", "18"])
+layer_list = Array[String](["18", "10", "11", "12", "13", "14", "15", "16", "17", "19"])
 layer_info = {
 "": SubResource("Resource_dhr0t"),
 "10": SubResource("Resource_e60ov"),
@@ -75,9 +97,9 @@ layer_info = {
 "15": SubResource("Resource_o3tlb"),
 "16": SubResource("Resource_qns71"),
 "17": SubResource("Resource_xhr6k"),
-"18": SubResource("Resource_3ntuk")
+"18": SubResource("Resource_3ntuk"),
+"19": SubResource("Resource_dtsqa")
 }
-base_scene = ExtResource("1_mqthk")
 base_overrides = {}
 layers = Array[ExtResource("1_4iyr2")]([])
-metadata/_latest_layer = "18"
+metadata/_latest_layer = ""

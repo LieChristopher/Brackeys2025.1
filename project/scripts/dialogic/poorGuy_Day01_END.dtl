@@ -1,5 +1,47 @@
-join  center
+set {InteractionCounter.poorGuy} = 2
+join character_overlay center [animation="Instant In"]
+join character_poorGuy center
+character_poorGuy: Oh your offering is ready? Then I shall partake...this wondrous looking potion!
+character_poorGuy: *drinks potion and pulls out a shard of glass*
 if {success} == true:
-	Success
+	set {MoodGood.poorGuy} = true
+	character_poorGuy: Hmm...
+	Loiue drinks more of the potion
+	character_poorGuy: Strange, I do not sense any noticeable change?
+	character_poorGuy: Could it be...
+	Louie shoots you a glare
+	character_poorGuy: Could it be that mineself is already DIVINE!?
+	character_poorGuy: Oh the gods have already made mineself absolute perfection! Overflowing with divinity!
+	character_poorGuy: The gods have sent thee as a messenger to decree...that mineself!
+	character_poorGuy: Louie Gutaussehender Mann des Dorfes. Nay! I Louie Mor Netterman!
+	character_poorGuy: Am worthy to reclaim mine divine birthright and kingdom!
+	character_poorGuy: Mineself thanks you. It's as if a weight has been lifted off my shoulders.
+	character_poorGuy: Mineself sees now what must be done.
+	character_poorGuy: True to mine words, you shall be anointed chief alchemist of the kingdom of Land der Verdammten once mineself, is crowned king!
+	character_poorGuy: Thank you...mine friend.
+	character_poorGuy: Mineself shall return on the morrow to receive the divine right to rule as decreed by heavens, and you shall have the honor of bestowing it.
+	character_poorGuy: I bid thee farewell.
+	leave character_poorGuy
+	Louie walks away, a beaming smile on his face, brimming with confidence
 else:
-	FAIL
+	set {MoodGood.poorGuy} = false
+	Louie's face blur's, becoming more and more defined. Turning into one not of this world
+	character_poorGuy: ......
+	character_poorGuy: I!..I'M HIDEOUS!
+	character_poorGuy: I SHOULD HAVE KNOWN THAT YOU WERE JUST A FRAUD!
+	character_poorGuy: YOU LOWLY! FILTHY! DECEITFUL! DEGENERATE....RGH..INGRATE
+	*Huff* *Puff*
+	Louie looks downcast. But with such a face it's hard to tell
+	character_poorGuy: Oh my face...mine beautiful divinity...gone....
+	.......
+	Louie looks at you.
+	He regains his composure
+	character_poorGuy: Mine apologies. Alchemist.
+	character_poorGuy: I have let mine inner demons best me. A poor show of kingship. It seems I have much to learn before I am anything akin to mine revered father.
+	character_poorGuy: T'was I who requested such a tconcotion from you to sate my desires in the guise of a test...
+	character_poorGuy: Perhaps this is the what the gods intended...to show me proof of mine own lacking qualities...
+	character_poorGuy: How can mineself possibly measure up to mine father...
+	character_poorGuy: Mineself shall return to reflect upon today's misgivings. Strengthen mine faith and seek guidance from the gods...
+	character_poorGuy: Minself bids you farewell.
+	leave character_poorGuy
+	Louie weakly walks away, dejected, lost, and distraught

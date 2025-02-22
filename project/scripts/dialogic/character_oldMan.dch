@@ -6,7 +6,7 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "New_File"
+"style": "DialogueStyle"
 },
 "default_portrait": "Neutral",
 "description": "",
@@ -22,7 +22,7 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": "res://project/scenes/portrait/portrait_default.tscn"
+"scene": ""
 }
 },
 "scale": 1.0
