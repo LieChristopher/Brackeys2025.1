@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfbyjw2lwgigk"]
+[gd_scene load_steps=3 format=3 uid="uid://cfbyjw2lwgigk"]
 
-[ext_resource type="Script" path="res://ingredient_drop_area.gd" id="1_jdfhg"]
+[ext_resource type="Script" path="res://project/scripts/IngredientDropArea2D.gd" id="1_jdfhg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i232g"]
+size = Vector2(240, 240)
 
 [node name="IngredientDropArea" type="Area2D"]
 script = ExtResource("1_jdfhg")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i232g")

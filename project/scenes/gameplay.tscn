@@ -1,19 +1,53 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=13 format=3 uid="uid://dcolix4rx84pb"]
 
-[ext_resource type="PackedScene" uid="uid://cchwg152iv3ip" path="res://project/prefabs/draggable_area_template (works).tscn" id="1_3dths"]
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="3_3woh7"]
-[ext_resource type="Texture2D" uid="uid://bpngfrfiknk51" path="res://project/arts/internal/sprites/ingredients/Beast Fang.png" id="4_oimyw"]
+[ext_resource type="PackedScene" uid="uid://bh5n8k13hs61f" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
 [ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="5_qvt0x"]
-[ext_resource type="Texture2D" uid="uid://cw23hitf2r5c" path="res://project/arts/internal/sprites/ingredients/Goat Eye.png" id="6_bxuu3"]
+[ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="6_6rbcy"]
 [ext_resource type="PackedScene" uid="uid://cfbyjw2lwgigk" path="res://project/prefabs/ingredient_drop_area.tscn" id="8_4kkyh"]
+[ext_resource type="Texture2D" uid="uid://cns1itri6mmtl" path="res://project/arts/internal/sprites/Drop-Indicator.png" id="9_2o8hy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_as8e7"]
-radius = 192.044
+[sub_resource type="Animation" id="Animation_l4vn4"]
+resource_name = "ANIM_IndicatorBleeping"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.282353), Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_55wjo"]
-radius = 140.089
+[sub_resource type="Animation" id="Animation_4qsee"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cs1nj"]
+_data = {
+"ANIM_IndicatorBleeping": SubResource("Animation_l4vn4"),
+"RESET": SubResource("Animation_4qsee")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8s0c7"]
+radius = 140.0
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_nrl2g")
@@ -30,35 +64,36 @@ expand_mode = 2
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Draggable Area (beast fang)" parent="Node" instance=ExtResource("1_3dths")]
-position = Vector2(921, 131)
-_debug_print = false
+[node name="Physical Ingredient (Beast Fang)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(920, 130)
 
-[node name="Sprite" parent="Node/Draggable Area (beast fang)" index="0"]
-scale = Vector2(0.125, 0.125)
-texture = ExtResource("4_oimyw")
+[node name="Physical Ingredient (Fish Scale)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(1082, 128)
 
-[node name="Draggable Area2 (fish scale)" parent="Node" instance=ExtResource("1_3dths")]
-position = Vector2(1081, 128)
-_debug_print = false
-
-[node name="Sprite" parent="Node/Draggable Area2 (fish scale)" index="0"]
-scale = Vector2(0.13, 0.13)
+[node name="Sprite" parent="Node/Physical Ingredient (Fish Scale)/Draggable Area" index="0"]
 texture = ExtResource("5_qvt0x")
 
-[node name="Draggable Area3 (Frog eye)" parent="Node" instance=ExtResource("1_3dths")]
-position = Vector2(941, 266)
-_debug_print = false
+[node name="Physical Ingredient (Frog Eye)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(940, 265)
 
-[node name="Sprite" parent="Node/Draggable Area3 (Frog eye)" index="0"]
-scale = Vector2(0.115, 0.115)
-texture = ExtResource("6_bxuu3")
+[node name="Sprite" parent="Node/Physical Ingredient (Frog Eye)/Draggable Area" index="0"]
+texture = ExtResource("6_6rbcy")
 
-[node name="IngredientDropArea (Cauldron)" parent="." instance=ExtResource("8_4kkyh")]
+[node name="Drop Indicator Cauldron" parent="." node_paths=PackedStringArray("_indicator", "_anim") instance=ExtResource("8_4kkyh")]
+position = Vector2(227, 268)
+_indicator = NodePath("Sprite")
+_anim = NodePath("AnimationPlayer")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientDropArea (Cauldron)"]
-position = Vector2(238, 326)
-shape = SubResource("CircleShape2D_as8e7")
+[node name="Sprite" type="Sprite2D" parent="Drop Indicator Cauldron"]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("9_2o8hy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drop Indicator Cauldron"]
+libraries = {
+"": SubResource("AnimationLibrary_cs1nj")
+}
+
+[node name="Inserted SFX" type="AudioStreamPlayer2D" parent="Drop Indicator Cauldron"]
 
 [node name="Clear Cauldron Button" type="Button" parent="."]
 offset_left = 9.0
@@ -67,14 +102,21 @@ offset_right = 156.0
 offset_bottom = 650.0
 text = "clear cauldron"
 
-[node name="IngredientDropArea (Rune Area)" parent="." instance=ExtResource("8_4kkyh")]
+[node name="Drop Area Rune" parent="." instance=ExtResource("8_4kkyh")]
+position = Vector2(636, 513)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientDropArea (Rune Area)"]
-position = Vector2(633, 508)
-shape = SubResource("CircleShape2D_55wjo")
+[node name="Collider" parent="Drop Area Rune" index="0"]
+shape = SubResource("CircleShape2D_8s0c7")
 
-[connection signal="pressed" from="Clear Cauldron Button" to="IngredientDropArea (Cauldron)" method="_on_button_pressed"]
+[connection signal="on_pointer_pressed" from="Pointer Control" to="Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_pressed"]
+[connection signal="on_pointer_released" from="Pointer Control" to="Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_released"]
+[connection signal="pressed" from="Clear Cauldron Button" to="Drop Indicator Cauldron" method="_on_button_pressed"]
 
-[editable path="Node/Draggable Area (beast fang)"]
-[editable path="Node/Draggable Area2 (fish scale)"]
-[editable path="Node/Draggable Area3 (Frog eye)"]
+[editable path="Node/Physical Ingredient (Beast Fang)"]
+[editable path="Node/Physical Ingredient (Beast Fang)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Fish Scale)"]
+[editable path="Node/Physical Ingredient (Fish Scale)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Frog Eye)"]
+[editable path="Node/Physical Ingredient (Frog Eye)/Draggable Area"]
+[editable path="Drop Indicator Cauldron"]
+[editable path="Drop Area Rune"]
