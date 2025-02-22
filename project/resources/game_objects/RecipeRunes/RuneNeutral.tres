@@ -6,4 +6,4 @@
 script = ExtResource("1_btl28")
 name = "Runeless"
 adjective = ""
-gooiness = 0
+gooeyness = 0

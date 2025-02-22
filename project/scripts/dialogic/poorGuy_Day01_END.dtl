@@ -1,0 +1,5 @@
+join  center
+if {success} == true:
+	Success
+else:
+	FAIL

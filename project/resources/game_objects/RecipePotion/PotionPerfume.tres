@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=9 format=3 uid="uid://bj1jqjoj7u8hw"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_pn0nb"]
+[ext_resource type="Resource" uid="uid://ci5f7wv8x5h3p" path="res://project/resources/game_objects/RecipeIngredients/RASPBERRY LEAF.tres" id="2_7b1dh"]
+[ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="4_3axml"]
+[ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="5_hro3l"]
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="6_2sndk"]
+
+[sub_resource type="Resource" id="Resource_slp2x"]
+script = ExtResource("1_pn0nb")
+rune = ExtResource("5_hro3l")
+ingredient = ExtResource("2_7b1dh")
+
+[sub_resource type="Resource" id="Resource_meye2"]
+script = ExtResource("1_pn0nb")
+rune = ExtResource("5_hro3l")
+ingredient = ExtResource("2_7b1dh")
+
+[sub_resource type="Resource" id="Resource_tr0w1"]
+script = ExtResource("1_pn0nb")
+rune = ExtResource("4_3axml")
+ingredient = ExtResource("2_7b1dh")
+
+[resource]
+script = ExtResource("6_2sndk")
+name = "Perfume Potion"
+description = "A must have for the local ladies. And the occasional unhygienic fellow."
+points = 1000
+listOfIngredientRunes = Array[ExtResource("1_pn0nb")]([SubResource("Resource_slp2x"), SubResource("Resource_meye2"), SubResource("Resource_tr0w1")])

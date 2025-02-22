@@ -1,11 +1,11 @@
 extends Resource
 class_name RecipeIngredientRune
 
-@export var id : String
-@export var name : String
 @export var rune: RecipeRune
 @export var ingredient: RecipeIngredient
-@export var sprite : Texture2D
+
+func getName() -> String:
+	return rune.adjective + " " + ingredient.name
 
 func getVector() -> Array[int]:
 	var list = ingredient.aspectValueList

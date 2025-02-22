@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ShopCustomer" load_steps=3 format=3 uid="uid://drnevdhwgjfwe"]
+
+[ext_resource type="Resource" path="res://project/scripts/dialogic/character_richGirl.dch" id="1_62abx"]
+[ext_resource type="Script" path="res://project/resources/resource_script/shop_customer.gd" id="1_muotg"]
+
+[resource]
+script = ExtResource("1_muotg")
+code = "richGirl"
+char = ExtResource("1_62abx")

@@ -30,32 +30,40 @@ directories/dch_directory={
 "character_richGirl": "res://project/scripts/dialogic/character_richGirl.dch"
 }
 directories/dtl_directory={
-"timeline_EndTemplate": "res://project/scripts/dialogic/timeline_EndTemplate.dtl",
-"timeline_StartTemplate": "res://project/scripts/dialogic/timeline_StartTemplate.dtl",
-"timeline_oldMan_End": "res://project/scripts/dialogic/timeline_oldMan_End.dtl",
-"timeline_oldMan_Start": "res://project/scripts/dialogic/timeline_oldMan_Start.dtl",
-"timeline_poorGuy_End": "res://project/scripts/dialogic/timeline_poorGuy_End.dtl",
-"timeline_poorGuy_Start": "res://project/scripts/dialogic/timeline_poorGuy_Start.dtl",
-"timeline_richGirl_End": "res://project/scripts/dialogic/timeline_richGirl_End.dtl",
-"timeline_richGirl_Start": "res://project/scripts/dialogic/timeline_richGirl_Start.dtl"
+"Template_Day01_END": "res://project/scripts/dialogic/Template_Day01_END.dtl",
+"Template_Day01_START": "res://project/scripts/dialogic/Template_Day01_START.dtl",
+"Template_Day02_BadMood_END": "res://project/scripts/dialogic/Template_Day02_BadMood_END.dtl",
+"Template_Day02_GoodMood_END": "res://project/scripts/dialogic/Template_Day02_GoodMood_END.dtl",
+"Template_Day02_START": "res://project/scripts/dialogic/Template_Day02_START.dtl",
+"oldMan_Day01_END": "res://project/scripts/dialogic/oldMan_Day01_END.dtl",
+"oldMan_Day01_START": "res://project/scripts/dialogic/oldMan_Day01_START.dtl",
+"oldMan_Day02_BadMood_END": "res://project/scripts/dialogic/oldMan_Day02_BadMood_END.dtl",
+"oldMan_Day02_GoodMood_END": "res://project/scripts/dialogic/oldMan_Day02_GoodMood_END.dtl",
+"oldMan_Day02_START": "res://project/scripts/dialogic/oldMan_Day02_START.dtl",
+"poorGuy_Day01_END": "res://project/scripts/dialogic/poorGuy_Day01_END.dtl",
+"poorGuy_Day01_START": "res://project/scripts/dialogic/poorGuy_Day01_START.dtl",
+"poorGuy_Day02_BadMood_END": "res://project/scripts/dialogic/poorGuy_Day02_BadMood_END.dtl",
+"poorGuy_Day02_GoodMood_END": "res://project/scripts/dialogic/poorGuy_Day02_GoodMood_END.dtl",
+"poorGuy_Day02_START": "res://project/scripts/dialogic/poorGuy_Day02_START.dtl",
+"richGirl_Day01_END": "res://project/scripts/dialogic/richGirl_Day01_END.dtl",
+"richGirl_Day01_START": "res://project/scripts/dialogic/richGirl_Day01_START.dtl",
+"richGirl_Day02_BadMood_END": "res://project/scripts/dialogic/richGirl_Day02_BadMood_END.dtl",
+"richGirl_Day02_GoodMood_END": "res://project/scripts/dialogic/richGirl_Day02_GoodMood_END.dtl",
+"richGirl_Day02_START": "res://project/scripts/dialogic/richGirl_Day02_START.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
 "InteractionCounter": {
-"OldMan": 0,
-"PoorGuy": 0,
-"RichGirl": 0
+"oldMan": 1,
+"poorGuy": 1,
+"richGirl": 1
 },
 "MoodGood": {
-"OldMan": true,
-"PoorGuy": true,
-"RichGirl": true
-},
-"Names": {
-"Var": "",
-"oldMan": "Boisterous Old Man"
+"oldMan": true,
+"poorGuy": true,
+"richGirl": true
 },
 "success": true
 }

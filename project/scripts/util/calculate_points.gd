@@ -26,6 +26,7 @@ func calculateQuality(inputListOfIngredientRunes : Array[RecipeIngredientRune], 
 				minDistance = newDistance
 				minDistanceIngredientRune = inputIngredientRune
 		multiplier *= getPointMultiplier(minDistance)
+		inputListOfIngredientRunes.erase(minDistanceIngredientRune)
 	return points * multiplier
 
 func getGrade(quality: int, recipePotion: RecipePotion):
