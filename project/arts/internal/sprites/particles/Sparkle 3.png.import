@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://st3xvxns7vdk"
-path="res://.godot/imported/poof-smoke-1.png-98008d164b9f19fbc43016c075931f13.ctex"
+uid="uid://txih254xx852"
+path="res://.godot/imported/Sparkle 3.png-637f876edceacd308826b7c7701019eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://project/arts/internal/sprites/particles/poof-smoke-1.png"
-dest_files=["res://.godot/imported/poof-smoke-1.png-98008d164b9f19fbc43016c075931f13.ctex"]
+source_file="res://project/arts/internal/sprites/particles/Sparkle 3.png"
+dest_files=["res://.godot/imported/Sparkle 3.png-637f876edceacd308826b7c7701019eb.ctex"]
 
 [params]
 

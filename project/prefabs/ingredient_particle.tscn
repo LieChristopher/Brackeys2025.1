@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt17ugjvxm0v0"]
+
+[ext_resource type="Texture2D" uid="uid://b6ju8cuieyo50" path="res://project/arts/internal/sprites/particles/Poof 1.png" id="1_80fbw"]
+[ext_resource type="Texture2D" uid="uid://bsy4626hs7p53" path="res://project/arts/internal/sprites/particles/Poof 2.png" id="2_wbpap"]
+
+[sub_resource type="Curve" id="Curve_6yl87"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.4, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_tri0v"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, -200), 0.0, 560.0, 0, 0, Vector2(1, 200), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_6edqg"]
+offsets = PackedFloat32Array(0.173333, 0.48)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[node name="IngredientParticle" type="CPUParticles2D"]
+scale = Vector2(0.15, 0.15)
+emitting = false
+lifetime = 0.5
+one_shot = true
+speed_scale = 0.25
+explosiveness = 1.0
+fract_delta = false
+local_coords = true
+texture = ExtResource("1_80fbw")
+emission_shape = 5
+emission_points = PackedVector2Array(200, 50, -200, 50, 100, 200, -100, 200)
+emission_normals = PackedVector2Array(3, -3, -3, -3)
+emission_colors = PackedColorArray()
+spread = 90.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 200.0
+initial_velocity_max = 800.0
+angular_velocity_curve = SubResource("Curve_6yl87")
+radial_accel_curve = SubResource("Curve_tri0v")
+damping_max = 5.0
+color_ramp = SubResource("Gradient_6edqg")
+
+[node name="Ingredient" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 2
+lifetime = 0.5
+one_shot = true
+speed_scale = 0.25
+explosiveness = 1.0
+fract_delta = false
+local_coords = true
+texture = ExtResource("2_wbpap")
+emission_shape = 5
+emission_points = PackedVector2Array(300, 50, -300, 50)
+emission_normals = PackedVector2Array(3, -3, -3, -3)
+emission_colors = PackedColorArray()
+spread = 90.0
+gravity = Vector2(-1000, -1000)
+initial_velocity_min = 500.0
+initial_velocity_max = 800.0
+angular_velocity_curve = SubResource("Curve_6yl87")
+radial_accel_curve = SubResource("Curve_tri0v")
+damping_max = 5.0
+color_ramp = SubResource("Gradient_6edqg")
