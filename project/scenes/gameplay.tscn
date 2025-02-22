@@ -1,9 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=30 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="3_3woh7"]
-[ext_resource type="PackedScene" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
+[ext_resource type="PackedScene" uid="uid://bh5n8k13hs61f" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
 [ext_resource type="Resource" uid="uid://cgd7wqtfgxf3m" path="res://project/resources/game_objects/RecipeIngredients/HORN.tres" id="6_dwu51"]
 [ext_resource type="Texture2D" uid="uid://cijfh7y0gwx4k" path="res://project/arts/internal/sprites/ingredients/Horn.png" id="7_g8ano"]
 [ext_resource type="Resource" uid="uid://bqnufgurlhqqy" path="res://project/resources/game_objects/RecipeIngredients/BEANS.tres" id="8_0emjp"]
@@ -16,9 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://cyfw0c6xhcu47" path="res://project/arts/internal/sprites/ingredients/Algae Fish.png" id="11_lpl0m"]
 [ext_resource type="Resource" uid="uid://ci5f7wv8x5h3p" path="res://project/resources/game_objects/RecipeIngredients/RASPBERRY LEAF.tres" id="12_ctwdm"]
 [ext_resource type="Texture2D" uid="uid://bq63eyn04dj6" path="res://project/arts/internal/sprites/ingredients/Raspberry Leaf.png" id="13_bsf0q"]
-[ext_resource type="Resource" uid="uid://hulo0yc1xb6g" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest.tres" id="16_v4brw"]
+[ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="15_b0wn8"]
+[ext_resource type="Resource" uid="uid://b1eehrjm21jxu" path="res://project/resources/game_objects/RecipeIngredients/FISH SCALE.tres" id="15_o43xy"]
+[ext_resource type="Resource" uid="uid://bcgx44431k2hg" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest.tres" id="16_v4brw"]
+[ext_resource type="Resource" uid="uid://4aedinxw2v1t" path="res://project/resources/game_objects/RecipeIngredients/FROG EYES.tres" id="17_lrq5b"]
+[ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="18_ap7kt"]
 [ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="18_mhleu"]
-[ext_resource type="Resource" uid="uid://ub4uqms0p2fr" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest2.tres" id="18_v2bts"]
+[ext_resource type="Resource" uid="uid://b1j3sawsmsuyn" path="res://project/resources/game_objects/RecipePotion/PotionEasyTest2.tres" id="18_v2bts"]
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="20_wfedy"]
 [ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="21_w3vu6"]
 
@@ -152,6 +156,36 @@ position = Vector2(1, 13)
 position = Vector2(-2, 12)
 scale = Vector2(0.725504, 0.784503)
 
+[node name="Physical Ingredient (Fish Scale)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(1131, 258)
+_ingredient_id = ExtResource("15_o43xy")
+
+[node name="Draggable Area" parent="Node/Physical Ingredient (Fish Scale)" index="0"]
+position = Vector2(-32, -13)
+
+[node name="Sprite" parent="Node/Physical Ingredient (Fish Scale)/Draggable Area" index="0"]
+position = Vector2(1, 13)
+texture = ExtResource("15_b0wn8")
+
+[node name="Collider" parent="Node/Physical Ingredient (Fish Scale)/Draggable Area" index="1"]
+position = Vector2(-2, 12)
+scale = Vector2(0.725504, 0.784503)
+
+[node name="Physical Ingredient (Frog Eyes)" parent="Node" instance=ExtResource("4_lhp4y")]
+position = Vector2(921, 382)
+_ingredient_id = ExtResource("17_lrq5b")
+
+[node name="Draggable Area" parent="Node/Physical Ingredient (Frog Eyes)" index="0"]
+position = Vector2(-32, -13)
+
+[node name="Sprite" parent="Node/Physical Ingredient (Frog Eyes)/Draggable Area" index="0"]
+position = Vector2(1, 13)
+texture = ExtResource("18_ap7kt")
+
+[node name="Collider" parent="Node/Physical Ingredient (Frog Eyes)/Draggable Area" index="1"]
+position = Vector2(-2, 12)
+scale = Vector2(0.725504, 0.784503)
+
 [node name="Drop Indicator Cauldron" parent="." node_paths=PackedStringArray("_indicator", "_anim") instance=ExtResource("8_4kkyh")]
 unique_name_in_owner = true
 position = Vector2(227, 269)
@@ -239,5 +273,9 @@ metadata/_edit_use_anchors_ = true
 [editable path="Node/Physical Ingredient (Raspberry Leaf)/Draggable Area"]
 [editable path="Node/Physical Ingredient (Fang)"]
 [editable path="Node/Physical Ingredient (Fang)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Fish Scale)"]
+[editable path="Node/Physical Ingredient (Fish Scale)/Draggable Area"]
+[editable path="Node/Physical Ingredient (Frog Eyes)"]
+[editable path="Node/Physical Ingredient (Frog Eyes)/Draggable Area"]
 [editable path="Drop Indicator Cauldron"]
 [editable path="Drop Area Rune"]

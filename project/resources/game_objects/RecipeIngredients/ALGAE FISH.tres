@@ -1,13 +1,12 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://be3d2ysjyrhlh"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_o2a8d"]
-[ext_resource type="Texture2D" path="../../../arts/internal/sprites/ingredients/Ingredient - Algae Fish.png" id="2_jotvk"]
-
+[ext_resource type="Texture2D" uid="uid://cyfw0c6xhcu47" path="res://project/arts/internal/sprites/ingredients/Algae Fish.png" id="2_hsovj"]
 
 [resource]
 script = ExtResource("1_o2a8d")
 name = "ALGAE FISH"
-sprite = ExtResource("2_jotvk")
+sprite = ExtResource("2_hsovj")
 LethalVital = 3
 StinkyFragrant = -5
 BodyMind = -3
