@@ -1,13 +1,12 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b6gtef5x5l6l1"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_mogh1"]
-[ext_resource type="Texture2D" path="../../../arts/internal/sprites/ingredients/Ingredient - Worms.png" id="2_8evmp"]
-
+[ext_resource type="Texture2D" uid="uid://bopokne8iem6b" path="res://project/arts/internal/sprites/ingredients/Worms.png" id="2_8j061"]
 
 [resource]
 script = ExtResource("1_mogh1")
 name = "WORM"
-sprite = ExtResource("2_8evmp")
+sprite = ExtResource("2_8j061")
 LethalVital = 3
 StinkyFragrant = 0
 BodyMind = -3

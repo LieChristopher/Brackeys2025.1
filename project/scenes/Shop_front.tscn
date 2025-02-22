@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://0r01kooufvfd"]
 
-[ext_resource type="Texture2D" uid="uid://chlun7fmbwmt1" path="res://project/arts/external/Images/Props/shopBG.jpg" id="1_21upi"]
-[ext_resource type="Texture2D" uid="uid://dn0wggkigsma1" path="res://project/arts/external/Images/Props/table.png" id="2_bl7kq"]
-[ext_resource type="Texture2D" uid="uid://no0v6kko27je" path="res://project/arts/external/Images/Props/bookmark.png" id="3_selep"]
-[ext_resource type="Texture2D" uid="uid://dkmvwpg2oubwf" path="res://project/arts/external/Images/Props/customer.png" id="4_80jjg"]
-[ext_resource type="Texture2D" uid="uid://b7qxrva1lcdrb" path="res://project/arts/external/Images/Props/recipe.png" id="5_sann7"]
+[ext_resource type="Texture2D" uid="uid://chlun7fmbwmt1" path="res://project/arts/external/placeholder images/Props/shopBG.jpg" id="1_21upi"]
+[ext_resource type="Texture2D" uid="uid://dn0wggkigsma1" path="res://project/arts/external/placeholder images/Props/table.png" id="2_bl7kq"]
+[ext_resource type="Texture2D" uid="uid://no0v6kko27je" path="res://project/arts/external/placeholder images/Props/bookmark.png" id="3_selep"]
+[ext_resource type="Texture2D" uid="uid://dkmvwpg2oubwf" path="res://project/arts/external/placeholder images/Props/customer.png" id="4_80jjg"]
+[ext_resource type="Texture2D" uid="uid://b7qxrva1lcdrb" path="res://project/arts/external/placeholder images/Props/recipe.png" id="5_sann7"]
 
 [node name="Node2D" type="Node2D"]
 

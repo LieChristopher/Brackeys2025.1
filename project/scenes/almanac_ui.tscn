@@ -18,6 +18,7 @@ script = ExtResource("1_oaqi7")
 process_mode = 3
 top_level = true
 z_index = 6
+layout_mode = 0
 offset_left = 1022.0
 offset_top = 600.0
 offset_right = 1157.0
@@ -54,6 +55,7 @@ stretch_mode = 6
 flip_h = true
 
 [node name="TextureRect4" type="TextureRect" parent="AlmanacScreen"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = -6.0
 offset_right = 1925.0
@@ -72,6 +74,7 @@ texture = ExtResource("4_n34by")
 
 [node name="Next" type="Button" parent="AlmanacScreen"]
 z_index = 5
+layout_mode = 0
 offset_left = 1086.0
 offset_top = 177.0
 offset_right = 1094.0
