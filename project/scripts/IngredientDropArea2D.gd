@@ -2,8 +2,10 @@ class_name IngredientDropArea2D
 extends Area2D
 
 # Variables.
-@export_group("Target Potion")
+@export_group("Target Potion (changes needed)")
 @export var _target_potion: RecipePotion = null;
+
+@export_group("Runes for Rune Table")
 @export var _neutral_rune: RecipeRune = null;
 @export var _goo_rune: RecipeRune = null;
 @export var _powder_rune: RecipeRune = null;
@@ -71,6 +73,7 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 		while j<len(cauldronArray):
 			if expectedIngredientRunes[i].ingredient.name == cauldronArray[j].ingredient.name  && expectedIngredientRunes[i].rune.name  == cauldronArray[j].rune.name :
 				ingredientExists = true;
+				print(cauldronArray[j].ingredient.name)
 				cauldronArray.remove_at(j);
 				i+=1
 				j=0

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://6jwa651earqi"]
+
+[ext_resource type="Script" path="res://recipe_ui.gd" id="1_hvi3n"]
+[ext_resource type="Texture2D" uid="uid://pf804ub7mwt0" path="res://project/arts/internal/sprites/recipes/PotionChiseled.png" id="2_blyb5"]
+[ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="2_xf2h8"]
+
+[node name="Recipe UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hvi3n")
+
+[node name="Show Recipe Button" type="Button" parent="."]
+process_mode = 3
+top_level = true
+z_index = 5
+offset_left = 1031.0
+offset_top = 7.0
+offset_right = 1166.0
+offset_bottom = 75.0
+scale = Vector2(0.936843, 0.645581)
+theme_override_font_sizes/font_size = 21
+text = "Show Recipe
+
+"
+
+[node name="RecipeScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -7.0
+offset_top = 2.0
+offset_right = 33.0
+offset_bottom = 42.0
+
+[node name="TextureRect" type="TextureRect" parent="RecipeScreen"]
+self_modulate = Color(0.370364, 0.370364, 0.370364, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -16.0
+offset_right = -2.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(29.5219, 16.6387)
+texture = ExtResource("2_xf2h8")
+expand_mode = 1
+stretch_mode = 6
+flip_h = true
+
+[node name="TextureRect2" type="TextureRect" parent="RecipeScreen"]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 33.0
+offset_right = 1317.0
+offset_bottom = 1033.0
+scale = Vector2(0.574599, 0.583877)
+texture = ExtResource("2_blyb5")
+
+[connection signal="pressed" from="Show Recipe Button" to="." method="_on_show_recipe_button_pressed"]
