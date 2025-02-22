@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8cl7q634kt5l"]
+
+[ext_resource type="Script" path="res://options_menu.gd" id="1_vioqj"]
+[ext_resource type="Script" path="res://project/scenes/audio_options.gd" id="2_ggre2"]
+
+[node name="Options Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vioqj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.118
+anchor_right = 0.365
+anchor_bottom = 0.118
+offset_left = 278.808
+offset_top = 30.536
+offset_right = 154.52
+offset_bottom = 65.536
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="Audio Options" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_ggre2")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Audio Options"]
+offset_left = -3.0
+offset_top = 62.0
+offset_right = 362.0
+offset_bottom = 145.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Audio Options/MarginContainer2"]
+layout_mode = 2
+
+[node name="VolumeLabel" type="Label" parent="MarginContainer/VBoxContainer/Audio Options/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer/Audio Options/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/Audio Options/MarginContainer2/VBoxContainer/VolumeSlider" to="MarginContainer/VBoxContainer/Audio Options" method="_on_volume_slider_drag_ended"]
