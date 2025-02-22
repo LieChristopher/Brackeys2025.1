@@ -62,10 +62,12 @@ offset_bottom = 1080.0
 scale = Vector2(0.598435, 0.606806)
 texture = ExtResource("3_3woh7")
 expand_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Pause menu" parent="." instance=ExtResource("9_08ny0")]
 process_mode = 3
 z_index = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="Node" type="Node" parent="."]
 
@@ -106,6 +108,7 @@ offset_top = 555.0
 offset_right = 156.0
 offset_bottom = 650.0
 text = "clear cauldron"
+metadata/_edit_use_anchors_ = true
 
 [node name="Drop Area Rune" parent="." instance=ExtResource("8_4kkyh")]
 position = Vector2(636, 513)

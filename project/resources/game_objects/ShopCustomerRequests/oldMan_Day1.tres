@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShopCustomerRequest" load_steps=4 format=3 uid="uid://uics8xlnvrky"]
+
+[ext_resource type="Resource" uid="uid://c8xsfnrxumt5k" path="res://project/resources/game_objects/ShopCustomers/oldMan.tres" id="1_e34jp"]
+[ext_resource type="Script" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_e466m"]
+[ext_resource type="Resource" uid="uid://bj1jqjoj7u8hw" path="res://project/resources/game_objects/RecipePotion/PotionPerfume.tres" id="2_ypwx2"]
+
+[resource]
+script = ExtResource("1_e466m")
+customer = ExtResource("1_e34jp")
+requestedPotion = ExtResource("2_ypwx2")

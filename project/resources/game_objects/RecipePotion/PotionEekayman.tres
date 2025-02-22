@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=12 format=3 uid="uid://d2hriv2u72lv8"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_are8t"]
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_11cr2"]
+[ext_resource type="Resource" uid="uid://b41a3w7dek54u" path="res://project/resources/game_objects/RecipeIngredients/GOAT EYE.tres" id="2_ea1ky"]
+[ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="3_y3dkv"]
+[ext_resource type="Resource" uid="uid://d3lev24x6lypb" path="res://project/resources/game_objects/RecipeIngredients/POISON IVY.tres" id="4_eif6b"]
+[ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="5_thr4v"]
+[ext_resource type="Resource" uid="uid://b6gtef5x5l6l1" path="res://project/resources/game_objects/RecipeIngredients/WORM.tres" id="6_2q3g1"]
+
+[sub_resource type="Resource" id="Resource_4od67"]
+script = ExtResource("1_are8t")
+rune = ExtResource("3_y3dkv")
+ingredient = ExtResource("2_ea1ky")
+
+[sub_resource type="Resource" id="Resource_sn4gp"]
+script = ExtResource("1_are8t")
+rune = ExtResource("3_y3dkv")
+ingredient = ExtResource("2_ea1ky")
+
+[sub_resource type="Resource" id="Resource_dl303"]
+script = ExtResource("1_are8t")
+rune = ExtResource("5_thr4v")
+ingredient = ExtResource("4_eif6b")
+
+[sub_resource type="Resource" id="Resource_m44s8"]
+script = ExtResource("1_are8t")
+rune = ExtResource("3_y3dkv")
+ingredient = ExtResource("6_2q3g1")
+
+[resource]
+script = ExtResource("2_11cr2")
+name = "Eekayman Potion"
+description = "According to the ancient eastern texts of Mang Ga, this potion gives one a face that is said to be irresistable"
+points = 1000
+listOfIngredientRunes = Array[ExtResource("1_are8t")]([SubResource("Resource_4od67"), SubResource("Resource_sn4gp"), SubResource("Resource_dl303"), SubResource("Resource_m44s8")])

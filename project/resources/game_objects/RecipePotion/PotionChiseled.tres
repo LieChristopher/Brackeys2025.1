@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=16 format=3 uid="uid://crp44darb3af6"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_gwfm5"]
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_hqayx"]
+[ext_resource type="Resource" uid="uid://338me5n68mvn" path="res://project/resources/game_objects/RecipeIngredients/STONE FISH.tres" id="2_rl32h"]
+[ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="3_8n8gl"]
+[ext_resource type="Resource" uid="uid://g0fmwqxqsauj" path="res://project/resources/game_objects/RecipeIngredients/TURTLE SCUTE.tres" id="4_itwm0"]
+[ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="5_pgbv6"]
+[ext_resource type="Resource" uid="uid://cgd7wqtfgxf3m" path="res://project/resources/game_objects/RecipeIngredients/HORN.tres" id="6_qkoy0"]
+[ext_resource type="Resource" uid="uid://bqnufgurlhqqy" path="res://project/resources/game_objects/RecipeIngredients/BEANS.tres" id="7_g37c1"]
+[ext_resource type="Resource" uid="uid://b6gtef5x5l6l1" path="res://project/resources/game_objects/RecipeIngredients/WORM.tres" id="8_pvukt"]
+[ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="9_6vut6"]
+
+[sub_resource type="Resource" id="Resource_a7okl"]
+script = ExtResource("1_gwfm5")
+rune = ExtResource("3_8n8gl")
+ingredient = ExtResource("2_rl32h")
+
+[sub_resource type="Resource" id="Resource_bjcj5"]
+script = ExtResource("1_gwfm5")
+rune = ExtResource("5_pgbv6")
+ingredient = ExtResource("4_itwm0")
+
+[sub_resource type="Resource" id="Resource_tq2dc"]
+script = ExtResource("1_gwfm5")
+rune = ExtResource("5_pgbv6")
+ingredient = ExtResource("6_qkoy0")
+
+[sub_resource type="Resource" id="Resource_nkw4x"]
+script = ExtResource("1_gwfm5")
+rune = ExtResource("5_pgbv6")
+ingredient = ExtResource("7_g37c1")
+
+[sub_resource type="Resource" id="Resource_2ydi5"]
+script = ExtResource("1_gwfm5")
+rune = ExtResource("9_6vut6")
+ingredient = ExtResource("8_pvukt")
+
+[resource]
+script = ExtResource("2_hqayx")
+name = "Chiseled Potion"
+description = "You gain the body of a greek god. Said to shine even in the dark."
+points = 1000
+listOfIngredientRunes = Array[ExtResource("1_gwfm5")]([SubResource("Resource_a7okl"), SubResource("Resource_bjcj5"), SubResource("Resource_tq2dc"), SubResource("Resource_nkw4x"), SubResource("Resource_2ydi5")])

@@ -1,0 +1,5 @@
+join  center
+if {} == "":
+	<Empty Text Event>
+else:
+	<Empty Text Event>

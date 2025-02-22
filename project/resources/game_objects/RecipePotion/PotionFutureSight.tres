@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=14 format=3 uid="uid://brfna43deqw8t"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_efb5a"]
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_qxla5"]
+[ext_resource type="Resource" uid="uid://b41a3w7dek54u" path="res://project/resources/game_objects/RecipeIngredients/GOAT EYE.tres" id="2_s618x"]
+[ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="3_r4w58"]
+[ext_resource type="Resource" uid="uid://cgd7wqtfgxf3m" path="res://project/resources/game_objects/RecipeIngredients/HORN.tres" id="4_2davw"]
+[ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="5_fdjmw"]
+[ext_resource type="Resource" uid="uid://b1eehrjm21jxu" path="res://project/resources/game_objects/RecipeIngredients/FISH SCALE.tres" id="6_nbefa"]
+[ext_resource type="Resource" uid="uid://g0fmwqxqsauj" path="res://project/resources/game_objects/RecipeIngredients/TURTLE SCUTE.tres" id="7_cke4h"]
+
+[sub_resource type="Resource" id="Resource_up3a4"]
+script = ExtResource("1_efb5a")
+rune = ExtResource("3_r4w58")
+ingredient = ExtResource("2_s618x")
+
+[sub_resource type="Resource" id="Resource_m64ga"]
+script = ExtResource("1_efb5a")
+rune = ExtResource("3_r4w58")
+ingredient = ExtResource("2_s618x")
+
+[sub_resource type="Resource" id="Resource_xtqev"]
+script = ExtResource("1_efb5a")
+rune = ExtResource("5_fdjmw")
+ingredient = ExtResource("4_2davw")
+
+[sub_resource type="Resource" id="Resource_0sl6y"]
+script = ExtResource("1_efb5a")
+rune = ExtResource("5_fdjmw")
+ingredient = ExtResource("6_nbefa")
+
+[sub_resource type="Resource" id="Resource_2iv74"]
+script = ExtResource("1_efb5a")
+rune = ExtResource("5_fdjmw")
+ingredient = ExtResource("7_cke4h")
+
+[resource]
+script = ExtResource("2_qxla5")
+name = "Future Sight Potion"
+description = "Allows one to see a single moment in that will occur in the future."
+points = 1000
+listOfIngredientRunes = Array[ExtResource("1_efb5a")]([SubResource("Resource_up3a4"), SubResource("Resource_m64ga"), SubResource("Resource_xtqev"), SubResource("Resource_0sl6y"), SubResource("Resource_2iv74")])
