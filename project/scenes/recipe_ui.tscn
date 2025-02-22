@@ -17,6 +17,7 @@ script = ExtResource("1_hvi3n")
 process_mode = 3
 top_level = true
 z_index = 5
+layout_mode = 0
 offset_left = 1031.0
 offset_top = 7.0
 offset_right = 1166.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=46 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://b0qkf42g1463n" path="res://project/arts/internal/sprites/runes/RUNE BOOK.png" id="34_admkp"]
 [ext_resource type="Texture2D" uid="uid://c8sc6fod5fcav" path="res://project/arts/internal/sprites/runes/powder.png" id="39_vnyom"]
 [ext_resource type="Texture2D" uid="uid://bo1g0j005lbou" path="res://project/arts/internal/sprites/runes/goo.png" id="40_xkeae"]
+[ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="41_11auw"]
 [ext_resource type="Texture2D" uid="uid://dmafcjjdp256k" path="res://project/arts/internal/sprites/runes/neutral.png" id="41_yinhb"]
 
 [sub_resource type="Animation" id="Animation_l4vn4"]
@@ -100,7 +101,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Pause menu" parent="." instance=ExtResource("9_08ny0")]
 process_mode = 3
-z_index = 5
+z_index = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Recipe UI" parent="." instance=ExtResource("3_g3kw6")]
@@ -113,7 +114,6 @@ scale = Vector2(1.00405, 1.03429)
 metadata/_edit_use_anchors_ = true
 
 [node name="Show Recipe Button" parent="Recipe UI" index="0"]
-layout_mode = 0
 offset_left = 1779.0
 offset_top = 20.0
 offset_right = 1914.0
@@ -129,17 +129,22 @@ scale = Vector2(1.00802, 1.0179)
 metadata/_edit_use_anchors_ = true
 
 [node name="Show Almanac Button" parent="Almanac UI" index="0"]
-layout_mode = 0
 offset_left = 1765.0
 offset_top = 1016.0
 offset_right = 1900.0
 offset_bottom = 1084.0
 
 [node name="TextureRect4" parent="Almanac UI/AlmanacScreen" index="1"]
-layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="Next" parent="Almanac UI/AlmanacScreen" index="3"]
-layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="IngredientNodes" type="Node" parent="."]
 
@@ -388,6 +393,24 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RuneTableNodes" type="Node" parent="."]
 
+[node name="RuneTableIngredient" type="Sprite2D" parent="RuneTableNodes"]
+unique_name_in_owner = true
+z_index = -2
+position = Vector2(1058, 817)
+scale = Vector2(0.2245, 0.211)
+
+[node name="TableNotification" type="Label" parent="RuneTableNodes/RuneTableIngredient"]
+unique_name_in_owner = true
+visible = false
+offset_left = 4.0
+offset_top = 910.0
+offset_right = 1487.0
+offset_bottom = 1270.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 77
+text = "Choose rune to process ingredient that will be automatically added to cauldron"
+autowrap_mode = 2
+
 [node name="SceneBackground" type="TextureRect" parent="RuneTableNodes"]
 z_index = -4
 offset_left = 658.0
@@ -414,7 +437,9 @@ z_index = 5
 position = Vector2(0, 8.45053)
 shape = SubResource("CircleShape2D_8s0c7")
 
-[node name="Make Powder Button" type="Button" parent="RuneTableNodes"]
+[node name="Buttons" type="Node" parent="RuneTableNodes"]
+
+[node name="Make Powder Button" type="Button" parent="RuneTableNodes/Buttons"]
 offset_left = 1133.0
 offset_top = 432.0
 offset_right = 2141.0
@@ -423,7 +448,7 @@ scale = Vector2(0.227727, 0.207631)
 icon = ExtResource("39_vnyom")
 metadata/_edit_use_anchors_ = true
 
-[node name="Make Goo Button" type="Button" parent="RuneTableNodes"]
+[node name="Make Goo Button" type="Button" parent="RuneTableNodes/Buttons"]
 offset_left = 679.0
 offset_top = 443.0
 offset_right = 1687.0
@@ -432,7 +457,7 @@ scale = Vector2(0.218309, 0.258452)
 icon = ExtResource("40_xkeae")
 metadata/_edit_use_anchors_ = true
 
-[node name="Make Neutral Button" type="Button" parent="RuneTableNodes"]
+[node name="Make Neutral Button" type="Button" parent="RuneTableNodes/Buttons"]
 offset_left = 912.0
 offset_top = 190.0
 offset_right = 1920.0
@@ -441,6 +466,50 @@ scale = Vector2(0.218158, 0.247242)
 icon = ExtResource("41_yinhb")
 metadata/_edit_use_anchors_ = true
 
+[node name="GameEnd" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_top = -18.0
+offset_right = 1169.0
+offset_bottom = 667.0
+scale = Vector2(1.01559, 1.0328)
+
+[node name="TextureRectBackground" type="TextureRect" parent="GameEnd"]
+self_modulate = Color(0.370364, 0.370364, 0.370364, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("41_11auw")
+expand_mode = 1
+stretch_mode = 6
+flip_h = true
+
+[node name="PotionEndText" type="RichTextLabel" parent="GameEnd"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 171.779
+offset_top = 143.153
+offset_right = 171.779
+offset_bottom = 1128.15
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/bold_italics_font_size = 48
+theme_override_font_sizes/italics_font_size = 48
+theme_override_font_sizes/mono_font_size = 48
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 133
+bbcode_enabled = true
+text = "[wave amp=100.0 freq=10.0][b]POTION COMPLETE[/b][/wave]"
+fit_content = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(590.184, 317.791)
 
@@ -448,9 +517,9 @@ position = Vector2(590.184, 317.791)
 [connection signal="on_pointer_released" from="Pointer Control" to="CauldronNodes/Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_released"]
 [connection signal="pressed" from="CauldronNodes/Clear Cauldron Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_clear_cauldron_button_pressed"]
 [connection signal="pressed" from="CauldronNodes/Make Cauldron potion Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_make_cauldron_potion_button_pressed"]
-[connection signal="pressed" from="RuneTableNodes/Make Powder Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_powder_button_pressed"]
-[connection signal="pressed" from="RuneTableNodes/Make Goo Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_goo_button_pressed"]
-[connection signal="pressed" from="RuneTableNodes/Make Neutral Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_neutral_button_pressed"]
+[connection signal="pressed" from="RuneTableNodes/Buttons/Make Powder Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_powder_button_pressed"]
+[connection signal="pressed" from="RuneTableNodes/Buttons/Make Goo Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_goo_button_pressed"]
+[connection signal="pressed" from="RuneTableNodes/Buttons/Make Neutral Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_neutral_button_pressed"]
 
 [editable path="Recipe UI"]
 [editable path="Almanac UI"]

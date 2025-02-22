@@ -67,6 +67,7 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 	var expectedIngredientRunes = _target_potion.listOfIngredientRunes
 	var i=0
 	
+	
 	while i<len(expectedIngredientRunes):
 		var j=0
 		var ingredientExists = false;
@@ -80,11 +81,18 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 			j+=1
 		if ingredientExists == false:
 			print("Wrong potion")
+			potion_complete()
 			return false #potion fail
 		
 	print("Correct potion")
+	potion_complete()
 	return true
 
+
+func potion_complete()-> void:
+	%GameEnd.visible=true
+	pass
+	
 func _on_clear_cauldron_button_pressed() -> void:
 	array.clear();
 	print(self.name,"ARRAY CLEARED!",array)
@@ -129,5 +137,7 @@ func create_potion_with_same_rune(runeType:int) -> void:
 		print('%"Drop Indicator Cauldron".array has ',each.ingredient.name, each.rune.name)
 	ingredientRuneArray.clear()
 	%"Drop Area Rune".array.clear()
+	%RuneTableIngredient.texture = null
+	%TableNotification.visible = false
 	
 	

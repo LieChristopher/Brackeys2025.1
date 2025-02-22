@@ -23,3 +23,5 @@ func _on_draggable_released(pos: Vector2) -> void:
 	if _intersected_area is IngredientDropArea2D:
 		_drop_area = _intersected_area as IngredientDropArea2D;
 		_drop_area.add_ingredient(self);
+		%RuneTableIngredient.texture = load(self._ingredient_id.sprite.resource_path)
+		%TableNotification.visible = true

@@ -1,13 +1,12 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://338me5n68mvn"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_lifbe"]
-[ext_resource type="Texture2D" path="../../../arts/internal/sprites/ingredients/Ingredient - Stone Fish.png" id="2_kqant"]
-
+[ext_resource type="Texture2D" uid="uid://n80ondf6jbof" path="res://project/arts/internal/sprites/ingredients/Stone Fish.png" id="2_aacvn"]
 
 [resource]
 script = ExtResource("1_lifbe")
 name = "STONE FISH"
-sprite = ExtResource("2_kqant")
+sprite = ExtResource("2_aacvn")
 LethalVital = -5
 StinkyFragrant = -5
 BodyMind = -5
