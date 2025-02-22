@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://8du60s7v5nus"]
+
+[ext_resource type="StyleBox" uid="uid://du3jeyg5l6ulq" path="res://project/arts/internal/user-interface/main-menu/boxes/main-btn.tres" id="1_agl77"]
+[ext_resource type="FontFile" uid="uid://de6wd14syob7j" path="res://project/arts/external/fonts/Merriweather/Merriweather-Bold.ttf" id="2_ki5k4"]
+[ext_resource type="StyleBox" uid="uid://cwtcs4mpcx3tx" path="res://project/arts/internal/user-interface/main-menu/boxes/main-btn-hover.tres" id="2_wpu37"]
+[ext_resource type="FontFile" uid="uid://bv0unvx6bhh10" path="res://project/arts/external/fonts/Merriweather/Merriweather-BoldItalic.ttf" id="3_ypk1y"]
+[ext_resource type="StyleBox" uid="uid://yyayl1pdpn35" path="res://project/arts/internal/user-interface/main-menu/boxes/main-btn-pressed.tres" id="4_0pknj"]
+[ext_resource type="FontFile" uid="uid://dhlykyr0347bj" path="res://project/arts/external/fonts/Merriweather/Merriweather-Italic.ttf" id="4_sxtdu"]
+[ext_resource type="FontFile" uid="uid://hwhjwaqvgysr" path="res://project/arts/external/fonts/Merriweather/Merriweather-Light.ttf" id="5_5kojh"]
+[ext_resource type="FontFile" uid="uid://b1fsdwilyt2kb" path="res://project/arts/external/fonts/Merriweather/Merriweather-Regular.ttf" id="6_pfhhi"]
+
+[resource]
+default_font = ExtResource("6_pfhhi")
+default_font_size = 24
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("6_pfhhi")
+Button/styles/hover = ExtResource("2_wpu37")
+Button/styles/normal = ExtResource("1_agl77")
+Button/styles/pressed = ExtResource("4_0pknj")
+RichTextLabel/fonts/bold_font = ExtResource("2_ki5k4")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_ypk1y")
+RichTextLabel/fonts/italics_font = ExtResource("4_sxtdu")
+RichTextLabel/fonts/mono_font = ExtResource("5_5kojh")
+RichTextLabel/fonts/normal_font = ExtResource("6_pfhhi")

@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b1eehrjm21jxu"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_4nd1i"]
-[ext_resource type="Texture2D" path="Fish Scale.png" id="2_vc1hv"]
+[ext_resource type="Texture2D" path="../../../arts/internal/sprites/ingredients/Fish Scale.png" id="2_vc1hv"]
+
 
 [resource]
 script = ExtResource("1_4nd1i")

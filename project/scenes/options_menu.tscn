@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8cl7q634kt5l"]
+[gd_scene load_steps=4 format=3 uid="uid://c8cl7q634kt5l"]
 
+[ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="1_bc7w5"]
 [ext_resource type="Script" path="res://options_menu.gd" id="1_vioqj"]
 [ext_resource type="Script" path="res://project/scenes/audio_options.gd" id="2_ggre2"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_bc7w5")
 script = ExtResource("1_vioqj")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -36,6 +38,7 @@ layout_mode = 2
 script = ExtResource("2_ggre2")
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Audio Options"]
+layout_mode = 0
 offset_left = -3.0
 offset_top = 62.0
 offset_right = 362.0

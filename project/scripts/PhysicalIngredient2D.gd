@@ -1,6 +1,8 @@
 class_name PhysicalIngredient2D
 extends Node2D
 
+@export var _ingredient_id: RecipeIngredient = null;
+
 # Runtime variable data.
 var _intersected_area: Area2D = null;
 var _drop_area: IngredientDropArea2D = null;

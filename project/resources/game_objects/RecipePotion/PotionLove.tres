@@ -25,4 +25,5 @@ ingredient = ExtResource("4_7o3h7")
 script = ExtResource("2_mnq6e")
 name = ""
 listOfIngredientRunes = Array[ExtResource("1_gjo2v")]([SubResource("Resource_ajvl4"), SubResource("Resource_meye2")])
+sprite = Vector2(0, 0)
 points = 0
