@@ -94,6 +94,8 @@ layout_mode = 1
 
 [node name="VolumeSlider2" parent="Options Menu/Contents/Audio Options/VBoxContainer/SFX" index="1" instance=ExtResource("5_ch5aw")]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Main Contents/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_visible" binds= [false]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_process_mode" binds= [4]]
