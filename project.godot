@@ -22,8 +22,49 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"character_oldMan": "res://project/scripts/dialogic/character_oldMan.dch",
+"character_player": "res://project/scripts/dialogic/character_player.dch",
+"character_poorGuy": "res://project/scripts/dialogic/character_poorGuy.dch",
+"character_richGirl": "res://project/scripts/dialogic/character_richGirl.dch"
+}
+directories/dtl_directory={
+"timeline_oldMan_Day1_End": "res://project/scripts/dialogic/timeline_oldMan_Day1_End.dtl",
+"timeline_oldMan_Day1_Start": "res://project/scripts/dialogic/timeline_oldMan_Day1_Start.dtl",
+"timeline_poorGuy_Day1_Start": "res://project/scripts/dialogic/timeline_poorGuy_Day1_Start.dtl",
+"timeline_richGirl_Day1_End": "res://project/scripts/dialogic/timeline_richGirl_Day1_End.dtl",
+"timeline_richGirl_Day1_Start": "res://project/scripts/dialogic/timeline_richGirl_Day1_Start.dtl"
+}
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="Default"
+variables={
+"Names": {
+"Var": "",
+"oldMan": "Boisterous Old Man"
+},
+"success": true
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+audio/max_channels=4.0
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
 
 [editor_plugins]
 
