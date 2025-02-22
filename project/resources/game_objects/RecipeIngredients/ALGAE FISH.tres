@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://be3d2ysjyrhlh"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_o2a8d"]
+[ext_resource type="Texture2D" path="Ingredient - Algae Fish.png" id="2_jotvk"]
+
+[resource]
+script = ExtResource("1_o2a8d")
+name = "ALGAE FISH"
+sprite = ExtResource("2_jotvk")
+LethalVital = 3
+StinkyFragrant = -5
+BodyMind = -3
+description = "A bog fish. Smells like swamp. But paste made from the moss coating make for quite the potent healing ingredient. While turning the fish's bones into powder grants water-resistant properties."
+aspectValueList = Array[int]([0, 0, 0])

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b41a3w7dek54u"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_ct7kg"]
+[ext_resource type="Texture2D" path="Goat Eye.png" id="2_5r4ma"]
+
+[resource]
+script = ExtResource("1_ct7kg")
+name = "GOAT EYE"
+sprite = ExtResource("2_5r4ma")
+LethalVital = 3
+StinkyFragrant = -5
+BodyMind = 5
+description = "Using eyes as an ingredient will grant very literal effects. In this case the properties of the goat. Paste made out of goat eyes however grant inexplicable mystical and mental effects."
+aspectValueList = Array[int]([0, 0, 0])

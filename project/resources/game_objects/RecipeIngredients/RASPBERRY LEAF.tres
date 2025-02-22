@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://ci5f7wv8x5h3p"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_sp631"]
+[ext_resource type="Texture2D" path="Raspberry Leaf.png" id="2_u0l0q"]
+
+[resource]
+script = ExtResource("1_sp631")
+name = "RASPBERRY LEAF"
+sprite = ExtResource("2_u0l0q")
+LethalVital = 0
+StinkyFragrant = 5
+BodyMind = 0
+description = "A herb that can be found nearly everywhere. Refreshing and fragrant like perfume. Helps staunch the smelliest of smells. Increases potency and causes sleepiness if processed into a paste."
+aspectValueList = Array[int]([0, 0, 0])

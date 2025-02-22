@@ -6,4 +6,4 @@ class_name RecipeRune
 @export var spriteResult : Texture2D
 @export var adjective : String
 
-@export var gooiness : int
+@export var gooeyness : int

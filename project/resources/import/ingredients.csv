@@ -1,0 +1,13 @@
+Column 1	Sprite File Name	Lethality/Vitality	Stinky/Fragrant	Body/Mind	Lore
+HORN	Horn.png	3	0	5	A protruding bone from an animal. Grants stiffening properties from it's broth, but as a powder oddly makes one smarter.
+FANG	Beast Fang.png	-5	-5	-5	Teeth from a vile stinky meat-eating scavenger. Gives body altering effects if processed into powder, but is otherwise toxic and an incredibly sharp tooth
+TURTLE SCUTE	Turtle Scute.png	5	-2	-5	A popular ingredient known for it's energizing properties. A little smelly but an effective energizing agent . Turning it to fine powder amplifies the effect of physical changes
+FISH SCALE	Fish Scale.png	0	-5	5	Smells like old fish. Rancid. Only useful if turned into fine powder, that is said to sharpen one's wit.
+RASPBERRY LEAF	Raspberry Leaf.png	0	5	0	A herb that can be found nearly everywhere. Refreshing and fragrant like perfume. Helps staunch the smelliest of smells. Increases potency and causes sleepiness if processed into a paste.
+POISON IVY	Poison Ivy.png	-5	0	-3	Nearly identical to the Raspberry Leaf, easily mistaken for it save for it's pointier features.Very toxic, but if consummed as a paste can counteract some toxins instead 
+WORM	Ingredient - Worms.png	3	0	-3	Worms found in farmland, and beneath earthy soil. A local delicacy. But when turned into paste has the effect of reducing the effects of toxins and close small wounds.
+BEANS	Ingredient - Beans.png	-3	-4	-5	These beans are an extremely potent detoxifying ingredient. But it has the side effect of causing incredible swelling, warts and gas. Turning it to paste will lessen these effects somewhat.
+STONE FISH	Ingredient - Stone Fish.png	-5	-5	-5	The stench, toxicity, and horror of this fish is known to all alchemists. But none can deny the effects it bestows. A paste made from this fish will make your skin hard as stone, and mend wounds.
+ALGAE FISH	Ingredient - Algae Fish.png	3	-5	-3	A bog fish. Smells like swamp. But paste made from the moss coating make for quite the potent healing ingredient. While turning the fish's bones into powder grants water-resistant properties.
+FROG EYES	Frog Eyes.png	3	-5	2	Using eyes as an ingredient will grant very literal effects. In this case the properties of the frog. Processing the eyes in any way will dissipate it's effects entirely rendering it into just a smelly pile of junk.
+GOAT EYE	Goat Eye.png	3	-5	5	Using eyes as an ingredient will grant very literal effects. In this case the properties of the goat. Paste made out of goat eyes however grant inexplicable mystical and mental effects.

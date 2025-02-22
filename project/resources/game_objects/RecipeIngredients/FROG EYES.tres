@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://rjgrucrt0syf"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_7l24y"]
+[ext_resource type="Texture2D" path="Frog Eyes.png" id="2_kglm4"]
+
+[resource]
+script = ExtResource("1_7l24y")
+name = "FROG EYES"
+sprite = ExtResource("2_kglm4")
+LethalVital = 3
+StinkyFragrant = -5
+BodyMind = 2
+description = "Using eyes as an ingredient will grant very literal effects. In this case the properties of the frog. Processing the eyes in any way will dissipate it's effects entirely rendering it into just a smelly pile of junk."
+aspectValueList = Array[int]([0, 0, 0])

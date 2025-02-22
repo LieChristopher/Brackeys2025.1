@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://bqnufgurlhqqy"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_j41dc"]
+[ext_resource type="Texture2D" path="Ingredient - Beans.png" id="2_8skbf"]
+
+[resource]
+script = ExtResource("1_j41dc")
+name = "BEANS"
+sprite = ExtResource("2_8skbf")
+LethalVital = -3
+StinkyFragrant = -4
+BodyMind = -5
+description = "These beans are an extremely potent detoxifying ingredient. But it has the side effect of causing incredible swelling, warts and gas. Turning it to paste will lessen these effects somewhat."
+aspectValueList = Array[int]([0, 0, 0])

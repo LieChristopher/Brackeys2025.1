@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b1eehrjm21jxu"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_4nd1i"]
+[ext_resource type="Texture2D" path="Fish Scale.png" id="2_vc1hv"]
+
+[resource]
+script = ExtResource("1_4nd1i")
+name = "FISH SCALE"
+sprite = ExtResource("2_vc1hv")
+LethalVital = 0
+StinkyFragrant = -5
+BodyMind = 5
+description = "Smells like old fish. Rancid. Only useful if turned into fine powder, that is said to sharpen one's wit."
+aspectValueList = Array[int]([0, 0, 0])

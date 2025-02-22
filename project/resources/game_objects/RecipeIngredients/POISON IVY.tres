@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://d3lev24x6lypb"]
+
+[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_bysfs"]
+[ext_resource type="Texture2D" path="Poison Ivy.png" id="2_2cu35"]
+
+[resource]
+script = ExtResource("1_bysfs")
+name = "POISON IVY"
+sprite = ExtResource("2_2cu35")
+LethalVital = -5
+StinkyFragrant = 0
+BodyMind = -3
+description = "Nearly identical to the Raspberry Leaf, easily mistaken for it save for it's pointier features.Very toxic, but if consummed as a paste can counteract some toxins instead "
+aspectValueList = Array[int]([0, 0, 0])

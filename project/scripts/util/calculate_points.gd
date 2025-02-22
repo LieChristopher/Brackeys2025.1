@@ -1,4 +1,4 @@
-extends Node
+extends Resource
 
 func distanceEuclidean(list1: Array[int], list2: Array[int]):
 	var squared: float = 0
