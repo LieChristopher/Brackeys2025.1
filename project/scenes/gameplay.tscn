@@ -1,18 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=11 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="PackedScene" uid="uid://cchwg152iv3ip" path="res://project/prefabs/draggable_area_template (works).tscn" id="1_3dths"]
-[ext_resource type="Script" path="res://project/scripts/pointer-controller/PointerControl2D.gd" id="1_f5gco"]
+[ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="3_3woh7"]
+[ext_resource type="Texture2D" uid="uid://bpngfrfiknk51" path="res://project/arts/internal/sprites/ingredients/Beast Fang.png" id="4_oimyw"]
+[ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="5_qvt0x"]
+[ext_resource type="Texture2D" uid="uid://cw23hitf2r5c" path="res://project/arts/internal/sprites/ingredients/Goat Eye.png" id="6_bxuu3"]
+[ext_resource type="PackedScene" uid="uid://cfbyjw2lwgigk" path="res://project/prefabs/ingredient_drop_area.tscn" id="8_4kkyh"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yx02j"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_as8e7"]
+radius = 192.044
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6w65d"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6uatf"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_55wjo"]
+radius = 140.089
 
 [node name="Gameplay" type="Node2D"]
-script = ExtResource("1_f5gco")
+script = ExtResource("1_nrl2g")
 
 [node name="Pointer Control" parent="." instance=ExtResource("2_gwq1t")]
 
@@ -26,27 +30,51 @@ expand_mode = 2
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Draggable Area" parent="Node" instance=ExtResource("1_3dths")]
+[node name="Draggable Area (beast fang)" parent="Node" instance=ExtResource("1_3dths")]
 position = Vector2(921, 131)
+_debug_print = false
 
-[node name="Sprite" parent="Node/Draggable Area" index="0"]
+[node name="Sprite" parent="Node/Draggable Area (beast fang)" index="0"]
 scale = Vector2(0.125, 0.125)
-texture = SubResource("CompressedTexture2D_yx02j")
+texture = ExtResource("4_oimyw")
 
-[node name="Draggable Area2" parent="Node" instance=ExtResource("1_3dths")]
+[node name="Draggable Area2 (fish scale)" parent="Node" instance=ExtResource("1_3dths")]
 position = Vector2(1081, 128)
+_debug_print = false
 
-[node name="Sprite" parent="Node/Draggable Area2" index="0"]
+[node name="Sprite" parent="Node/Draggable Area2 (fish scale)" index="0"]
 scale = Vector2(0.13, 0.13)
-texture = SubResource("CompressedTexture2D_6w65d")
+texture = ExtResource("5_qvt0x")
 
-[node name="Draggable Area3" parent="Node" instance=ExtResource("1_3dths")]
+[node name="Draggable Area3 (Frog eye)" parent="Node" instance=ExtResource("1_3dths")]
 position = Vector2(941, 266)
+_debug_print = false
 
-[node name="Sprite" parent="Node/Draggable Area3" index="0"]
+[node name="Sprite" parent="Node/Draggable Area3 (Frog eye)" index="0"]
 scale = Vector2(0.115, 0.115)
-texture = SubResource("CompressedTexture2D_6uatf")
+texture = ExtResource("6_bxuu3")
 
-[editable path="Node/Draggable Area"]
-[editable path="Node/Draggable Area2"]
-[editable path="Node/Draggable Area3"]
+[node name="IngredientDropArea (Cauldron)" parent="." instance=ExtResource("8_4kkyh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientDropArea (Cauldron)"]
+position = Vector2(238, 326)
+shape = SubResource("CircleShape2D_as8e7")
+
+[node name="Clear Cauldron Button" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 555.0
+offset_right = 156.0
+offset_bottom = 650.0
+text = "clear cauldron"
+
+[node name="IngredientDropArea (Rune Area)" parent="." instance=ExtResource("8_4kkyh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientDropArea (Rune Area)"]
+position = Vector2(633, 508)
+shape = SubResource("CircleShape2D_55wjo")
+
+[connection signal="pressed" from="Clear Cauldron Button" to="IngredientDropArea (Cauldron)" method="_on_button_pressed"]
+
+[editable path="Node/Draggable Area (beast fang)"]
+[editable path="Node/Draggable Area2 (fish scale)"]
+[editable path="Node/Draggable Area3 (Frog eye)"]

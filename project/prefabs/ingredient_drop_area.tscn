@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfbyjw2lwgigk"]
+
+[ext_resource type="Script" path="res://ingredient_drop_area.gd" id="1_jdfhg"]
+
+[node name="IngredientDropArea" type="Area2D"]
+script = ExtResource("1_jdfhg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
