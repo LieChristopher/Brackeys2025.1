@@ -36,6 +36,7 @@ layout_mode = 2
 script = ExtResource("2_ggre2")
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Audio Options"]
+layout_mode = 0
 offset_left = -3.0
 offset_top = 62.0
 offset_right = 362.0

@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgmjwhupccgw2"]
+
+[ext_resource type="Script" path="res://project/scripts/pause_menu.gd" id="1_t8m1o"]
+[ext_resource type="Script" path="res://project/scenes/audio_options.gd" id="2_dhmpq"]
+
+[sub_resource type="Gradient" id="Gradient_lfukq"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vhl1d"]
+gradient = SubResource("Gradient_lfukq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_y8xav"]
+line_spacing = 3.155
+font_size = 71
+
+[node name="Pause menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00554, 1.01819)
+script = ExtResource("1_t8m1o")
+
+[node name="Pause Button" type="Button" parent="."]
+process_mode = 3
+z_index = 3
+layout_mode = 0
+offset_left = 19.8898
+offset_top = 21.607
+offset_right = 110.89
+offset_bottom = 75.607
+scale = Vector2(1.22962, 1.23154)
+text = "Pause
+
+"
+
+[node name="MenuScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="MenuScreen"]
+visible = false
+light_mask = 2
+visibility_layer = 2
+z_index = -1
+layout_mode = 2
+offset_left = -1.98898
+offset_top = -0.982135
+offset_right = 773.011
+offset_bottom = 185.018
+scale = Vector2(1.49462, 3.45268)
+texture = SubResource("GradientTexture1D_vhl1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.118
+anchor_right = 0.365
+anchor_bottom = 0.118
+offset_left = 204.025
+offset_top = 111.172
+offset_right = 686.265
+offset_bottom = 298.172
+scale = Vector2(1.39509, 2.11492)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuScreen/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME PAUSED"
+label_settings = SubResource("LabelSettings_y8xav")
+horizontal_alignment = 1
+
+[node name="Unpause Button" type="Button" parent="MenuScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Unpause
+"
+
+[node name="Audio Options" type="Control" parent="MenuScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_dhmpq")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MenuScreen/MarginContainer/VBoxContainer/Audio Options"]
+layout_mode = 0
+offset_left = 2.85141
+offset_top = 13.996
+offset_right = 367.851
+offset_bottom = 96.996
+scale = Vector2(1.36764, 0.756446)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuScreen/MarginContainer/VBoxContainer/Audio Options/MarginContainer2"]
+layout_mode = 2
+
+[node name="VolumeLabel" type="Label" parent="MenuScreen/MarginContainer/VBoxContainer/Audio Options/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="MenuScreen/MarginContainer/VBoxContainer/Audio Options/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="Pause Button" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MarginContainer/VBoxContainer/Unpause Button" to="." method="_on_unpause_button_pressed"]
+[connection signal="drag_ended" from="MenuScreen/MarginContainer/VBoxContainer/Audio Options/MarginContainer2/VBoxContainer/VolumeSlider" to="MenuScreen/MarginContainer/VBoxContainer/Audio Options" method="_on_volume_slider_drag_ended"]
