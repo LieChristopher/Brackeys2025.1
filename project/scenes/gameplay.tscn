@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="3_3woh7"]
-[ext_resource type="PackedScene" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
+[ext_resource type="PackedScene" uid="uid://bh5n8k13hs61f" path="res://project/prefabs/physical-ingredient.tscn" id="4_lhp4y"]
 [ext_resource type="Texture2D" uid="uid://wjabt8wbodot" path="res://project/arts/internal/sprites/ingredients/Fish Scale.png" id="5_qvt0x"]
 [ext_resource type="Texture2D" uid="uid://de5v087mvp4ol" path="res://project/arts/internal/sprites/ingredients/Frog Eyes.png" id="6_6rbcy"]
 [ext_resource type="PackedScene" uid="uid://cfbyjw2lwgigk" path="res://project/prefabs/ingredient_drop_area.tscn" id="8_4kkyh"]

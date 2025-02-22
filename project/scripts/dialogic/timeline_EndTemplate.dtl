@@ -1,0 +1,16 @@
+if {InteractionCounter.OldMan} == 0:
+	set {InteractionCounter.OldMan} = 1
+	if {success} == true:
+		set {MoodGood.OldMan} = true
+	else:
+		set {MoodGood.OldMan} = false
+if {InteractionCounter.OldMan} == 1:
+	set {InteractionCounter.OldMan} = 2
+	if {success} == true:
+		if {MoodGood.OldMan} == true:
+		else:
+			set {MoodGood.OldMan} = false
+	else:
+		if {MoodGood.OldMan} == true:
+		else:
+		set {MoodGood.OldMan} = false
