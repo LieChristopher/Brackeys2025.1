@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bah3qycv6ybwf"]
+
+[ext_resource type="StyleBox" uid="uid://c8k1i6xtqsfvs" path="res://project/arts/internal/user-interface/gameplay/boxes/gameplay-btn.tres" id="1_f7rtj"]
+[ext_resource type="FontFile" uid="uid://b1fsdwilyt2kb" path="res://project/arts/external/fonts/Merriweather/Merriweather-Regular.ttf" id="2_yg5eb"]
+
+[resource]
+default_font = ExtResource("2_yg5eb")
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = ExtResource("1_f7rtj")
+Button/styles/pressed = ExtResource("1_f7rtj")

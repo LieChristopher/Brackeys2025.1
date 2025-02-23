@@ -69,16 +69,16 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 	
 	
 	while i<len(expectedIngredientRunes):
-		var j=0
-		var ingredientExists = false;
-		while j<len(cauldronArray):
+		var j: int = 0;
+		var ingredientExists: bool = false;
+		while j < len(cauldronArray):
 			if expectedIngredientRunes[i].ingredient.name == cauldronArray[j].ingredient.name  && expectedIngredientRunes[i].rune.name  == cauldronArray[j].rune.name :
 				ingredientExists = true;
 				print(cauldronArray[j].ingredient.name)
 				cauldronArray.remove_at(j);
-				i+=1
-				j=0
-			j+=1
+				i += 1;
+				j = 0;
+			j += 1;
 		if ingredientExists == false:
 			print("Wrong potion")
 			potion_complete()

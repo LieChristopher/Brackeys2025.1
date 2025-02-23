@@ -64,6 +64,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Background" type="TextureRect" parent="AlmanacScreen"]
 self_modulate = Color(0.370364, 0.370364, 0.370364, 1)
@@ -73,6 +74,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_3y5oi")
 expand_mode = 1
 stretch_mode = 6
@@ -144,10 +146,12 @@ offset_right = 72.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 alignment = 2
 
 [node name="Page Hint" type="RichTextLabel" parent="AlmanacScreen/V Align"]
 layout_mode = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]XX / XX[/b][/center]"
 fit_content = true
