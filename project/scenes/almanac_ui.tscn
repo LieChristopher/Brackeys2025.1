@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpqrd6hbyxvt7"]
+
+[ext_resource type="Script" path="res://almanac_ui.gd" id="1_oaqi7"]
+[ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="2_3y5oi"]
+[ext_resource type="Texture2D" uid="uid://0ys8ethcsp3j" path="res://project/arts/internal/sprites/almanac/Left_Right Buttons.png" id="3_x63w2"]
+[ext_resource type="Texture2D" uid="uid://b20rwdns5j71c" path="res://project/arts/internal/sprites/almanac/Alamanac-1.png" id="4_n34by"]
+
+[node name="Almanac UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oaqi7")
+
+[node name="Show Almanac Button" type="Button" parent="."]
+process_mode = 3
+top_level = true
+z_index = 6
+layout_mode = 0
+offset_left = 1022.0
+offset_top = 600.0
+offset_right = 1157.0
+offset_bottom = 668.0
+scale = Vector2(0.936843, 0.645581)
+theme_override_font_sizes/font_size = 21
+text = "Almanac"
+
+[node name="AlmanacScreen" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = -7.0
+offset_top = 2.0
+offset_right = 33.0
+offset_bottom = 42.0
+
+[node name="TextureRect" type="TextureRect" parent="AlmanacScreen"]
+self_modulate = Color(0.370364, 0.370364, 0.370364, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -16.0
+offset_right = -2.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(29.5219, 16.6387)
+texture = ExtResource("2_3y5oi")
+expand_mode = 1
+stretch_mode = 6
+flip_h = true
+
+[node name="TextureRect4" type="TextureRect" parent="AlmanacScreen"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -6.0
+offset_right = 1925.0
+offset_bottom = 1074.0
+scale = Vector2(0.60819, 0.547498)
+texture = ExtResource("3_x63w2")
+
+[node name="TextureRect2" type="TextureRect" parent="AlmanacScreen"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = -36.0
+offset_right = 1977.0
+offset_bottom = 1044.0
+scale = Vector2(0.574599, 0.583877)
+texture = ExtResource("4_n34by")
+
+[node name="Next" type="Button" parent="AlmanacScreen"]
+z_index = 5
+layout_mode = 0
+offset_left = 1086.0
+offset_top = 177.0
+offset_right = 1094.0
+offset_bottom = 185.0
+scale = Vector2(8.96162, 28.149)
+
+[node name="Prev" type="Button" parent="AlmanacScreen"]
+z_index = 5
+layout_mode = 0
+offset_left = 24.0
+offset_top = 183.0
+offset_right = 32.0
+offset_bottom = 191.0
+scale = Vector2(8.96162, 28.149)
+
+[connection signal="pressed" from="Show Almanac Button" to="." method="_on_show_almanac_button_pressed"]
+[connection signal="pressed" from="AlmanacScreen/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="AlmanacScreen/Prev" to="." method="_on_prev_pressed"]

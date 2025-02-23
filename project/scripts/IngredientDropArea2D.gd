@@ -2,8 +2,10 @@ class_name IngredientDropArea2D
 extends Area2D
 
 # Variables.
-@export_group("Target Potion")
+@export_group("Target Potion (changes needed)")
 @export var _target_potion: RecipePotion = null;
+
+@export_group("Runes for Rune Table")
 @export var _neutral_rune: RecipeRune = null;
 @export var _goo_rune: RecipeRune = null;
 @export var _powder_rune: RecipeRune = null;
@@ -65,23 +67,32 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 	var expectedIngredientRunes = _target_potion.listOfIngredientRunes
 	var i=0
 	
+	
 	while i<len(expectedIngredientRunes):
 		var j=0
 		var ingredientExists = false;
 		while j<len(cauldronArray):
 			if expectedIngredientRunes[i].ingredient.name == cauldronArray[j].ingredient.name  && expectedIngredientRunes[i].rune.name  == cauldronArray[j].rune.name :
 				ingredientExists = true;
+				print(cauldronArray[j].ingredient.name)
 				cauldronArray.remove_at(j);
 				i+=1
 				j=0
 			j+=1
 		if ingredientExists == false:
 			print("Wrong potion")
+			potion_complete()
 			return false #potion fail
 		
 	print("Correct potion")
+	potion_complete()
 	return true
 
+
+func potion_complete()-> void:
+	%GameEnd.visible=true
+	pass
+	
 func _on_clear_cauldron_button_pressed() -> void:
 	array.clear();
 	print(self.name,"ARRAY CLEARED!",array)
@@ -126,5 +137,7 @@ func create_potion_with_same_rune(runeType:int) -> void:
 		print('%"Drop Indicator Cauldron".array has ',each.ingredient.name, each.rune.name)
 	ingredientRuneArray.clear()
 	%"Drop Area Rune".array.clear()
+	%RuneTableIngredient.texture = null
+	%TableNotification.visible = false
 	
 	
