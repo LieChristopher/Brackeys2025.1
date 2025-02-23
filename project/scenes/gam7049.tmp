@@ -263,19 +263,19 @@ texture = ExtResource("7_g8ano")
 [node name="Collider" parent="IngredientNodes/Physical Ingredient (Horn)/Draggable Area" index="1"]
 scale = Vector2(0.657753, 0.746428)
 
-[node name="Physical Ingredient (Poison Ivy)" parent="IngredientNodes" instance=ExtResource("4_lhp4y")]
+[node name="Physical Ingredient (Poison Ivy)2" parent="IngredientNodes" instance=ExtResource("4_lhp4y")]
 position = Vector2(4709, 794)
 _ingredient_id = ExtResource("19_henek")
 
-[node name="Draggable Area" parent="IngredientNodes/Physical Ingredient (Poison Ivy)" index="0"]
+[node name="Draggable Area" parent="IngredientNodes/Physical Ingredient (Poison Ivy)2" index="0"]
 position = Vector2(-2982, -186)
 scale = Vector2(1.40927, 1.56586)
 
-[node name="Sprite" parent="IngredientNodes/Physical Ingredient (Poison Ivy)/Draggable Area" index="0"]
+[node name="Sprite" parent="IngredientNodes/Physical Ingredient (Poison Ivy)2/Draggable Area" index="0"]
 position = Vector2(1, 13)
 texture = ExtResource("20_b013x")
 
-[node name="Collider" parent="IngredientNodes/Physical Ingredient (Poison Ivy)/Draggable Area" index="1"]
+[node name="Collider" parent="IngredientNodes/Physical Ingredient (Poison Ivy)2/Draggable Area" index="1"]
 position = Vector2(-2, 12)
 scale = Vector2(0.725504, 0.784503)
 
@@ -329,21 +329,21 @@ texture = ExtResource("26_ng1u0")
 position = Vector2(2, 12)
 scale = Vector2(0.725504, 0.784503)
 
-[node name="Physical Ingredient (Worm)" parent="IngredientNodes" instance=ExtResource("4_lhp4y")]
+[node name="Physical Ingredient (Worm)2" parent="IngredientNodes" instance=ExtResource("4_lhp4y")]
 position = Vector2(5081, 1343)
 scale = Vector2(1.01404, 1.01226)
 _ingredient_id = ExtResource("27_lpebh")
 
-[node name="Draggable Area" parent="IngredientNodes/Physical Ingredient (Worm)" index="0"]
+[node name="Draggable Area" parent="IngredientNodes/Physical Ingredient (Worm)2" index="0"]
 position = Vector2(-3171.48, -533.459)
 scale = Vector2(1.65349, 1.76177)
 
-[node name="Sprite" parent="IngredientNodes/Physical Ingredient (Worm)/Draggable Area" index="0"]
+[node name="Sprite" parent="IngredientNodes/Physical Ingredient (Worm)2/Draggable Area" index="0"]
 position = Vector2(1, 13)
 scale = Vector2(0.0851035, 0.0828997)
 texture = ExtResource("28_qtit8")
 
-[node name="Collider" parent="IngredientNodes/Physical Ingredient (Worm)/Draggable Area" index="1"]
+[node name="Collider" parent="IngredientNodes/Physical Ingredient (Worm)2/Draggable Area" index="1"]
 position = Vector2(-2, 12)
 scale = Vector2(0.725504, 0.784503)
 
@@ -534,15 +534,15 @@ position = Vector2(590.184, 317.791)
 [editable path="IngredientNodes/Physical Ingredient (Goat Eyes)/Draggable Area"]
 [editable path="IngredientNodes/Physical Ingredient (Horn)"]
 [editable path="IngredientNodes/Physical Ingredient (Horn)/Draggable Area"]
-[editable path="IngredientNodes/Physical Ingredient (Poison Ivy)"]
-[editable path="IngredientNodes/Physical Ingredient (Poison Ivy)/Draggable Area"]
+[editable path="IngredientNodes/Physical Ingredient (Poison Ivy)2"]
+[editable path="IngredientNodes/Physical Ingredient (Poison Ivy)2/Draggable Area"]
 [editable path="IngredientNodes/Physical Ingredient (Stone Fish)"]
 [editable path="IngredientNodes/Physical Ingredient (Stone Fish)/Draggable Area"]
 [editable path="IngredientNodes/Physical Ingredient (Raspberry Leaf)"]
 [editable path="IngredientNodes/Physical Ingredient (Raspberry Leaf)/Draggable Area"]
 [editable path="IngredientNodes/Physical Ingredient (Turtle Scute)"]
 [editable path="IngredientNodes/Physical Ingredient (Turtle Scute)/Draggable Area"]
-[editable path="IngredientNodes/Physical Ingredient (Worm)"]
-[editable path="IngredientNodes/Physical Ingredient (Worm)/Draggable Area"]
+[editable path="IngredientNodes/Physical Ingredient (Worm)2"]
+[editable path="IngredientNodes/Physical Ingredient (Worm)2/Draggable Area"]
 [editable path="CauldronNodes/Drop Indicator Cauldron"]
 [editable path="RuneTableNodes/Drop Area Rune"]
