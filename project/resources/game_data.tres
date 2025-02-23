@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GameData" load_steps=2 format=3 uid="uid://daubhhlgee811"]
+
+[ext_resource type="Script" path="res://project/scenes/game_data.gd" id="1_6nhsf"]
+
+[resource]
+script = ExtResource("1_6nhsf")
+level_list = ["oldMan_Day01", "richGirl_Day01", "poorGuy_Day01", "oldMan_Day02", "richGirl_Day02", "poorGuy_Day02"]
+completed_list = [false, false, false, false, false, false]

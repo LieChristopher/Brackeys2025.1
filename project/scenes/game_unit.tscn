@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bapwd3d6jpvby"]
+
+[ext_resource type="Script" path="res://project/scenes/game_unit.gd" id="1_0gb6s"]
+[ext_resource type="PackedScene" uid="uid://dcolix4rx84pb" path="res://project/scenes/gameplay.tscn" id="2_hcj8i"]
+
+[node name="GameUnit" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0gb6s")
+
+[node name="Gameplay" parent="." instance=ExtResource("2_hcj8i")]
