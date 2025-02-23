@@ -1,94 +1,156 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpqrd6hbyxvt7"]
+[gd_scene load_steps=13 format=3 uid="uid://cmbuctke5a1ct"]
 
+[ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="1_ip4jw"]
 [ext_resource type="Script" path="res://almanac_ui.gd" id="1_oaqi7"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="2_3y5oi"]
-[ext_resource type="Texture2D" uid="uid://0ys8ethcsp3j" path="res://project/arts/internal/sprites/almanac/Left_Right Buttons.png" id="3_x63w2"]
+[ext_resource type="StyleBox" uid="uid://clk4q2clegu2w" path="res://project/arts/internal/user-interface/main-menu/boxes/secondary-btn-hover.tres" id="3_x2rly"]
+[ext_resource type="StyleBox" uid="uid://cxomqoxcpp1rq" path="res://project/arts/internal/user-interface/main-menu/boxes/secondary-btn-pressed.tres" id="4_i73cy"]
 [ext_resource type="Texture2D" uid="uid://b20rwdns5j71c" path="res://project/arts/internal/sprites/almanac/Alamanac-1.png" id="4_n34by"]
+[ext_resource type="StyleBox" uid="uid://c7wchye3ht53u" path="res://project/arts/internal/user-interface/main-menu/boxes/secondary-btn.tres" id="5_cha06"]
+[ext_resource type="Texture2D" uid="uid://qtjref8jsky" path="res://project/arts/internal/sprites/almanac/next-arrow-page.png" id="5_kf68j"]
+[ext_resource type="Texture2D" uid="uid://5yuxa1lxecuh" path="res://project/arts/internal/sprites/almanac/prev-arrow-page.png" id="6_c1scm"]
 
-[node name="Almanac UI" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vapoe"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bjvc"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvgq7"]
+draw_center = false
+
+[node name="Almanac UI" type="Control" node_paths=PackedStringArray("_page_hint_txt")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ip4jw")
 script = ExtResource("1_oaqi7")
+_page_hint_txt = NodePath("AlmanacScreen/V Align/Page Hint")
+_formatted_text = "[center][b]{c} / {p}[/b][/center]"
 
 [node name="Show Almanac Button" type="Button" parent="."]
 process_mode = 3
 top_level = true
 z_index = 6
-layout_mode = 0
-offset_left = 1022.0
-offset_top = 600.0
-offset_right = 1157.0
-offset_bottom = 668.0
-scale = Vector2(0.936843, 0.645581)
-theme_override_font_sizes/font_size = 21
-text = "Almanac"
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -209.0
+offset_top = -92.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = ExtResource("3_x2rly")
+theme_override_styles/pressed = ExtResource("4_i73cy")
+theme_override_styles/normal = ExtResource("5_cha06")
+text = "ALMANAC"
 
 [node name="AlmanacScreen" type="Control" parent="."]
 z_index = 1
-layout_mode = 3
-anchors_preset = 0
-offset_left = -7.0
-offset_top = 2.0
-offset_right = 33.0
-offset_bottom = 42.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="AlmanacScreen"]
+[node name="Background" type="TextureRect" parent="AlmanacScreen"]
 self_modulate = Color(0.370364, 0.370364, 0.370364, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -16.0
-offset_right = -2.0
-offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(29.5219, 16.6387)
 texture = ExtResource("2_3y5oi")
 expand_mode = 1
 stretch_mode = 6
 flip_h = true
 
-[node name="TextureRect4" type="TextureRect" parent="AlmanacScreen"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = -6.0
-offset_right = 1925.0
-offset_bottom = 1074.0
-scale = Vector2(0.60819, 0.547498)
-texture = ExtResource("3_x63w2")
-
-[node name="TextureRect2" type="TextureRect" parent="AlmanacScreen"]
-layout_mode = 0
-offset_left = 57.0
-offset_top = -36.0
-offset_right = 1977.0
-offset_bottom = 1044.0
-scale = Vector2(0.574599, 0.583877)
+[node name="Recipe Book" type="TextureRect" parent="AlmanacScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_n34by")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Next" type="Button" parent="AlmanacScreen"]
 z_index = 5
-layout_mode = 0
-offset_left = 1086.0
-offset_top = 177.0
-offset_right = 1094.0
-offset_bottom = 185.0
-scale = Vector2(8.96162, 28.149)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -32.0
+offset_right = -48.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_vapoe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0bjvc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvgq7")
+icon = ExtResource("5_kf68j")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Prev" type="Button" parent="AlmanacScreen"]
 z_index = 5
-layout_mode = 0
-offset_left = 24.0
-offset_top = 183.0
-offset_right = 32.0
-offset_bottom = 191.0
-scale = Vector2(8.96162, 28.149)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -32.0
+offset_right = 112.0
+offset_bottom = 32.0
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_vapoe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0bjvc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvgq7")
+icon = ExtResource("6_c1scm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="V Align" type="VBoxContainer" parent="AlmanacScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -64.0
+offset_right = 72.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="Page Hint" type="RichTextLabel" parent="AlmanacScreen/V Align"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]XX / XX[/b][/center]"
+fit_content = true
 
 [connection signal="pressed" from="Show Almanac Button" to="." method="_on_show_almanac_button_pressed"]
 [connection signal="pressed" from="AlmanacScreen/Next" to="." method="_on_next_pressed"]
