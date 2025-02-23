@@ -50,13 +50,13 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/bold_italics_font_size = 48
-theme_override_font_sizes/italics_font_size = 48
-theme_override_font_sizes/mono_font_size = 48
-theme_override_font_sizes/normal_font_size = 48
-theme_override_font_sizes/bold_font_size = 48
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
 bbcode_enabled = true
-text = "[wave amp=100.0 freq=10.0][b]NAUGHTY POTION CRAFTING PROJECT[/b][/wave]"
+text = "[wave amp=100.0 freq=10.0][b]Dropout Alchemy[/b][/wave]"
 fit_content = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Contents"]
