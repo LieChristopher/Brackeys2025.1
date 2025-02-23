@@ -101,7 +101,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Pause menu" parent="." instance=ExtResource("9_08ny0")]
 process_mode = 3
-z_index = 5
+z_index = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Recipe UI" parent="." instance=ExtResource("3_g3kw6")]
@@ -114,7 +114,6 @@ scale = Vector2(1.00405, 1.03429)
 metadata/_edit_use_anchors_ = true
 
 [node name="Show Recipe Button" parent="Recipe UI" index="0"]
-layout_mode = 0
 offset_left = 1779.0
 offset_top = 20.0
 offset_right = 1914.0
@@ -130,17 +129,22 @@ scale = Vector2(1.00802, 1.0179)
 metadata/_edit_use_anchors_ = true
 
 [node name="Show Almanac Button" parent="Almanac UI" index="0"]
-layout_mode = 0
 offset_left = 1765.0
 offset_top = 1016.0
 offset_right = 1900.0
 offset_bottom = 1084.0
 
 [node name="TextureRect4" parent="Almanac UI/AlmanacScreen" index="1"]
-layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="Next" parent="Almanac UI/AlmanacScreen" index="3"]
-layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="IngredientNodes" type="Node" parent="."]
 
@@ -513,9 +517,9 @@ position = Vector2(590.184, 317.791)
 [connection signal="on_pointer_released" from="Pointer Control" to="CauldronNodes/Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_released"]
 [connection signal="pressed" from="CauldronNodes/Clear Cauldron Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_clear_cauldron_button_pressed"]
 [connection signal="pressed" from="CauldronNodes/Make Cauldron potion Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_make_cauldron_potion_button_pressed"]
-[connection signal="pressed" from="RuneTableNodes/Make Powder Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_powder_button_pressed"]
-[connection signal="pressed" from="RuneTableNodes/Make Goo Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_goo_button_pressed"]
-[connection signal="pressed" from="RuneTableNodes/Make Neutral Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_neutral_button_pressed"]
+[connection signal="pressed" from="RuneTableNodes/Buttons/Make Powder Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_powder_button_pressed"]
+[connection signal="pressed" from="RuneTableNodes/Buttons/Make Goo Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_goo_button_pressed"]
+[connection signal="pressed" from="RuneTableNodes/Buttons/Make Neutral Button" to="RuneTableNodes/Drop Area Rune" method="_on_make_neutral_button_pressed"]
 
 [editable path="Recipe UI"]
 [editable path="Almanac UI"]
