@@ -55,7 +55,10 @@ stretch_mode = 6
 flip_h = true
 
 [node name="TextureRect4" type="TextureRect" parent="AlmanacScreen"]
+<<<<<<< HEAD
 layout_mode = 0
+=======
+>>>>>>> 5fa260e95f2f4e77ca6b829d219d2b9833c1bacc
 offset_left = 5.0
 offset_top = -6.0
 offset_right = 1925.0
@@ -74,7 +77,10 @@ texture = ExtResource("4_n34by")
 
 [node name="Next" type="Button" parent="AlmanacScreen"]
 z_index = 5
+<<<<<<< HEAD
 layout_mode = 0
+=======
+>>>>>>> 5fa260e95f2f4e77ca6b829d219d2b9833c1bacc
 offset_left = 1086.0
 offset_top = 177.0
 offset_right = 1094.0
