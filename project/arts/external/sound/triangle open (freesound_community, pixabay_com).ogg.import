@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1640har8yj1t"
+path="res://.godot/imported/triangle open (freesound_community, pixabay_com).ogg-d0c22ef8ab9b4c077fb4b139a7f0ab76.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/triangle open (freesound_community, pixabay_com).ogg"
+dest_files=["res://.godot/imported/triangle open (freesound_community, pixabay_com).ogg-d0c22ef8ab9b4c077fb4b139a7f0ab76.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

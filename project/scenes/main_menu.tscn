@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://blgk6uvwsy20f"]
+[gd_scene load_steps=9 format=3 uid="uid://blgk6uvwsy20f"]
 
 [ext_resource type="Script" path="res://project/scenes/main_menu.gd" id="1_sg0my"]
 [ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="2_622jy"]
 [ext_resource type="PackedScene" uid="uid://c8cl7q634kt5l" path="res://project/scenes/options_menu.tscn" id="2_oske0"]
 [ext_resource type="Texture2D" uid="uid://bsjn86acwpmpr" path="res://project/arts/internal/sprites/scenes/Main Menu Brackeys.png" id="3_v7wxp"]
+[ext_resource type="AudioStream" uid="uid://c4wetv8ydlaqc" path="res://project/arts/external/sound/click-ui (by Rusu Gabriel, pixabay_com).ogg" id="4_q6cyf"]
 [ext_resource type="PackedScene" uid="uid://duo7tgjytmfy2" path="res://project/scripts/audio-system/audio_manager.tscn" id="5_ch5aw"]
+[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="5_jrmgv"]
+[ext_resource type="PackedScene" uid="uid://5nsyacj4u08s" path="res://project/scenes/credits_page.tscn" id="8_yi1kr"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -76,17 +79,46 @@ layout_mode = 2
 text = "PLAY"
 alignment = 0
 
+[node name="Click" type="AudioStreamPlayer2D" parent="Main Contents/VBoxContainer/Play"]
+stream = ExtResource("4_q6cyf")
+script = ExtResource("5_jrmgv")
+_audio_type = "SFX"
+
 [node name="Option" type="Button" parent="Main Contents/VBoxContainer"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 text = "SETTINGS"
 alignment = 0
 
+[node name="Click" type="AudioStreamPlayer2D" parent="Main Contents/VBoxContainer/Option"]
+position = Vector2(0, -80)
+stream = ExtResource("4_q6cyf")
+script = ExtResource("5_jrmgv")
+_audio_type = "SFX"
+
+[node name="Credits" type="Button" parent="Main Contents/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+text = "CREDITS"
+alignment = 0
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Main Contents/VBoxContainer/Credits"]
+position = Vector2(0, -160)
+stream = ExtResource("4_q6cyf")
+script = ExtResource("5_jrmgv")
+_audio_type = "SFX"
+
 [node name="Exit" type="Button" parent="Main Contents/VBoxContainer"]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 text = "EXIT GAME"
 alignment = 0
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Main Contents/VBoxContainer/Exit"]
+position = Vector2(0, -160)
+stream = ExtResource("4_q6cyf")
+script = ExtResource("5_jrmgv")
+_audio_type = "SFX"
 
 [node name="Options Menu" parent="." instance=ExtResource("2_oske0")]
 process_mode = 4
@@ -95,17 +127,34 @@ layout_mode = 1
 
 [node name="VolumeSlider2" parent="Options Menu/Contents/Audio Options/VBoxContainer/SFX" index="1" instance=ExtResource("5_ch5aw")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Credits Page" parent="." instance=ExtResource("8_yi1kr")]
+process_mode = 4
+visible = false
+layout_mode = 1
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
 
 [connection signal="pressed" from="Main Contents/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Play" to="Main Contents/VBoxContainer/Play/Click" method="play" binds= [0.0]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_process_mode" binds= [4]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents/VBoxContainer/Option/Click" method="play" binds= [0.0]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Options Menu" method="set_process_mode" binds= [0]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Options Menu" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Credits" to="Main Contents" method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Credits" to="Main Contents" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Credits" to="Main Contents/VBoxContainer/Credits/Click" method="play" binds= [0.0]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Credits" to="Credits Page" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Credits" to="Credits Page" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Exit" to="Main Contents/VBoxContainer/Exit/Click" method="play" binds= [0.0]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Main Contents" method="set_process_mode" binds= [0]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Main Contents" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_process_mode" binds= [4]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Credits Page/Back" to="Main Contents" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Credits Page/Back" to="Main Contents" method="set_visible" binds= [true]]
 
 [editable path="Options Menu"]
+[editable path="Credits Page"]

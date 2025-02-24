@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4wetv8ydlaqc"
+path="res://.godot/imported/click-ui (by Rusu Gabriel, pixabay_com).ogg-d9ded9146a61f882d0bb0f18e9b841af.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/click-ui (by Rusu Gabriel, pixabay_com).ogg"
+dest_files=["res://.godot/imported/click-ui (by Rusu Gabriel, pixabay_com).ogg-d9ded9146a61f882d0bb0f18e9b841af.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

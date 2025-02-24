@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cuy76ba8bcd8f"
+path="res://.godot/imported/long-distant-foghorn (by freesound_community, pixabay_com).ogg-21cc25591398714856227f34813e2d9b.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/long-distant-foghorn (by freesound_community, pixabay_com).ogg"
+dest_files=["res://.godot/imported/long-distant-foghorn (by freesound_community, pixabay_com).ogg-21cc25591398714856227f34813e2d9b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
