@@ -83,7 +83,6 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 			print("Wrong potion")
 			potion_complete()
 			Dialogic.VAR.set_variable("success",false)
-			get_parent().get_parent().complete = false
 			return false #potion fail
 			
 			
@@ -91,7 +90,6 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 	print("Correct potion")
 	potion_complete()
 	Dialogic.VAR.set_variable("success",true)
-	get_parent().get_parent().complete = true
 	return true
 
 
@@ -99,6 +97,7 @@ func potion_complete()-> void:
 	%GameEnd.visible=true
 	await get_tree().create_timer(1.0).timeout
 	%GameEnd.visible=false
+	get_parent().get_parent().complete = true
 	pass
 	
 func _on_clear_cauldron_button_pressed() -> void:
