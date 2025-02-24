@@ -337,7 +337,16 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("35_h1njv")
 
-[node name="Make Powder Button" type="Button" parent="Gameplay UI/Main Gameplay"]
+[node name="Rune Picker" type="Control" parent="Gameplay UI/Main Gameplay"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Make Powder Button" type="Button" parent="Gameplay UI/Main Gameplay/Rune Picker"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00703125
@@ -353,7 +362,7 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Make Neutral Button" type="Button" parent="Gameplay UI/Main Gameplay"]
+[node name="Make Neutral Button" type="Button" parent="Gameplay UI/Main Gameplay/Rune Picker"]
 layout_mode = 0
 offset_left = 629.0
 offset_top = 117.0
@@ -364,7 +373,7 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Make Goo Button" type="Button" parent="Gameplay UI/Main Gameplay"]
+[node name="Make Goo Button" type="Button" parent="Gameplay UI/Main Gameplay/Rune Picker"]
 layout_mode = 0
 offset_left = 759.0
 offset_top = 286.0
@@ -374,6 +383,26 @@ icon = ExtResource("40_xkeae")
 icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
+
+[node name="TableNotification" type="Label" parent="Gameplay UI/Main Gameplay/Rune Picker"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_top = -186.0
+offset_right = 229.0
+offset_bottom = -114.98
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Choose rune to process ingredient that will be automatically added to cauldron"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Clear Cauldron Button" type="Button" parent="Gameplay UI/Main Gameplay"]
 layout_mode = 1
@@ -405,7 +434,7 @@ text = "COMPLETE POTION"
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="SceneBackground" type="TextureRect" parent="Gameplay UI/Main Gameplay"]
+[node name="Almanac Opener" type="TextureButton" parent="Gameplay UI/Main Gameplay"]
 z_index = -4
 layout_mode = 1
 anchors_preset = -1
@@ -420,42 +449,17 @@ offset_bottom = 35.065
 grow_horizontal = 2
 grow_vertical = 0
 rotation = 0.0654331
-texture = ExtResource("34_admkp")
-expand_mode = 1
+texture_normal = ExtResource("34_admkp")
+texture_pressed = ExtResource("34_admkp")
+texture_hover = ExtResource("34_admkp")
+texture_disabled = ExtResource("34_admkp")
+texture_focused = ExtResource("34_admkp")
+ignore_texture_size = true
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="TableNotification" type="Label" parent="Gameplay UI/Main Gameplay"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -91.0
-offset_top = -186.0
-offset_right = 229.0
-offset_bottom = -114.98
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Choose rune to process ingredient that will be automatically added to cauldron"
-horizontal_alignment = 1
-autowrap_mode = 2
-
 [node name="Main UI" type="CanvasLayer" parent="."]
 layer = 3
-
-[node name="Pause menu" parent="Main UI" instance=ExtResource("9_08ny0")]
-process_mode = 3
-z_index = 5
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Background" parent="Main UI/Pause menu/MenuScreen" index="0"]
-self_modulate = Color(1, 1, 1, 0.588235)
 
 [node name="Recipe UI" parent="Main UI" instance=ExtResource("3_g3kw6")]
 z_index = 5
@@ -466,6 +470,15 @@ metadata/_edit_use_anchors_ = true
 z_index = 5
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Pause menu" parent="Main UI" instance=ExtResource("9_08ny0")]
+process_mode = 3
+z_index = 5
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" parent="Main UI/Pause menu/MenuScreen" index="0"]
+self_modulate = Color(1, 1, 1, 0.588235)
 
 [node name="GameEnd" type="Control" parent="Main UI"]
 unique_name_in_owner = true
@@ -517,10 +530,19 @@ fit_content = true
 [connection signal="on_pointer_released" from="Pointer Control" to="RuneTableNodes/Drop Area Rune" method="_on_pointer_control_on_pointer_released"]
 [connection signal="pressed" from="Gameplay UI/Main Gameplay/Clear Cauldron Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_clear_cauldron_button_pressed"]
 [connection signal="pressed" from="Gameplay UI/Main Gameplay/Make Cauldron potion Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_make_cauldron_potion_button_pressed"]
-[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Gameplay UI/Main Gameplay/Almanac Opener" to="Main UI/Almanac UI" method="_on_show_almanac_button_pressed"]
+[connection signal="pressed" from="Main UI/Pause menu/Pause Button" to="Gameplay UI" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Main UI/Pause menu/Pause Button" to="Gameplay UI" method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Main UI/Pause menu/Pause Button" to="Main UI/Recipe UI" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Main UI/Pause menu/Pause Button" to="Main UI/Almanac UI" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Gameplay UI" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Gameplay UI" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Main UI/Recipe UI" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Main UI/Almanac UI" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_visible" binds= [true]]
-[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_process_mode" binds= [0]]
 [connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_process_mode" binds= [4]]
 
 [editable path="IngredientNodes/Physical Ingredient (Algae Fish)"]
 [editable path="IngredientNodes/Physical Ingredient (Algae Fish)/Draggable Area"]
@@ -548,7 +570,7 @@ fit_content = true
 [editable path="IngredientNodes/Physical Ingredient (Worm)/Draggable Area"]
 [editable path="CauldronNodes/Drop Indicator Cauldron"]
 [editable path="RuneTableNodes/Drop Area Rune"]
-[editable path="Main UI/Pause menu"]
-[editable path="Main UI/Pause menu/Options Menu"]
 [editable path="Main UI/Recipe UI"]
 [editable path="Main UI/Almanac UI"]
+[editable path="Main UI/Pause menu"]
+[editable path="Main UI/Pause menu/Options Menu"]

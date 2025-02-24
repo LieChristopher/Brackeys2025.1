@@ -19,7 +19,7 @@ draw_center = false
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvgq7"]
 draw_center = false
 
-[node name="Almanac UI" type="Control" node_paths=PackedStringArray("_page_hint_txt")]
+[node name="Almanac UI" type="Control" node_paths=PackedStringArray("_content", "_recipe_book", "_page_hint_txt")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,6 +28,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_ip4jw")
 script = ExtResource("1_oaqi7")
+_content = NodePath("AlmanacScreen")
+_recipe_book = NodePath("AlmanacScreen/Recipe Book")
 _page_hint_txt = NodePath("AlmanacScreen/V Align/Page Hint")
 _formatted_text = "[center][b]{c} / {p}[/b][/center]"
 
