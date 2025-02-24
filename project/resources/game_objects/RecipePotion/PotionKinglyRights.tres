@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipePotion" load_steps=13 format=3 uid="uid://bululi08u65vg"]
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=14 format=3 uid="uid://bululi08u65vg"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_ej85m"]
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_t1kea"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://cgd7wqtfgxf3m" path="res://project/resources/game_objects/RecipeIngredients/HORN.tres" id="4_ivpa6"]
 [ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="5_nkehh"]
 [ext_resource type="Resource" uid="uid://cpdpyugla8q1" path="res://project/resources/game_objects/RecipeIngredients/FANG.tres" id="6_s801k"]
+[ext_resource type="Texture2D" uid="uid://dtb4fascjm4gf" path="res://project/arts/internal/sprites/recipes/King Potion Recipe.png" id="7_4klx3"]
 
 [sub_resource type="Resource" id="Resource_00v60"]
 script = ExtResource("1_ej85m")
@@ -39,3 +40,4 @@ name = "Kingly Rights Potions"
 description = "A potion that is said to bestow upon the drinker the Mandate of Heaven. The right to rule."
 points = 1000
 listOfIngredientRunes = Array[ExtResource("1_ej85m")]([SubResource("Resource_00v60"), SubResource("Resource_fi8aa"), SubResource("Resource_q0jct"), SubResource("Resource_6mtfq"), SubResource("Resource_fjvji")])
+recipe = ExtResource("7_4klx3")

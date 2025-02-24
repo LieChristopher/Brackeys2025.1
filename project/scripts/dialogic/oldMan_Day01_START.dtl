@@ -1,5 +1,3 @@
-[background arg="res://project/arts/internal/sprites/scenes/Customer BG Back.png" fade="0.0"]
-set {gameOver} = false
 join character_overlay center [animation="Instant In" z_index="5"]
 You hear footsteps in the distance. In the distance, a man hurriedly approaches you.
 join character_oldMan center

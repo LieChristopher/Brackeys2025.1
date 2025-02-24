@@ -1,4 +1,3 @@
-set {InteractionCounter.oldMan} = 2
 join character_overlay center [animation="Instant In"]
 join character_oldMan center
 character_oldMan: Bout time. Gimme it.
@@ -38,3 +37,5 @@ else:
 	character_oldMan: Alright MISTAH TOP O' DA CLASS! ONE screw up is all you's get!
 	character_oldMan: No more slip up's! CAPICHE! See ya dis one's got a date wit da showers! PHOOE!
 	leave character_oldMan
+set {InteractionCounter.oldMan} = 2
+

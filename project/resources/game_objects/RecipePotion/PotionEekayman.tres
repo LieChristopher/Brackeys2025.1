@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipePotion" load_steps=12 format=3 uid="uid://d2hriv2u72lv8"]
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=13 format=3 uid="uid://d2hriv2u72lv8"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_are8t"]
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_11cr2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://d3lev24x6lypb" path="res://project/resources/game_objects/RecipeIngredients/POISON IVY.tres" id="4_eif6b"]
 [ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="5_thr4v"]
 [ext_resource type="Resource" uid="uid://b6gtef5x5l6l1" path="res://project/resources/game_objects/RecipeIngredients/WORM.tres" id="6_2q3g1"]
+[ext_resource type="Texture2D" uid="uid://dnt7676lmp2wb" path="res://project/arts/internal/sprites/recipes/Eeekayman Potion.png" id="7_vle3f"]
 
 [sub_resource type="Resource" id="Resource_4od67"]
 script = ExtResource("1_are8t")
@@ -34,3 +35,4 @@ name = "Eekayman Potion"
 description = "According to the ancient eastern texts of Mang Ga, this potion gives one a face that is said to be irresistable"
 points = 1000
 listOfIngredientRunes = Array[ExtResource("1_are8t")]([SubResource("Resource_4od67"), SubResource("Resource_sn4gp"), SubResource("Resource_dl303"), SubResource("Resource_m44s8")])
+recipe = ExtResource("7_vle3f")

@@ -1,0 +1,25 @@
+join character_overlay center [animation="Instant In"]
+join character_oldMan center
+character_richGirl: So once I take this, I'll get a vision of when I wish to see the most?
+character_richGirl: Sounds straightforward enough, no use waiting any longer then!
+She chugs the potion
+if {success} == true:
+	character_richGirl: ...
+	character_richGirl: Ah... So that's how it is.
+	character_richGirl: ...
+	character_richGirl: Hm... Oh?
+	character_richGirl: Just a lot to think about, that's all.
+	character_richGirl: You wanna know more you say?
+	character_richGirl: ...I just have a lot to consider for my future.
+	character_richGirl: I am a prince after all. Anything more than that is confidential info sorry, heh~
+	character_richGirl: Thanks again for your service, impressive as ever!
+	character_richGirl: I'll be sure to return the favor one day.
+else:
+	character_richGirl: *cough cough*
+	character_richGirl: Gah, my head-
+	character_richGirl: Wait that's...
+	character_richGirl: WHAT IS THIS... NO, THIS ISN'T WHAT YOU PROMISED ME!?
+	character_richGirl: The future!? What I'm seeing is FAR from it, is this a joke to you?
+	She clutches her head, but glares at you
+	character_richGirl: Be grateful I owe you a favor from before... Otherwise you'd wish you were gone.
+	character_richGirl: Close down this shop, I'm not taking no for an answer. 

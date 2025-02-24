@@ -275,7 +275,6 @@ scale = Vector2(0.745, 0.915)
 [node name="Drop Indicator Cauldron" parent="CauldronNodes" node_paths=PackedStringArray("_indicator", "_anim") instance=ExtResource("8_4kkyh")]
 unique_name_in_owner = true
 position = Vector2(251, 303)
-_target_potion = ExtResource("33_q3a4f")
 _indicator = NodePath("Sprite")
 _anim = NodePath("AnimationPlayer")
 

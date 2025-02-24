@@ -1,4 +1,3 @@
-set {InteractionCounter.richgirl} = 2
 join character_overlay center [animation="Instant In"]
 join character_richGirl center
 character_richGirl: So... all I have to do is... find a way for him to drink this right? Okay, I'll be right back.
@@ -19,4 +18,15 @@ if {success} == true:
 	leave character_richGirl
 else:
 	set {MoodGood.richGirl} = false
-	FAIL
+	character_richGirl: DIDN'T I SAY NO POISON?! He started foaming in the mouth MINUTES after ingesting whatever the hell you gave me...
+	character_richGirl: It's an impressive poison sure, but I've never had to run so fast in my life before...
+	character_richGirl: Responsibility?! Hell no this isn't my fault! You're the one who made the damn potion!
+	character_richGirl: If anything, I should report you and your hack of a shop immediately!
+	character_richGirl: ...ugh but knowing that guy he won't even get close to dying over something as simple as poison... You're lucky that you won't have a manslaughter charge on your hands you hack.
+	character_richGirl: Screw it, I want no part in this-
+	character_richGirl: In fact, no one will know I was here... not even you...
+	character_richGirl: Got it?
+	character_richGirl: A corpse can't talk, and you better remember that if you know what's good for you.
+	She snaps her fingers, your vision flashes red and she's gone
+set {InteractionCounter.richgirl} = 2
+
