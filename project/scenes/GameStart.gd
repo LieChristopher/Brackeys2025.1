@@ -2,6 +2,7 @@ extends Node2D
 
 var paused= false;
 @export var complete = false
+@export var potion = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

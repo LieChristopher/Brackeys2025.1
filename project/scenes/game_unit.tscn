@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bapwd3d6jpvby"]
+[gd_scene load_steps=4 format=3 uid="uid://bapwd3d6jpvby"]
 
 [ext_resource type="Script" path="res://project/scenes/game_unit.gd" id="1_0gb6s"]
+[ext_resource type="Texture2D" uid="uid://p4qb5e48u065" path="res://project/arts/internal/sprites/scenes/Customer BG Back.png" id="2_02hcq"]
 [ext_resource type="PackedScene" uid="uid://dcolix4rx84pb" path="res://project/scenes/gameplay.tscn" id="2_hcj8i"]
 
 [node name="GameUnit" type="Control"]
@@ -8,4 +9,25 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_0gb6s")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+z_index = 100
+offset_left = 1700.0
+offset_top = 750.0
+offset_right = 1813.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 30
+text = "SKIP >>"
+
+[node name="CutsceneBG" type="TextureRect" parent="."]
+z_index = 20
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_02hcq")
+
 [node name="Gameplay" parent="." instance=ExtResource("2_hcj8i")]
+
+[connection signal="pressed" from="CanvasLayer/SkipButton" to="." method="_on_button_pressed"]
