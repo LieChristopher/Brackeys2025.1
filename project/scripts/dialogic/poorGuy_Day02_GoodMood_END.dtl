@@ -1,0 +1,31 @@
+join character_overlay center [animation="Instant In"]
+join character_poorGuy center
+character_poorGuy: And so it is done....
+character_poorGuy: To think one could attain the right to rule from a concotion....
+character_poorGuy: Nay...Mineself has learned, friend. mineself need not the potion to reclaim mine right to rule nor to rebuild mine kingdom
+character_poorGuy: What mineself needed was conviction! And worthy subjects.
+character_poorGuy: Bear witness friend..This tribute that you have gifted me. Shall be the beginning.
+character_poorGuy: A vow of brotherhood. Together we shall rebuild mine-, nay the people's kingdom. In the name of mine father.
+character_poorGuy: As the gods have ordained mineself shall reclaim my birthright!
+character_poorGuy: In the name of my father King Gut Mor Netterman! Mineself swears To be a divine, just and magnanimous king
+if {success} == true:
+	Louie drinks the concoction but nothing happens
+	character_poorGuy: As mineself expected...nothing more than a tall tale for the greedy and desperate...
+	character_poorGuy: A part of mineself is relieved. If it was that simple to attain the right to rule then there could be no true king.
+	character_poorGuy: It is time mineself begins the long journey to rebuild...
+	character_poorGuy: Come join mineself when you are ready friend...Mineself shall welcome you with open arms as chief alchemist and friend at Land der Verdammten.
+	character_poorGuy: But before mineself leaves....It is time I found mine fair lady.
+	Louie walks away and doesn't turn back, his conviction and demeanor seemed almost divine
+else:
+	Louie drinks the concoction and a glorious crown of lettuce sprouts atop his noble head
+	............
+	character_poorGuy: It appears that there is now quite the blemish upon the future kingdoms chief alchemist's record...
+	character_poorGuy: To anoint one's king with lettuce is quite the grave crime...
+	character_poorGuy: But I shall forgive your misgiving for tainting mineself's divine body, should you remove this humiliating object from my visage.
+	character_poorGuy: Unless you want a crown of cabbage as well!
+	character_poorGuy: You dare laugh! To make a mockery of your divine king!
+	Louie angrily scolds you. But the crown of lettuce atop is head shakes with every shout
+	character_poorGuy: Mineself's first decree as king is to deny you your wages for a whole year!
+	character_poorGuy: Furthermore you must help mineself find mine noble lady until she is found!
+	Though Louie still lacks the temperament of a king. At least he has a friend to stick with him
+	

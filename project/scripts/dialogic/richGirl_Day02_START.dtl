@@ -1,5 +1,23 @@
-join  center
-if {} == "":
-	<Empty Text Event>
+join character_richGirl center
+if {MoodGood.richGirl} == true:
+	character_richGirl: I'm back, remember me?
+	character_richGirl: Hehehe it hasn't been too long since my last request, but I did mention I'd be back if I needed anything else.
+	character_richGirl: Your potion was a big help, but there's been something bothering me still-
+	character_richGirl: Oh? No, I think it seems to be working just fine. No foam in the mouth or whatever you said...
+	character_richGirl: Anyway this isn't about him anymore, its another problem entirely.
+	character_richGirl: I've... been looking for better foresight you could say. Got anything for that?
+	character_richGirl: Hm? A Future Sight potion? PERFECT! I knew I could count on you~
+	character_richGirl: But one moment only you say... No, nothing's wrong with that.
+	character_richGirl: Just means I'll have to think real hard on this...
+	character_richGirl: Oh cmon, don't start moping now, get to work! I'm counting on you.
 else:
-	<Empty Text Event>
+	character_richGirl: Hey. I got a job for you. 
+	character_richGirl: Hm? About the other day you say you're sorry?
+	character_richGirl: Well, for better or for worse, that poison was't lethal.
+	character_richGirl: But if you insist that you're sorry then prove it to me now.
+	character_richGirl: They say actions speak louder than words~
+	character_richGirl: I've... been looking for better foresight you could say. Got anything for that?
+	character_richGirl: Hm? A Future Sight potion? That sounds about right for me.
+	character_richGirl: But one moment only you say... No, nothing's wrong with that.
+	character_richGirl: Just means I'll have to think real hard on this...
+	character_richGirl: Now, get to work! Don't mess up this time.

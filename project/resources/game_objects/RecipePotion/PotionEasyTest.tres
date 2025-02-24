@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="RecipePotion" load_steps=7 format=3 uid="uid://hulo0yc1xb6g"]
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=8 format=3 uid="uid://hulo0yc1xb6g"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_ebpfn"]
 [ext_resource type="Resource" uid="uid://ci5f7wv8x5h3p" path="res://project/resources/game_objects/RecipeIngredients/RASPBERRY LEAF.tres" id="2_xpuw7"]
 [ext_resource type="Resource" uid="uid://qdq7arj5uv4h" path="res://project/resources/game_objects/RecipeRunes/RuneNeutral.tres" id="3_lp0xm"]
+[ext_resource type="Texture2D" uid="uid://wp52ufglp8w1" path="res://project/arts/internal/sprites/recipes/Perfume Recipe.png" id="4_vyl4p"]
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="5_hkfcx"]
 
 [sub_resource type="Resource" id="Resource_slp2x"]
@@ -21,3 +22,4 @@ name = "Perfume Potion"
 description = "A must have for the local ladies. And the occasional unhygienic fellow."
 points = 1000
 listOfIngredientRunes = Array[ExtResource("1_ebpfn")]([SubResource("Resource_slp2x"), SubResource("Resource_meye2")])
+recipe = ExtResource("4_vyl4p")

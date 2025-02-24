@@ -275,7 +275,6 @@ scale = Vector2(0.745, 0.915)
 [node name="Drop Indicator Cauldron" parent="CauldronNodes" node_paths=PackedStringArray("_indicator", "_anim") instance=ExtResource("8_4kkyh")]
 unique_name_in_owner = true
 position = Vector2(251, 303)
-_target_potion = ExtResource("33_q3a4f")
 _indicator = NodePath("Sprite")
 _anim = NodePath("AnimationPlayer")
 
@@ -539,10 +538,6 @@ fit_content = true
 [connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Gameplay UI" method="set_process_mode" binds= [0]]
 [connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Main UI/Recipe UI" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Main UI/Pause menu/MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Main UI/Almanac UI" method="set_visible" binds= [true]]
-[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_visible" binds= [true]]
-[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_process_mode" binds= [0]]
-[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_visible" binds= [false]]
-[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_process_mode" binds= [4]]
 
 [editable path="IngredientNodes/Physical Ingredient (Algae Fish)"]
 [editable path="IngredientNodes/Physical Ingredient (Algae Fish)/Draggable Area"]

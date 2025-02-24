@@ -2,7 +2,7 @@ extends Node2D
 
 var paused= false;
 @export var complete = false
-@export var potion = null
+@export var potion_path = "res://project/resources/game_objects/RecipePotion/PotionChiseled.tres"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

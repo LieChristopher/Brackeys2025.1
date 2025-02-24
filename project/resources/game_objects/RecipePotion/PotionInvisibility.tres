@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="RecipePotion" load_steps=10 format=3 uid="uid://1qxjxvkct7y"]
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=11 format=3 uid="uid://1qxjxvkct7y"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_0jbe0"]
 [ext_resource type="Resource" uid="uid://b41a3w7dek54u" path="res://project/resources/game_objects/RecipeIngredients/GOAT EYE.tres" id="2_lwt2c"]
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_m4mk8"]
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="3_lds63"]
 [ext_resource type="Resource" uid="uid://ci5f7wv8x5h3p" path="res://project/resources/game_objects/RecipeIngredients/RASPBERRY LEAF.tres" id="4_1yq4q"]
+[ext_resource type="Texture2D" uid="uid://dntis4jro14kp" path="res://project/arts/internal/sprites/recipes/Invisibility Potion Recipe.png" id="5_qnl7p"]
 
 [sub_resource type="Resource" id="Resource_76p2n"]
 script = ExtResource("1_0jbe0")
@@ -32,3 +33,4 @@ name = "Make Me Invisible to the Other Person Potion"
 description = "Read the name of the potion"
 points = 1000
 listOfIngredientRunes = Array[ExtResource("1_0jbe0")]([SubResource("Resource_76p2n"), SubResource("Resource_u36q6"), SubResource("Resource_clye6"), SubResource("Resource_1vyii")])
+recipe = ExtResource("5_qnl7p")

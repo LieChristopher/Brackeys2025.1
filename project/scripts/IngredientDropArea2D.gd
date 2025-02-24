@@ -40,6 +40,9 @@ var array = [];
 	##area.queue_free()
 	##area.get_node("CollisionShape2D").queue_free()
 
+func _process(delta: float) -> void:
+	_target_potion = load(get_parent().get_parent().potion_path)
+
 func on_ingredient_hovered_ev() -> void:
 	modulate = _on_ingredient_hovered;
 

@@ -52,7 +52,7 @@ func _process(delta: float) -> void:
 		if !isCutscene:
 			print(level_event_tracker)
 			$Gameplay.complete = false
-			$Gameplay.potion = load("res://project/resources/game_objects/RecipePotion/Potion" + gameData.potion_level_list[level_tracker] + ".tres")
+			$Gameplay.potion_path = "res://project/resources/game_objects/RecipePotion/Potion" + gameData.potion_level_list[level_tracker] + ".tres"
 			Dialogic.Inputs.auto_skip.enabled = false
 			Dialogic.start(find_cutscene())
 			level_event_tracker = 1
