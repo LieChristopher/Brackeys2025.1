@@ -12,6 +12,8 @@ extends Area2D
 
 @export_group("Optionals")
 @export var _indicator: Sprite2D = null;
+@export var _on_ingredient_hovered: Color = Color.CYAN;
+@export var _on_ingredient_unhovered: Color = Color.WHITE;
 
 @export_group("Animations")
 @export var _anim: AnimationPlayer = null;
@@ -37,14 +39,18 @@ var array = [];
 	 ##queuefree messes with pointercontroller2d
 	##area.queue_free()
 	##area.get_node("CollisionShape2D").queue_free()
-	#pass # Replace with function body.
+
+func on_ingredient_hovered_ev() -> void:
+	modulate = _on_ingredient_hovered;
+
+func on_ingredient_unhovered_ev() -> void:
+	modulate = _on_ingredient_unhovered;
 
 func add_ingredient(ingredient: PhysicalIngredient2D) -> void:
-	#print(ingredient)
-	#print(ingredient._ingredient_id)
 	print(self.name," has added ",ingredient._ingredient_id.name)
 	array.push_back(ingredient._ingredient_id);
 	print(self.name," now has ",array);
+	modulate = _on_ingredient_unhovered;
 
 func _on_pointer_control_on_pointer_pressed(pos: Vector2, detected_contents: Array[Dictionary]) -> void:
 	var sz: int = detected_contents.size();
@@ -61,13 +67,10 @@ func _on_pointer_control_on_pointer_released(pos: Vector2, detected_contents: Ar
 		_indicator.visible = false;
 		_anim.stop();
 
-
 func _on_make_cauldron_potion_button_pressed() -> bool:
 	var cauldronArray = %"Drop Indicator Cauldron".array
 	var expectedIngredientRunes = _target_potion.listOfIngredientRunes
-	var i=0
-	
-	
+	var i: int = 0;
 	while i<len(expectedIngredientRunes):
 		var j: int = 0;
 		var ingredientExists: bool = false;
@@ -84,14 +87,10 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 			potion_complete()
 			Dialogic.VAR.set_variable("success",false)
 			return false #potion fail
-			
-			
-		
 	print("Correct potion")
 	potion_complete()
 	Dialogic.VAR.set_variable("success",true)
 	return true
-
 
 func potion_complete()-> void:
 	%GameEnd.visible=true
@@ -142,9 +141,7 @@ func create_potion_with_same_rune(runeType:int) -> void:
 	
 	for each in %"Drop Indicator Cauldron".array:
 		print('%"Drop Indicator Cauldron".array has ',each.ingredient.name, each.rune.name)
-	ingredientRuneArray.clear()
-	%"Drop Area Rune".array.clear()
-	%RuneTableIngredient.texture = null
-	%TableNotification.visible = false
-	
-	
+	ingredientRuneArray.clear();
+	%"Drop Area Rune".array.clear();
+	%RuneTableIngredient.texture = null;
+	%TableNotification.visible = false;

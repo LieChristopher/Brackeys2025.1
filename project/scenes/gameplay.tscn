@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=51 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://bopokne8iem6b" path="res://project/arts/internal/sprites/ingredients/Worms.png" id="28_qtit8"]
 [ext_resource type="Resource" uid="uid://crp44darb3af6" path="res://project/resources/game_objects/RecipePotion/PotionChiseled.tres" id="33_q3a4f"]
 [ext_resource type="Texture2D" uid="uid://b0qkf42g1463n" path="res://project/arts/internal/sprites/runes/RUNE BOOK.png" id="34_admkp"]
+[ext_resource type="Texture2D" uid="uid://7is1hfl8v1dv" path="res://project/arts/internal/sprites/circle-ind.png" id="34_fgihm"]
 [ext_resource type="Theme" uid="uid://bah3qycv6ybwf" path="res://project/arts/internal/user-interface/gameplay/default-gameplay.tres" id="35_h1njv"]
 [ext_resource type="Texture2D" uid="uid://c8sc6fod5fcav" path="res://project/arts/internal/sprites/runes/powder.png" id="39_vnyom"]
 [ext_resource type="Texture2D" uid="uid://bo1g0j005lbou" path="res://project/arts/internal/sprites/runes/goo.png" id="40_xkeae"]
@@ -82,6 +83,43 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8s0c7"]
 radius = 140.0
+
+[sub_resource type="Animation" id="Animation_uniaf"]
+resource_name = "ANIM_IndicatorBleeping"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Drop Area Rune/Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ufa4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Drop Area Rune/Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yn20m"]
+_data = {
+"ANIM_IndicatorBleeping": SubResource("Animation_uniaf"),
+"RESET": SubResource("Animation_4ufa4")
+}
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_nrl2g")
@@ -260,18 +298,30 @@ z_index = -2
 position = Vector2(1058, 817)
 scale = Vector2(0.2245, 0.211)
 
-[node name="Drop Area Rune" parent="RuneTableNodes" instance=ExtResource("8_4kkyh")]
+[node name="Drop Area Rune" parent="RuneTableNodes" node_paths=PackedStringArray("_indicator", "_anim") instance=ExtResource("8_4kkyh")]
 unique_name_in_owner = true
 position = Vector2(713.87, 571)
 _target_potion = ExtResource("33_q3a4f")
 _neutral_rune = ExtResource("18_mhleu")
 _goo_rune = ExtResource("20_wfedy")
 _powder_rune = ExtResource("21_w3vu6")
+_indicator = NodePath("Sprite")
+_anim = NodePath("AnimationPlayer")
 
 [node name="Collider" parent="RuneTableNodes/Drop Area Rune" index="0"]
 z_index = 5
 scale = Vector2(1.595, 0.885)
 shape = SubResource("CircleShape2D_8s0c7")
+
+[node name="Sprite" type="Sprite2D" parent="RuneTableNodes/Drop Area Rune"]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("34_fgihm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RuneTableNodes/Drop Area Rune"]
+root_node = NodePath("../../../CauldronNodes/Drop Indicator Cauldron")
+libraries = {
+"": SubResource("AnimationLibrary_yn20m")
+}
 
 [node name="Buttons" type="Node" parent="RuneTableNodes"]
 
@@ -404,6 +454,9 @@ z_index = 5
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="Background" parent="Main UI/Pause menu/MenuScreen" index="0"]
+self_modulate = Color(1, 1, 1, 0.588235)
+
 [node name="Recipe UI" parent="Main UI" instance=ExtResource("3_g3kw6")]
 z_index = 5
 mouse_filter = 2
@@ -459,9 +512,15 @@ text = "[wave amp=100.0 freq=10.0][b]POTION COMPLETE[/b][/wave]"
 fit_content = true
 
 [connection signal="on_pointer_pressed" from="Pointer Control" to="CauldronNodes/Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_pressed"]
+[connection signal="on_pointer_pressed" from="Pointer Control" to="RuneTableNodes/Drop Area Rune" method="_on_pointer_control_on_pointer_pressed"]
 [connection signal="on_pointer_released" from="Pointer Control" to="CauldronNodes/Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_released"]
+[connection signal="on_pointer_released" from="Pointer Control" to="RuneTableNodes/Drop Area Rune" method="_on_pointer_control_on_pointer_released"]
 [connection signal="pressed" from="Gameplay UI/Main Gameplay/Clear Cauldron Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_clear_cauldron_button_pressed"]
 [connection signal="pressed" from="Gameplay UI/Main Gameplay/Make Cauldron potion Button" to="CauldronNodes/Drop Indicator Cauldron" method="_on_make_cauldron_potion_button_pressed"]
+[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/MenuScreen" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Main UI/Pause menu/Options Menu/Contents/Back" to="Main UI/Pause menu/Options Menu" method="set_visible" binds= [false]]
 
 [editable path="IngredientNodes/Physical Ingredient (Algae Fish)"]
 [editable path="IngredientNodes/Physical Ingredient (Algae Fish)/Draggable Area"]
@@ -489,5 +548,7 @@ fit_content = true
 [editable path="IngredientNodes/Physical Ingredient (Worm)/Draggable Area"]
 [editable path="CauldronNodes/Drop Indicator Cauldron"]
 [editable path="RuneTableNodes/Drop Area Rune"]
+[editable path="Main UI/Pause menu"]
+[editable path="Main UI/Pause menu/Options Menu"]
 [editable path="Main UI/Recipe UI"]
 [editable path="Main UI/Almanac UI"]

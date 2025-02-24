@@ -98,14 +98,14 @@ layout_mode = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="Main Contents/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_visible" binds= [false]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_process_mode" binds= [4]]
-[connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Options Menu" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Main Contents" method="set_visible" binds= [false]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Options Menu" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Main Contents/VBoxContainer/Option" to="Options Menu" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Options Menu/Contents/Back" to="Main Contents" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Main Contents" method="set_process_mode" binds= [0]]
-[connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Options Menu/Contents/Back" to="Main Contents" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_visible" binds= [false]]
 
 [editable path="Options Menu"]
