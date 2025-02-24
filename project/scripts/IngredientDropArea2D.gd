@@ -74,7 +74,7 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 	var cauldronArray = %"Drop Indicator Cauldron".array
 	var expectedIngredientRunes = _target_potion.listOfIngredientRunes
 	var i: int = 0;
-	while i<len(expectedIngredientRunes):
+	while i < len(expectedIngredientRunes):
 		var j: int = 0;
 		var ingredientExists: bool = false;
 		while j < len(cauldronArray):
