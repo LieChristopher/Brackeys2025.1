@@ -5,6 +5,8 @@ class_name GameData
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+@export var character_level_list = ["oldMan","richGirl","poorGuy","oldMan","richGirl","poorGuy",]
+@export var potion_level_list = ["Perfume","Invisibility","Eekayman","Chiseled","FutureSight","KinglyRights",]
 @export var level_list = ["oldMan_Day01","richGirl_Day01","poorGuy_Day01","oldMan_Day02","richGirl_Day02","poorGuy_Day02",]
 @export var completed_list = [false,false,false,false,false,false,]
 
