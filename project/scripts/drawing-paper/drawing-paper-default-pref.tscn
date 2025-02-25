@@ -1,0 +1,208 @@
+[gd_scene load_steps=29 format=3 uid="uid://56sns8fwwth2"]
+
+[ext_resource type="PackedScene" uid="uid://buy7voa0rxb0i" path="res://project/prefabs/user-interfaces/ui-drawing-paper.tscn" id="1_6bsub"]
+[ext_resource type="Theme" uid="uid://dhy42pe8df1j6" path="res://project/arts/internal/user-interface/drawing-canvas/drawing-canvas-theme.tres" id="2_tmuh0"]
+[ext_resource type="StyleBox" uid="uid://ddd6lok0f3tq8" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/white-color-btn-hover.tres" id="3_k0rh5"]
+[ext_resource type="StyleBox" uid="uid://cvjw61ota887t" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/white-color-btn-pressed.tres" id="4_16a54"]
+[ext_resource type="Texture2D" uid="uid://djyhx3lnmmwi1" path="res://project/arts/external/icons/eraser-icon (iconduck_com).png" id="5_w18dl"]
+[ext_resource type="StyleBox" uid="uid://cqkt6ud5ldfma" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/red-color-btn-hover.tres" id="6_gex0g"]
+[ext_resource type="StyleBox" uid="uid://bw634mc0g4sit" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/red-color-btn-pressed.tres" id="7_beuqj"]
+[ext_resource type="StyleBox" uid="uid://btmrpahwv35ts" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/red-color-btn.tres" id="8_ie2lf"]
+[ext_resource type="StyleBox" uid="uid://kcbqnajp1qo2" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/blue-color-btn-hover.tres" id="9_qut63"]
+[ext_resource type="StyleBox" uid="uid://dqk2t5ubc8yhw" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/blue-color-btn-pressed.tres" id="10_p8ops"]
+[ext_resource type="StyleBox" uid="uid://b7n8l2bsaruj8" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/blue-color-btn.tres" id="11_4nkkk"]
+[ext_resource type="StyleBox" uid="uid://dkvixof63ulbn" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/green-color-btn-hover.tres" id="12_xnikc"]
+[ext_resource type="StyleBox" uid="uid://c03kr16lqx3df" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/green-color-btn-pressed.tres" id="13_c0s7w"]
+[ext_resource type="StyleBox" uid="uid://dvckv3dmu3vu0" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/green-color-btn.tres" id="14_82hh0"]
+[ext_resource type="StyleBox" uid="uid://bdgq4ocqdhxjy" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/yellow-color-btn-hover.tres" id="15_3h87u"]
+[ext_resource type="StyleBox" uid="uid://cmqhq7bcmerbj" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/yellow-color-btn-pressed.tres" id="16_4f4k4"]
+[ext_resource type="StyleBox" uid="uid://3ck3v2ytg0uy" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/yellow-color-btn.tres" id="17_nfwkg"]
+[ext_resource type="StyleBox" uid="uid://c15n6mhuigyv4" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/magenta-color-btn-hover.tres" id="18_ldbgs"]
+[ext_resource type="StyleBox" uid="uid://dk22hoxh6d1u6" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/magenta-color-btn-pressed.tres" id="19_chbvm"]
+[ext_resource type="StyleBox" uid="uid://cim2ale22wi1w" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/magenta-color-btn.tres" id="20_xh6vn"]
+[ext_resource type="StyleBox" uid="uid://bgj4elew4rhjm" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/cyan-color-btn-hover.tres" id="21_2iy1k"]
+[ext_resource type="StyleBox" uid="uid://csbbe4nhf2e6v" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/cyan-color-btn-pressed.tres" id="22_7mxub"]
+[ext_resource type="StyleBox" uid="uid://wegg64mpaes7" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/cyan-color-btn.tres" id="23_v0ri8"]
+[ext_resource type="StyleBox" uid="uid://7cr05cq4r2y6" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn-hover.tres" id="24_pu2pf"]
+[ext_resource type="StyleBox" uid="uid://cst1j1e7se0mn" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn-pressed.tres" id="25_r54k7"]
+[ext_resource type="StyleBox" uid="uid://d144whlsokata" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn.tres" id="26_2v3hi"]
+[ext_resource type="Texture2D" uid="uid://ko2ruukb06eg" path="res://project/arts/external/icons/reset-icon (by inkubators, flaticon_com).png" id="27_8cqym"]
+[ext_resource type="Script" path="res://project/scripts/drawing-paper/UI_BrushSizer.gd" id="28_m7gvm"]
+
+[node name="Drawing Paper Default Pref" type="CanvasLayer"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Title" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+offset_top = 64.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_font_sizes/bold_font_size = 56
+bbcode_enabled = true
+text = "[wave][center][b]Draw Your Potion Label...[/b]"
+fit_content = true
+
+[node name="Drawing Paper" parent="." instance=ExtResource("1_6bsub")]
+
+[node name="Colors" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -72.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 410.0
+grow_horizontal = 0
+theme = ExtResource("2_tmuh0")
+theme_override_constants/separation = 0
+
+[node name="White" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("3_k0rh5")
+theme_override_styles/pressed = ExtResource("4_16a54")
+icon = ExtResource("5_w18dl")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Red" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("6_gex0g")
+theme_override_styles/pressed = ExtResource("7_beuqj")
+theme_override_styles/normal = ExtResource("8_ie2lf")
+
+[node name="Blue" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("9_qut63")
+theme_override_styles/pressed = ExtResource("10_p8ops")
+theme_override_styles/normal = ExtResource("11_4nkkk")
+
+[node name="Green" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("12_xnikc")
+theme_override_styles/pressed = ExtResource("13_c0s7w")
+theme_override_styles/normal = ExtResource("14_82hh0")
+
+[node name="Yellow" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("15_3h87u")
+theme_override_styles/pressed = ExtResource("16_4f4k4")
+theme_override_styles/normal = ExtResource("17_nfwkg")
+
+[node name="Magenta" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("18_ldbgs")
+theme_override_styles/pressed = ExtResource("19_chbvm")
+theme_override_styles/normal = ExtResource("20_xh6vn")
+
+[node name="Cyan" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("21_2iy1k")
+theme_override_styles/pressed = ExtResource("22_7mxub")
+theme_override_styles/normal = ExtResource("23_v0ri8")
+
+[node name="Reset Btn" type="Button" parent="Colors"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_tmuh0")
+theme_override_styles/hover = ExtResource("24_pu2pf")
+theme_override_styles/pressed = ExtResource("25_r54k7")
+theme_override_styles/normal = ExtResource("26_2v3hi")
+icon = ExtResource("27_8cqym")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Brush Sizer" type="Control" parent="." node_paths=PackedStringArray("_brush_target", "_slider", "_value_hint")]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_top = 24.0
+offset_right = -80.0
+offset_bottom = 344.0
+grow_horizontal = 0
+script = ExtResource("28_m7gvm")
+_brush_target = NodePath("../Drawing Paper")
+_slider = NodePath("Slider")
+_value_hint = NodePath("Hint/Vertical Alignment/Text")
+
+[node name="Slider" type="VSlider" parent="Brush Sizer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 1.0
+value = 16.0
+
+[node name="Hint" type="Control" parent="Brush Sizer"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Vertical Alignment" type="VBoxContainer" parent="Brush Sizer/Hint"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="Brush Sizer/Hint/Vertical Alignment"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]XXX"
+fit_content = true
+
+[connection signal="pressed" from="Colors/White" to="Drawing Paper" method="set_brush_color" binds= [Color(1, 1, 1, 1)]]
+[connection signal="pressed" from="Colors/Red" to="Drawing Paper" method="set_brush_color" binds= [Color(0.931333, 0, 0.242856, 1)]]
+[connection signal="pressed" from="Colors/Blue" to="Drawing Paper" method="set_brush_color" binds= [Color(0.215686, 0.458824, 1, 1)]]
+[connection signal="pressed" from="Colors/Green" to="Drawing Paper" method="set_brush_color" binds= [Color(0, 0.72407, 0.374768, 1)]]
+[connection signal="pressed" from="Colors/Yellow" to="Drawing Paper" method="set_brush_color" binds= [Color(0.825759, 0.734399, 0.00629319, 1)]]
+[connection signal="pressed" from="Colors/Magenta" to="Drawing Paper" method="set_brush_color" binds= [Color(0.72549, 0.188235, 0.866667, 1)]]
+[connection signal="pressed" from="Colors/Cyan" to="Drawing Paper" method="set_brush_color" binds= [Color(4.52429e-06, 0.681521, 0.764854, 1)]]
+[connection signal="pressed" from="Colors/Reset Btn" to="Drawing Paper" method="fill_canvas" binds= [Color(1, 1, 1, 1)]]
+[connection signal="value_changed" from="Brush Sizer/Slider" to="Brush Sizer" method="_on_slider_changed"]
