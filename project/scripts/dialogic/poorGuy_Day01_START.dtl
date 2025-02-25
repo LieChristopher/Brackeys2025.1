@@ -1,4 +1,5 @@
 set {gameOver} = false
+set {gameWin} = false
 join character_overlay center [animation="Instant In"]
 join character_poorGuy center
 character_poorGuy (Positive): Oh great heavens! The gods have answered me thus! At long last! A cure for all of mine problems!
