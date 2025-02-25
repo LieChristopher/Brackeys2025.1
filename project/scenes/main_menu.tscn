@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://blgk6uvwsy20f"]
+[gd_scene load_steps=10 format=3 uid="uid://blgk6uvwsy20f"]
 
 [ext_resource type="Script" path="res://project/scenes/main_menu.gd" id="1_sg0my"]
 [ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="2_622jy"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://duo7tgjytmfy2" path="res://project/scripts/audio-system/audio_manager.tscn" id="5_ch5aw"]
 [ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="5_jrmgv"]
 [ext_resource type="PackedScene" uid="uid://5nsyacj4u08s" path="res://project/scenes/credits_page.tscn" id="8_yi1kr"]
+[ext_resource type="AudioStream" uid="uid://b46hrpjygbt6w" path="res://project/arts/external/sound/BGM/Minstrels-Song(by keys_of_moon, chosic_com).ogg" id="9_px67y"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -132,8 +133,14 @@ process_mode = 4
 visible = false
 layout_mode = 1
 
-[node name="AudioListener2D" type="AudioListener2D" parent="."]
+[node name="Listener" type="AudioListener2D" parent="."]
 current = true
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_px67y")
+autoplay = true
+script = ExtResource("5_jrmgv")
+_audio_type = "BGM"
 
 [connection signal="pressed" from="Main Contents/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main Contents/VBoxContainer/Play" to="Main Contents/VBoxContainer/Play/Click" method="play" binds= [0.0]]

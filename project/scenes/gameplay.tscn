@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dcolix4rx84pb"]
+[gd_scene load_steps=59 format=3 uid="uid://dcolix4rx84pb"]
 
 [ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
@@ -50,6 +50,7 @@
 [ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="44_0br6i"]
 [ext_resource type="AudioStream" uid="uid://bpabq3m2uhexi" path="res://project/arts/external/sound/splash (freesound_community, pixabay_com).ogg" id="44_glv4l"]
 [ext_resource type="PackedScene" uid="uid://56sns8fwwth2" path="res://project/scripts/drawing-paper/drawing-paper-default-pref.tscn" id="44_kid1s"]
+[ext_resource type="AudioStream" uid="uid://cd00yg57pyv85" path="res://project/arts/external/sound/BGM/a-robust-crew(by Darren Curtischosic_com).ogg" id="51_pmoxh"]
 
 [sub_resource type="Animation" id="Animation_l4vn4"]
 resource_name = "ANIM_IndicatorBleeping"
@@ -567,6 +568,15 @@ fit_content = true
 process_mode = 4
 layer = 10
 visible = false
+
+[node name="Listener" type="AudioListener2D" parent="."]
+current = true
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("51_pmoxh")
+autoplay = true
+script = ExtResource("44_0br6i")
+_audio_type = "BGM"
 
 [connection signal="on_pointer_pressed" from="Pointer Control" to="CauldronNodes/Drop Indicator Cauldron" method="_on_pointer_control_on_pointer_pressed"]
 [connection signal="on_pointer_pressed" from="Pointer Control" to="RuneTableNodes/Drop Area Rune" method="_on_pointer_control_on_pointer_pressed"]

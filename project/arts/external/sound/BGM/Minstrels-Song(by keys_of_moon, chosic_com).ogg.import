@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b46hrpjygbt6w"
+path="res://.godot/imported/Minstrels-Song(by keys_of_moon, chosic_com).ogg-08980e76e19d4a5ed4828aeec2a86784.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/BGM/Minstrels-Song(by keys_of_moon, chosic_com).ogg"
+dest_files=["res://.godot/imported/Minstrels-Song(by keys_of_moon, chosic_com).ogg-08980e76e19d4a5ed4828aeec2a86784.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

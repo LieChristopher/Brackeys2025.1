@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cd00yg57pyv85"
+path="res://.godot/imported/a-robust-crew(by Darren Curtischosic_com).ogg-96f1bb96c9fa8486f8047fbbb8feaa55.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/BGM/a-robust-crew(by Darren Curtischosic_com).ogg"
+dest_files=["res://.godot/imported/a-robust-crew(by Darren Curtischosic_com).ogg-96f1bb96c9fa8486f8047fbbb8feaa55.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
