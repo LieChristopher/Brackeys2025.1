@@ -1,30 +1,30 @@
 join character_overlay center [animation="Instant In"]
-join character_oldMan center
+join character_richGirl center
 character_richGirl: So once I take this, I'll get a vision of when I wish to see the most?
 character_richGirl: Sounds straightforward enough.
 She chugs the potion
 if {success} == true:
 	character_richGirl: ...
-	character_richGirl: Ah... So that's how it is.
+	character_richGirl (Negative): Ah... So that's how it is.
 	character_richGirl: ...
 	character_richGirl: Hm... Oh?
-	character_richGirl: I'm okay, thanks.
+	character_richGirl (Positive): I'm okay, thanks.
 	character_richGirl: Just a lot to think about, that's all.
 	character_richGirl: You wanna know more you say?
 	character_richGirl: ...I just have a lot to consider for my future.
 	character_richGirl: I am a prince y'know? Anything more than that is confidential info sorry, heh~
-	character_richGirl: Thanks for your service.
-	character_richGirl: I'll forgive that blunder you made the other day, not like it had any lasting consequences in the end heh.
+	character_richGirl (Positive): Thanks for your service.
+	character_richGirl (Positive): I'll forgive that blunder you made the other day, not like it had any lasting consequences in the end heh.
 else:
 	character_richGirl: *cough cough*
-	character_richGirl: Gah, my head-
+	character_richGirl (Negative): Gah, my head-
 	character_richGirl: Wait that's...
-	character_richGirl: WHAT IS THIS... NO, THIS ISN'T WHAT YOU PROMISED ME!?
-	character_richGirl: The future!? What I'm seeing is FAR from it, is this a joke to you?
-	character_richGirl: *she clutches her head, but glares at you*
-	character_richGirl: You're a fraud, through and through...
-	character_richGirl: Tch, I've had just about enough of you.
+	character_richGirl (Negative): WHAT IS THIS... NO, THIS ISN'T WHAT YOU PROMISED ME!?
+	character_richGirl (Negative): The future!? What I'm seeing is FAR from it, is this a joke to you?
+	character_richGirl (Negative): *she clutches her head, but glares at you*
+	character_richGirl (Negative): You're a fraud, through and through...
+	character_richGirl (Negative): Tch, I've had just about enough of you.
 	She snaps her fingers then turns to leave
 	Your vision fades to red, nothing is left
+	GAME OVER
 	set {gameOver} = true
-

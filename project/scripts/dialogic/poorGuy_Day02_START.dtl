@@ -1,18 +1,18 @@
 join character_overlay center [animation="Instant In"]
 join character_poorGuy center
 if {MoodGood.poorGuy} == true:
-	character_poorGuy: Mine friend! Is it not a glorious day!
+	character_poorGuy (Positive): Mine friend! Is it not a glorious day!
 	character_poorGuy: Today is the day...Mineself shall ascend once again to royalty. To reclaim mine divine birthright!
-	character_poorGuy: Today shall mark the day of mine ascension! Tomorrow, the banners of Land der Verdammten shall rise once again!
-	character_poorGuy: Mineself is prepared! Concoct for mineself your divine concoction of Kingly Rights!
-	character_poorGuy: No matter the result. Know, that this Louie Mor Netterman! Shall ever be your king and friend.
-	character_poorGuy: Now go forth! Your KING awaits his crown!
+	character_poorGuy (Positive): Today shall mark the day of mine ascension! Tomorrow, the banners of Land der Verdammten shall rise once again!
+	character_poorGuy (Positive): Mineself is prepared! Concoct for mineself your divine concoction of Kingly Rights!
+	character_poorGuy: No matter the result. Know, that this Humphrey Mor Netterman! Shall ever be your king and friend.
+	character_poorGuy (Positive): Now go forth! Your KING awaits his crown!
 else:
 	character_poorGuy: Alchemist...
 	character_poorGuy: Mineself has sought the gods for guidance. But mine prayers fell upon deaf ears.....
-	character_poorGuy: This must be a test! Until I reclaim what is rightfully mine I cannot recieve their guidance!
-	character_poorGuy: Mineself MUST become king!
-	character_poorGuy: So mineself demands it! As recompense for yesterday's transgressions. The potion of Kingly Rights!
-	character_poorGuy: Only then shall I reclaim MY BEAUTY, MY DIVINITY, MY KINGDOM!
+	character_poorGuy (Negative): This must be a test! Until I reclaim what is rightfully mine I cannot recieve their guidance!
+	character_poorGuy (Positive): Mineself MUST become king!
+	character_poorGuy (Negative): So mineself demands it! As recompense for yesterday's transgressions. The potion of Kingly Rights!
+	character_poorGuy (Positive): Only then shall I reclaim MY BEAUTY, MY DIVINITY, MY KINGDOM!
 	character_poorGuy: Then mineself might consider forgiving you for your crimes.
-	character_poorGuy: Get on with it peasant! Your king commands you!
+	character_poorGuy (Positive): Get on with it peasant! Your king commands you!

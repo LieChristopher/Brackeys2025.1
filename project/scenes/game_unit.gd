@@ -25,7 +25,7 @@ func find_cutscene() -> String:
 	var base_path = "res://project/scripts/dialogic/" + gameData.level_list[level_tracker] + "_"
 	#print(Dialogic.VAR.get("InteractionCounter").get(gameData.character_level_list[level_tracker]))
 	#if Dialogic.VAR.get("InteractionCounter").get(gameData.character_level_list[level_tracker]) > 1:
-	if level_tracker > 1:
+	if level_tracker >= 3 and level_event_tracker==2:
 		if Dialogic.VAR.get("MoodGood").get(gameData.character_level_list[level_tracker]):
 			base_path = base_path + "GoodMood_"
 		else:
@@ -35,10 +35,13 @@ func find_cutscene() -> String:
 		base_path = base_path + "START.dtl"
 	if level_event_tracker == 2:
 		base_path = base_path + "END.dtl"
+	print(base_path)
 	return base_path
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Dialogic.VAR.gameOver:
+		get_tree().change_scene_to_file("res://project/scenes/main_menu.tscn");
 	if level_tracker > len(gameData.level_list):
 		print("LEVELS COMPLETE")
 	
