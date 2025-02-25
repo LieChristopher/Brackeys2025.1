@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bl027w4f63vbe"
+path="res://.godot/imported/paper-flutter-5933 (by freesound_community, pixabay_com).ogg-a6846418f1cb61f55166e3d49494fa5a.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/paper-flutter-5933 (by freesound_community, pixabay_com).ogg"
+dest_files=["res://.godot/imported/paper-flutter-5933 (by freesound_community, pixabay_com).ogg-a6846418f1cb61f55166e3d49494fa5a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

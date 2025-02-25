@@ -22,7 +22,7 @@ func _exit_tree() -> void:
 	_audio_manager.unregister_audio_syncer(self);
 
 func set_audio_volume(v: float) -> void:
-	volume_db = v;
+	volume_db = (v * 104.0) - 80.0;
 
 func get_audio_type() -> int:
 	match _audio_type:

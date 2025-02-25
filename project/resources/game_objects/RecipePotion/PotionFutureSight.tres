@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipePotion" load_steps=14 format=3 uid="uid://brfna43deqw8t"]
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=15 format=3 uid="uid://brfna43deqw8t"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_efb5a"]
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_qxla5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="5_fdjmw"]
 [ext_resource type="Resource" uid="uid://b1eehrjm21jxu" path="res://project/resources/game_objects/RecipeIngredients/FISH SCALE.tres" id="6_nbefa"]
 [ext_resource type="Resource" uid="uid://g0fmwqxqsauj" path="res://project/resources/game_objects/RecipeIngredients/TURTLE SCUTE.tres" id="7_cke4h"]
+[ext_resource type="Texture2D" uid="uid://cktt4vf2y30fq" path="res://project/arts/internal/sprites/recipes/Future Sight Potion Recipe.png" id="8_d4bca"]
 
 [sub_resource type="Resource" id="Resource_up3a4"]
 script = ExtResource("1_efb5a")
@@ -40,3 +41,4 @@ name = "Future Sight Potion"
 description = "Allows one to see a single moment in that will occur in the future."
 points = 1000
 listOfIngredientRunes = Array[ExtResource("1_efb5a")]([SubResource("Resource_up3a4"), SubResource("Resource_m64ga"), SubResource("Resource_xtqev"), SubResource("Resource_0sl6y"), SubResource("Resource_2iv74")])
+recipe = ExtResource("8_d4bca")

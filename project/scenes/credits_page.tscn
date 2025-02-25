@@ -1,0 +1,313 @@
+[gd_scene load_steps=4 format=3 uid="uid://5nsyacj4u08s"]
+
+[ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="1_xpiax"]
+[ext_resource type="AudioStream" uid="uid://c4wetv8ydlaqc" path="res://project/arts/external/sound/click-ui (by Rusu Gabriel, pixabay_com).ogg" id="2_mscte"]
+[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="3_vabdn"]
+
+[node name="Credits Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xpiax")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.225
+anchor_right = 0.775
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27451)
+
+[node name="Scroller" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.225
+anchor_right = 0.775
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="Box" type="VBoxContainer" parent="Scroller"]
+custom_minimum_size = Vector2(0, 640)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SPACING2" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[wave][center][b]CREDITS[/b][/center][/wave]"
+fit_content = true
+
+[node name="Horizontal Line4" type="ColorRect" parent="Scroller/Box"]
+custom_minimum_size = Vector2(320, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SPACING" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Title2" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "[wave][center][b]Yoka Circle[/b][/center] present[/wave]"
+fit_content = true
+
+[node name="SPACING3" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="SAMPLE TITLE TEXT" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[center][wave amp=100.0 freq=10.0][b]DROPOUT ALCHEMY[/b][/wave]"
+fit_content = true
+
+[node name="SPACING15" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Horizontal Line3" type="ColorRect" parent="Scroller/Box"]
+custom_minimum_size = Vector2(480, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SPACING4" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Title4" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 56
+bbcode_enabled = true
+text = "[wave amp=50.0][center][b]TEAM[/b][/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING5" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="Horizontal Line5" type="ColorRect" parent="Scroller/Box"]
+custom_minimum_size = Vector2(480, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Title6" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "[wave][center][b]Designed by[/b][/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING6" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="Title7" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Borscht[/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING7" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Title3" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "[wave][center][b]Artists[/b][/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING9" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="Title8" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Noct[/center][/wave]
+"
+fit_content = true
+
+[node name="Title9" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]VENTOM0RI[/center][/wave]
+"
+fit_content = true
+
+[node name="Title10" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Zwelff[/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING10" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Title5" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "[wave][center][b]Programmers[/b][/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING11" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="Title11" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Christopher Lie[/center][/wave]
+"
+fit_content = true
+
+[node name="Title12" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]JoenTNT[/center][/wave]
+"
+fit_content = true
+
+[node name="Title13" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Xezonyx[/center][/wave]
+"
+fit_content = true
+
+[node name="Horizontal Line2" type="ColorRect" parent="Scroller/Box"]
+custom_minimum_size = Vector2(480, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SPACING12" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Title14" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 56
+bbcode_enabled = true
+text = "[wave amp=50.0][center][b]OUTSOURCES[/b][/center][/wave]
+"
+fit_content = true
+
+[node name="Horizontal Line" type="ColorRect" parent="Scroller/Box"]
+custom_minimum_size = Vector2(480, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SPACING14" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="Title15" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "[wave][center][b]SOUND ASSETS[/b][/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING13" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="Title16" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Freesound Community - Pixabay[/center][/wave]
+"
+fit_content = true
+
+[node name="Title17" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[wave][center]Rusu Gabriel - Pixabay[/center][/wave]
+"
+fit_content = true
+
+[node name="SPACING8" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="SAMPLE TITLE TEXT2" type="RichTextLabel" parent="Scroller/Box"]
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[center][wave amp=100.0 freq=10.0][b]THANK YOU FOR PLAYING!!![/b] :D[/wave]"
+fit_content = true
+
+[node name="SPACING16" type="Control" parent="Scroller/Box"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 168.0
+offset_bottom = 92.0
+text = "Back"
+alignment = 0
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Back"]
+stream = ExtResource("2_mscte")
+script = ExtResource("3_vabdn")
+_audio_type = "SFX"
+
+[connection signal="pressed" from="Back" to="." method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Back" to="." method="set_visible" binds= [false]]
+[connection signal="pressed" from="Back" to="Back/Click" method="play" binds= [0.0]]

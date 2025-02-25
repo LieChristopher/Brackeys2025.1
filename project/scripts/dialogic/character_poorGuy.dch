@@ -6,18 +6,45 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "DialogueStyle"
+"style": ""
 },
 "default_portrait": "Neutral",
 "description": "",
-"display_name": "Louie",
+"display_name": "Humphrey",
 "mirror": false,
-"nicknames": ["Poor Twink", "Louie Gutaussehender Mann des Dorfes"],
+"nicknames": ["Poor Twink", "Humphrey Gutaussehender Mann des Dorfes"],
 "offset": Vector2(0, 0),
 "portraits": {
+"Fail": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/characters/poorGuy/blondietwinkie  - realistic...png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Negative": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/characters/poorGuy/angy loiu.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Neutral": {
 "export_overrides": {
 "image": "\"res://project/arts/internal/sprites/characters/poorGuy/neutral.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Positive": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/characters/poorGuy/hepi loui.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

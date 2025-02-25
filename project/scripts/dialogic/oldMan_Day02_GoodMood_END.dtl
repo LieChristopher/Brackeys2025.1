@@ -1,42 +1,42 @@
 join character_overlay center [animation="Instant In"]
 join character_oldMan center
-character_oldMan: OHOHOHOHOOOO. GIMME DAT!
-character_oldMan: I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
+character_oldMan (Positive): OHOHOHOHOOOO. GIMME DAT!
+character_oldMan (Positive): I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
 Godman Dave consumes the potion with gusto His less than flattering body starts to contort and transform
 if {success} == true:
-	character_oldMan: WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... ROCK SOLID!
-	character_oldMan: GIMME A MIRROR! Lemme have a look at dat' looker.
-	character_oldMan: *Godman Dave grabs the mirror. And tears streak down his face*
-	character_oldMan: I's.....I's can't believe it... I'M-I'm.....
-	character_oldMan: IRRREEESISTAAABLEEEEEE!!!
+	character_oldMan (Positive): WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... ROCK SOLID!
+	character_oldMan (Positive): GIMME A MIRROR! Lemme have a look at dat' looker.
+	Godman Dave grabs the mirror. And tears streak down his face
+	character_oldMan : I's.....I's can't believe it... I'M-I'm.....
+	character_oldMan (Positive): IRRREEESISTAAABLEEEEEE!!!
 	Dave flexes and contorts his flabby pectoral muscles
-	character_oldMan: You's really outdone yourself kid!
-	character_oldMan: Just you's wait I'll be da' bees knees of the town wit dese GUNS!
+	character_oldMan (Positive): You's really outdone yourself kid!
+	character_oldMan (Positive): Just you's wait I'll be da' bees knees of the town wit dese GUNS!
 	Dave flexes his glutes
 	character_oldMan: I knew I was right ta put trust in you's.
 	character_oldMan: You know what kid? I had a sense from the start dat you's was meant for great things!
-	character_oldMan: Call it a god's intuition. CAPICHE!
-	character_oldMan: You's got dis' GODMAN DAVE's seal of approval! And dat dere! Means a heckova lot! 
+	character_oldMan (Positive): Call it a god's intuition. CAPICHE!
+	character_oldMan (Positive): You's got dis' GODMAN DAVE's seal of approval! And dat dere! Means a heckova lot! 
 	character_oldMan: So go on! GIT! IT'S A WIDE WORLD OUT 'DERE!
-	character_oldMan: Don't go wastin' it 'ere! In dis' shack you got dat! OR ELSE I'MMA BLOW YOU'S AND YOUR DINGY SHACK TO SMITHEREENS!
+	character_oldMan (Positive): Don't go wastin' it 'ere! In dis' shack you got dat! OR ELSE I'MMA BLOW YOU'S AND YOUR DINGY SHACK TO SMITHEREENS!
 	character_oldMan: Gotta run now kid! Best o' luck to ya!
-	character_oldMan: HOLD ON LADIES! GODMAN DAVE is on the way! HEHE! RAUR!
-	character_oldMan: CALL ME EL MACHO GUSTO, HANSAMO!
+	character_oldMan (Positive): HOLD ON LADIES! GODMAN DAVE is on the way! HEHE! RAUR!
+	character_oldMan (Positive): CALL ME EL MACHO GUSTO, HANSAMO!
 	Godman Dave starts running off shouting nonsensical things as he does
-	leave character_oldMan0
+	leave character_oldMan
 	character_oldMan: WHOOOO! Let's see em get away from GODMAN DAVE now!
 	Dave fades into the distance his laughter as infectious as his gusto
 else:
-	character_oldMan: WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... WiErd.....
-	character_oldMan: WhAt DA' hEck hAppENeD tA mE!
-	character_oldMan: GImMe A mIRrOr!
-	character_oldMan: *Godman Dave grabs the mirror*
+	character_oldMan (Negative): WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... WiErd.....
+	character_oldMan (Fail): WhAt DA' hEck hAppENeD tA mE!
+	character_oldMan (Fail): GImMe A mIRrOr!
+	character_oldMan (Fail): *Godman Dave grabs the mirror*
 	..........
 	Dave slowly raises his finger towards you
-	character_oldMan: I'M dIS' cLoSE Ta bLasTIn' yOu's tA KINGDOM COME! WhEre yOu'S'lL mEet mY BrOThEr. STEVE!
-	character_oldMan: BUT! YOu's a gOod KiD. ANd MiSTakeS hApPEn YeAH?.
-	character_oldMan: BuT dERe Won'T Be nO nExt TImE! CAPICHE!
+	character_oldMan (Fail): I'M dIS' cLoSE Ta bLasTIn' yOu's tA KINGDOM COME! WhEre yOu'S'lL mEet mY BrOThEr. STEVE!
+	character_oldMan (Fail): BUT! YOu's a gOod KiD. ANd MiSTakeS hApPEn YeAH?.
+	character_oldMan (Fail): BuT dERe Won'T Be nO nExt TImE! CAPICHE!
 	He lowers his' extremely menacing fingers
-	character_oldMan: NoW I's GonNa gO WaLK wHaTEveR DIs' iS Off.
+	character_oldMan (Fail): NoW I's GonNa gO WaLK wHaTEveR DIs' iS Off.
 	leave character_oldMan
 	Dave walks away all scribbly and deflated

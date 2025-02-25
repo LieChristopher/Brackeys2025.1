@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c8cl7q634kt5l" path="res://project/scenes/options_menu.tscn" id="3_g08ox"]
 [ext_resource type="Texture2D" uid="uid://8akxtsxemkm2" path="res://project/arts/internal/user-interface/pause-icon.png" id="3_svjgb"]
 
-[sub_resource type="Gradient" id="Gradient_lfukq"]
+[sub_resource type="Gradient" id="Gradient_mksw0"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vhl1d"]
-gradient = SubResource("Gradient_lfukq")
+gradient = SubResource("Gradient_mksw0")
 
 [node name="Pause menu" type="Control"]
 layout_mode = 3
@@ -114,22 +114,22 @@ visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="Pause Button" to="." method="_on_pause_button_pressed"]
-[connection signal="pressed" from="Pause Button" to="Pause Button" method="set_visible" binds= [false]]
 [connection signal="pressed" from="Pause Button" to="Pause Button" method="set_process_mode" binds= [4]]
-[connection signal="pressed" from="Pause Button" to="MenuScreen" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Pause Button" to="Pause Button" method="set_visible" binds= [false]]
 [connection signal="pressed" from="Pause Button" to="MenuScreen" method="set_process_mode" binds= [0]]
+[connection signal="pressed" from="Pause Button" to="MenuScreen" method="set_visible" binds= [true]]
 [connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="." method="_on_unpause_button_pressed"]
-[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Pause Button" method="set_visible" binds= [true]]
 [connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Pause Button" method="set_process_mode" binds= [0]]
-[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="MenuScreen" method="set_visible" binds= [false]]
+[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="Pause Button" method="set_visible" binds= [true]]
 [connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="MenuScreen" method="set_process_mode" binds= [4]]
-[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Settings Btn" to="MenuScreen" method="set_visible" binds= [false]]
+[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Unpause Btn" to="MenuScreen" method="set_visible" binds= [false]]
 [connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Settings Btn" to="MenuScreen" method="set_process_mode" binds= [4]]
-[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Settings Btn" to="Options Menu" method="set_visible" binds= [true]]
+[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Settings Btn" to="MenuScreen" method="set_visible" binds= [false]]
 [connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Settings Btn" to="Options Menu" method="set_process_mode" binds= [0]]
-[connection signal="pressed" from="Options Menu/Contents/Back" to="MenuScreen" method="set_visible" binds= [true]]
+[connection signal="pressed" from="MenuScreen/Main Content/VBoxContainer/Settings Btn" to="Options Menu" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="MenuScreen" method="set_process_mode" binds= [0]]
-[connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Options Menu/Contents/Back" to="MenuScreen" method="set_visible" binds= [true]]
 [connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Options Menu/Contents/Back" to="Options Menu" method="set_visible" binds= [false]]
 
 [editable path="Options Menu"]

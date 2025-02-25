@@ -3,11 +3,11 @@ join character_overlay center [animation="Instant In"]
 join character_richGirl center
 character_richGirl: The magic here is... impressive. You're an alchemist?
 character_richGirl: I've never seen you before though. Is this a new shop?
-character_richGirl: Haha, that's great. New things are always welcome.
+character_richGirl (Positive): Haha, that's great. New things are always welcome.
 character_richGirl: Anything I need... hm... my ex is in town this month...
-character_richGirl: Poison?! No, never! Are you mad?!
+character_richGirl (Negative): Poison?! No, never! Are you mad?!
 character_richGirl: ...Maybe not yet, I just don't want him to see me right now.
 character_richGirl: Invisibility? That doesn't sound too bad... but I know that will backfire... I still want others to see me of course.
-character_richGirl: A specialized one that makes him unable to see me and only me? You can do that? Wow, you must be a Grand Caster or something!
-character_richGirl: ...You're a drop out? In some ways that makes me uneasy, but this workshop you have IS quite incredible...
+character_richGirl (Positive): A specialized one that makes him unable to see me and only me? You can do that? Wow, you must be a Grand Caster or something!
+character_richGirl (Negative): ...You're a drop out? In some ways that makes me uneasy, but this workshop you have IS quite incredible...
 character_richGirl: Alright then, my instincts tell me you got what it takes to meet my demands... do your work magician...

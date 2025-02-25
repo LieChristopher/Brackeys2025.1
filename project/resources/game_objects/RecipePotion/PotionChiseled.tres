@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipePotion" load_steps=16 format=3 uid="uid://crp44darb3af6"]
+[gd_resource type="Resource" script_class="RecipePotion" load_steps=17 format=3 uid="uid://crp44darb3af6"]
 
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_gwfm5"]
 [ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_hqayx"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://bqnufgurlhqqy" path="res://project/resources/game_objects/RecipeIngredients/BEANS.tres" id="7_g37c1"]
 [ext_resource type="Resource" uid="uid://b6gtef5x5l6l1" path="res://project/resources/game_objects/RecipeIngredients/WORM.tres" id="8_pvukt"]
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="9_6vut6"]
+[ext_resource type="Texture2D" uid="uid://pf804ub7mwt0" path="res://project/arts/internal/sprites/recipes/PotionChiseled.png" id="10_jwidy"]
 
 [sub_resource type="Resource" id="Resource_a7okl"]
 script = ExtResource("1_gwfm5")
@@ -42,3 +43,4 @@ name = "Chiseled Potion"
 description = "You gain the body of a greek god. Said to shine even in the dark."
 points = 1000
 listOfIngredientRunes = Array[ExtResource("1_gwfm5")]([SubResource("Resource_a7okl"), SubResource("Resource_bjcj5"), SubResource("Resource_tq2dc"), SubResource("Resource_nkw4x"), SubResource("Resource_2ydi5")])
+recipe = ExtResource("10_jwidy")

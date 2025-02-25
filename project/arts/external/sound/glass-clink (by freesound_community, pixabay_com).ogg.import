@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bswv8tska4gvd"
+path="res://.godot/imported/glass-clink (by freesound_community, pixabay_com).ogg-ca34c41c553fcf6c886ef38e0ddd488d.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/glass-clink (by freesound_community, pixabay_com).ogg"
+dest_files=["res://.godot/imported/glass-clink (by freesound_community, pixabay_com).ogg-ca34c41c553fcf6c886ef38e0ddd488d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

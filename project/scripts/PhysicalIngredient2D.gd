@@ -3,22 +3,20 @@ extends Node2D
 
 @export var _ingredient_id: RecipeIngredient = null;
 
-func _ready() -> void:
-	print(_ingredient_id)
-
 # Runtime variable data.
 var _intersected_area: Area2D = null;
 var _drop_area: IngredientDropArea2D = null;
 
-func _ready() -> void:
-	#self.get_node("Sprite").texture = _ingredient_id.sprite.resource_path
-	#self.texture = str(_ingredient_id.sprite.resource_path)
-	pass
-
 func _on_draggable_area_entered(area: Area2D) -> void:
 	_intersected_area = area;
+	if _intersected_area == null: return;
+	if _intersected_area.has_method("on_ingredient_hovered_ev"):
+		_intersected_area.call("on_ingredient_hovered_ev");
 
 func _on_draggable_area_exited(area: Area2D) -> void:
+	if _intersected_area == null: return;
+	if _intersected_area.has_method("on_ingredient_unhovered_ev"):
+		_intersected_area.call("on_ingredient_unhovered_ev");
 	_intersected_area = null;
 
 func _on_draggable_released(pos: Vector2) -> void:

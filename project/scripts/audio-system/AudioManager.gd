@@ -40,11 +40,11 @@ func sync(audio_type: int) -> void:
 	for i in _syncers.keys():
 		_temp_syncer = _syncers[i] as AudioSyncer2D;
 		if audio_type == BGM_AUDIO:
-			_temp_syncer.set_audio_volume(_config.get_master_volume() * _config.get_bgm_volume());
+			_temp_syncer.set_audio_volume(_config.get_master_volume() * _config.get_bgm_volume() / 10000.0);
 		elif audio_type == SFX_AUDIO:
-			_temp_syncer.set_audio_volume(_config.get_master_volume() * _config.get_sfx_volume());
+			_temp_syncer.set_audio_volume(_config.get_master_volume() * _config.get_sfx_volume() / 10000.0);
 		else:
-			_temp_syncer.set_audio_volume(_config.get_master_volume());
+			_temp_syncer.set_audio_volume(_config.get_master_volume() / 100.0);
 
 func register_audio_syncer(syncer: AudioSyncer2D) -> void:
 	_syncers[syncer.get_instance_id()] = syncer;

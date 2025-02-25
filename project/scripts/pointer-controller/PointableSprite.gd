@@ -2,11 +2,13 @@ class_name PointableSprite
 extends Area2D
 
 signal on_pressed(pos: Vector2);
+signal on_pressed_non_param();
 signal on_tapped(pos: Vector2);
 signal on_hovered_enter();
 signal on_hovered_runtime(pos: Vector2);
 signal on_hovered_exit();
 signal on_released(pos: Vector2);
+signal on_released_non_param();
 signal on_enabled();
 signal on_disabled();
 
@@ -41,6 +43,7 @@ func _on_pressed(pos: Vector2) -> void:
 	_tap_seconds = 0.0;
 	_is_pressed = true;
 	on_pressed.emit(pos);
+	on_pressed_non_param.emit();
 	var sz: int = _tinted_sprites.size();
 	for i in range(0, sz):
 		_tinted_sprites[i].set_pressed_tint(self);
@@ -53,6 +56,7 @@ func _on_released(pos: Vector2) -> void:
 		on_tapped.emit(pos);
 		if _debug_print: print("Tapped: {s}".format({"s": name}));
 	on_released.emit(pos);
+	on_released_non_param.emit();
 	var sz: int = _tinted_sprites.size();
 	for i in range(0, sz):
 		_tinted_sprites[i].set_normal_tint(self);

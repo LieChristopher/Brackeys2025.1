@@ -1,0 +1,56 @@
+join character_overlay center [animation="Instant In"]
+join character_poorGuy center
+character_poorGuy (Positive): It is done!
+character_poorGuy: The right to rule! All in this bottle!
+character_poorGuy (Positive): At long last! MINE BIRTHRIGHT! AS THE GODS HAD ORDAINED!
+Humphrey greedily drinks the potion
+if {success} == true:
+	character_poorGuy (Positive): YES! NOW WITH THIS! MINESELF IS...mineself is....no different.....
+	Humphrey sighs and crumples to the floor
+	character_poorGuy: Mineself does not blame you, alchemist. What fool would believe one could attain the right to rule through a concoction....
+	character_poorGuy (Negative): The concoction was nothing more than a lure....to show greedy and desperate people like mineself how foolish they truly are.
+	character_poorGuy (Negative): Foolish people like mineself...who had no right to rule...
+	character_poorGuy: A part of mineself is relieved. If it was that simple to attain the right to rule then there could be no true king.
+	character_poorGuy: Mineself's eyes have been opened...what a fool I was.
+	character_poorGuy: What would mine father think if he saw mineself now.
+	Humphrey looks down in shame
+	character_poorGuy: Mine vain clinging to vanity and grandeur ends here. Mineself vows to be better.
+	character_poorGuy (Positive): Mineself thanks you for not turning your back on mineself despite mine actions.
+	character_poorGuy: If you could forgive mineself and humor me with a favour. Mineself would be ever grateful.
+	character_poorGuy (Positive): Could mineself ask you to assis in the search for mine noble lady?
+	character_poorGuy (Positive): She gleams like the sun! I may not be worthy now but perhaps...
+	Humphrey continues to describe his "lady" with incredible zeal. He looks as if he has finally become honest with himself
+else:
+	character_poorGuy (Positive): YES! NOW WITH THIS! MINESELF IS...mineself is....what is.....! Happening....!
+	Humphrey's head starts to swell
+	character_poorGuy (Negative): What have you done!?
+	Humphrey's face contorts, a similar face turns it's ugly head at you
+	character_poorGuy (Fail): Not again! MINE VISAGE! 
+	character_poorGuy (Fail): LOOK AWAY PEASANT! MINE BODY IS NOT FOR THE LIKES OF YOU TO LOOK DOWN UPON!
+	Humphrey covers his face and turns away in shame
+	character_poorGuy (Fail): LOOK WHAT YOUR CONCOCTION HAS DONE!
+	character_poorGuy (Fail): MINE DIVINE AND HEAVENLY APPEARANCE! RUINED, AGAIN! HOW HUMILIATING!
+	character_poorGuy (Fail): TURN MINESELF BACK! RIGHT THIS INSTANT PEASANT! 
+	You hear loud footsteps approaching
+	join character_oldMan left
+	character_oldMan (Positive): WHOA-HO! THERE! Did some sad bucko decide to shake the bee's trees and take the kingly rights potion?.
+	character_poorGuy (Fail): CAN'T YOU SEE MINE SITUATION YOU UGLY WRETCH! LEAVE!
+	character_oldMan (Positive): You's fell for the oooool' kingly potion bait, EH? Couldn't help it? AM I's RIGHT!
+	character_poorGuy (Fail): WHAT ARE YOU IMPLYING WRETCH!?
+	character_oldMan (Negative): SUCKERS LIKE YOU'S ARE EVERYWHERE. AND NOW THAT YOU'S TOOK DA BAIT! I'S GET TA BLAST YA!
+	character_oldMan (Negative): TA SMITHEREENS!!
+	character_poorGuy (Fail): YOU DARE! I AM A KING, DESTINED FOR GREATNESS! THE LIKES OF YOU-
+	character_oldMan: Yada yada yada! SHOULDA READ DA TERMS AND CONDITIONS ON DA BACK PAGE, BUCKO!
+	character_poorGuy (Fail): THERE WAS NO SUCH THING!
+	character_oldMan: WHOOPS! Uhhhh....my bad! BUT ANYWAY!
+	Godman Dave lifts his fingers to Humphrey
+	character_oldMan (Negative): ET ABIERUNT! YA SOURPUSS! KABLOOEY!!!
+	character_poorGuy (Fail): ARGHHH! IT SMELLS LIKE COW DUUUUUUUNG!
+	leave character_poorGuy
+	Humphrey was blasted to smithereens
+	character_oldMan: Terms and conditions kid' remember that. It'll be REAL important later on. 
+	character_oldMan: Now dat dat's over. I gotta run kid.
+	character_oldMan (Postitive): The ladies 'rouind 'ere. Wait for no one. Not even ME! And I'm worth the wait!
+	character_oldMan: HOLD ON LADIES! DAVEY IS ON DA WAY AND HE'S ALL WARMED UP! WHOOOO!
+	Godman Dave runs off. Though Humphrey may be gone, it feels like he may return....
+

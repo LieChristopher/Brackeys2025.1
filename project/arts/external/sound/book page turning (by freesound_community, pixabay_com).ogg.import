@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4x7omf0uj6pt"
+path="res://.godot/imported/book page turning (by freesound_community, pixabay_com).ogg-1bb667390565d4bceaecc11bd2da6806.oggvorbisstr"
+
+[deps]
+
+source_file="res://project/arts/external/sound/book page turning (by freesound_community, pixabay_com).ogg"
+dest_files=["res://.godot/imported/book page turning (by freesound_community, pixabay_com).ogg-1bb667390565d4bceaecc11bd2da6806.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

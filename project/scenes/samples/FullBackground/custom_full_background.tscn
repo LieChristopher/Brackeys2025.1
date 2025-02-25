@@ -27,6 +27,7 @@ script = ExtResource("2_ghan2")
 
 [node name="SceneBackground" type="TextureRect" parent="DialogicNode_BackgroundHolder"]
 z_index = -1
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.598435, 0.606806)

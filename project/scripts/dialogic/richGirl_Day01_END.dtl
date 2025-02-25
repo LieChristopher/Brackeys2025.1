@@ -1,4 +1,3 @@
-set {InteractionCounter.richgirl} = 2
 join character_overlay center [animation="Instant In"]
 join character_richGirl center
 character_richGirl: So... all I have to do is... find a way for him to drink this right? Okay, I'll be right back.
@@ -8,15 +7,26 @@ join character_richGirl center
 Not long after, the noble comes back. For a while, you got a bit nervous that you got swindled
 if {success} == true:
 	set {MoodGood.richGirl} = true
-	character_richGirl: Oh. My. God... It worked... and it was basically an instant effect! I got the chance to slap him and he had no clue I was even there!-
+	character_richGirl (Positive): Oh. My. God... It worked... and it was basically an instant effect! I got the chance to slap him and he had no clue I was even there!-
 	character_richGirl: Ahem, sorry I got carried away-
 	character_richGirl: Regardless, this is impressive work - perhaps equal to or greater to my personal magicians...
-	character_richGirl: I'll be sure to come back to you if I need anything else - my entire kingdom will know about you~
+	character_richGirl (Positive): I'll be sure to come back to you if I need anything else - my entire kingdom will know about you~
 	character_richGirl: Oh? Yeah I am a prince of a kingdom far, far away... I just choose to live here because I grew up here.
-	character_richGirl: What? Women can be princes too yk~? ;p
-	character_richGirl: Alrighty then~ I'm gonna go off and mess with him a bit again hehehe....
-	character_richGirl: Erm- Anyway! Thanks for your services sir!
+	character_richGirl (Positive): What? Women can be princes too yk~? ;p
+	character_richGirl (Positive): Alrighty then~ I'm gonna go off and mess with him a bit again hehehe....
+	character_richGirl (Positive): Erm- Anyway! Thanks for your services sir!
 	leave character_richGirl
 else:
 	set {MoodGood.richGirl} = false
-	FAIL
+	character_richGirl (Negative): DIDN'T I SAY NO POISON?! He started foaming in the mouth MINUTES after ingesting whatever the hell you gave me...
+	character_richGirl: It's an impressive poison sure, but I've never had to run so fast in my life before...
+	character_richGirl (Negative): Responsibility?! Hell no this isn't my fault! You're the one who made the damn potion!
+	character_richGirl (Negative): If anything, I should report you and your hack of a shop immediately!
+	character_richGirl (Negative): ...ugh but knowing that guy he won't even get close to dying over something as simple as poison... You're lucky that you won't have a manslaughter charge on your hands you hack.
+	character_richGirl: Screw it, I want no part in this-
+	character_richGirl: In fact, no one will know I was here... not even you...
+	character_richGirl (Negative): Got it?
+	character_richGirl (Negative): A corpse can't talk, and you better remember that if you know what's good for you.
+	She snaps her fingers, your vision flashes red and she's gone
+set {InteractionCounter.richGirl} = 2
+

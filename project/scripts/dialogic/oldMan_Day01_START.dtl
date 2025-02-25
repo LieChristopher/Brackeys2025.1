@@ -2,23 +2,23 @@ set {gameOver} = false
 join character_overlay center [animation="Instant In" z_index="5"]
 You hear footsteps in the distance. In the distance, a man hurriedly approaches you.
 join character_oldMan center
-character_oldMan: Well well well. Whadda we 'ave here. A random stranger setting up shop on GODMAN DAVE'S LAND.
-character_oldMan: You's see anyone else round 'ere! I'm talkin' to you's!
+character_oldMan (Negative): Well well well. Whadda we 'ave here. A random stranger setting up shop on GODMAN DAVE'S LAND.
+character_oldMan (Negative): You's see anyone else round 'ere! I'm talkin' to you's!
 character_oldMan: So? Whaddya plannin on doin' here with your dinky shack eh?
-character_oldMan: Oh. Did I forget to mention. ON.MY.LAND.
+character_oldMan (Negative): Oh. Did I forget to mention. ON.MY.LAND.
 character_oldMan: Whuzzat? An alchemist? In dis' shabby shack? You's gotta be kiddin' me.
-character_oldMan: I ain't listenin' to no more beeswax. Now hurry up and get outta here before I blast you's and your sorry excuse of a shack.... ta SMITHEREENS!!
-character_oldMan: CAPICHE!! GOT IT!? NOW GET ON OUTTA HERE! GIT!
+character_oldMan (Negative): I ain't listenin' to no more beeswax. Now hurry up and get outta here before I blast you's and your sorry excuse of a shack.... ta SMITHEREENS!!
+character_oldMan (Negative): CAPICHE!! GOT IT!? NOW GET ON OUTTA HERE! GIT!
 character_oldMan: Huh!? What'd you's say? Alchemy academy graduate? Top o' da class?
 character_oldMan: Den what's you's doin' all the way out 'ere?
 character_oldMan: Hmmm. Let's see here. I's got it.
-character_oldMan: IF. What you're sayin' is true. Dis' MAGNANIMOUS GODMAN DAVE and dis' Land o' mine could use your skills.
+character_oldMan (Positive): IF. What you're sayin' is true. Dis' MAGNANIMOUS GODMAN DAVE and dis' Land o' mine could use your skills.
 character_oldMan: Plenty of folk round 'ere have need of some concotions.
 character_oldMan: Dunno why you's decided to set up shop here but let's say what you's said was the truth.
 character_oldMan: Right here, right now. I want you's to make me a potion.
-character_oldMan: What? Scared? Aren't ya MR. TOP O' DA CLASS??? HMMM?
-character_oldMan: I haven't even told you's what kinda potion ta make and you're already sweatin' bullets.
-character_oldMan: Well whateva' if you're lyin'. I'll just blast ya' ta smithereens like I said I'd do. Capiche?
-character_oldMan: So get ta brewin me a perfume. Only da finest smellin' fragrance in all da land'll cut it...Got a date later today with da ladies and I gotta be tip-top IRRESISTABLE!
-character_oldMan: Tell ya what I'll even supply you's with the ingredients since I'm OH SO GENEROUS and ALMIGHTY.
-character_oldMan: So don't screw this up got it! NOW GET TA BREWIN! CHOP! CHOP!
+character_oldMan (Negative): What? Scared? Aren't ya MR. TOP O' DA CLASS??? HMMM?
+character_oldMan (Negative): I haven't even told you's what kinda potion ta make and you're already sweatin' bullets.
+character_oldMan (Negative): Well whateva' if you're lyin'. I'll just blast ya' ta smithereens like I said I'd do. Capiche?
+character_oldMan (Positive): So get ta brewin me a perfume. Only da finest smellin' fragrance in all da land'll cut it...Got a date later today with da ladies and I gotta be tip-top IRRESISTABLE!
+character_oldMan (Positive): Tell ya what I'll even supply you's with the ingredients since I'm OH SO GENEROUS and ALMIGHTY.
+character_oldMan (Negative): So don't screw this up got it! NOW GET TA BREWIN! CHOP! CHOP!
