@@ -116,6 +116,9 @@ func set_brush_size(sz: int) -> void:
 func get_drawn_texture() -> ImageTexture:
 	return _texture_obj;
 
+func get_texture_2d() -> Texture2D:
+	return _texture_obj;
+
 func save_image() -> void:
 	_full_path = "{dir}{file}".format({"dir": _save_directory, "file": _save_file_name});
 	_image_canvas.save_png(_full_path);
