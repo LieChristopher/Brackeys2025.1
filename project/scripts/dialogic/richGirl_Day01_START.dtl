@@ -1,5 +1,6 @@
 set {gameOver} = false
-join character_overlay center [animation="Instant In"]
+set {gameWin} = false
+join character_overlay center [animation="Instant In" z_index="5"]
 join character_richGirl center
 character_richGirl: The magic here is... impressive. You're an alchemist?
 character_richGirl: I've never seen you before though. Is this a new shop?

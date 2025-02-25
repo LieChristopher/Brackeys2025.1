@@ -1,0 +1,9 @@
+join character_overlay center [animation="Instant In" z_index="5"]
+It's been a while that you've worked this shop..
+You really feel like a part of the community
+join character_poorGuy right
+join character_richGirl left
+join character_oldMan center
+All in all, things are looking up for you in this strange place
+set {gameOver} = true
+set {gameWin} = true
