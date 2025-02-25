@@ -51,6 +51,7 @@ directories/dtl_directory={
 "richGirl_Day02_BadMood_END": "res://project/scripts/dialogic/richGirl_Day02_BadMood_END.dtl",
 "richGirl_Day02_GoodMood_END": "res://project/scripts/dialogic/richGirl_Day02_GoodMood_END.dtl",
 "richGirl_Day02_START": "res://project/scripts/dialogic/richGirl_Day02_START.dtl",
+"timeline_test": "res://project/scripts/dialogic/timeline_test.dtl",
 "timeline_win": "res://project/scripts/dialogic/timeline_win.dtl"
 }
 glossary/default_case_sensitive=true

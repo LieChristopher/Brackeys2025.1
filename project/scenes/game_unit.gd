@@ -40,6 +40,7 @@ func find_cutscene() -> String:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#$CanvasLayer3/TextureRect3.texture = $"Gameplay/Drawing Paper Default Pref/Drawing Paper".get
 	if Dialogic.VAR.gameOver:
 		Dialogic.end_timeline()
 		get_tree().change_scene_to_file("res://project/scenes/main_menu.tscn");
