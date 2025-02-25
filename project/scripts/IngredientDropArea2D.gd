@@ -155,8 +155,8 @@ func create_potion_with_same_rune(runeType:int) -> void:
 		#testing to add to cauldron
 		%"Drop Indicator Cauldron".array.append(newIngredientRune)
 	
-	for each in %"Drop Indicator Cauldron".array:
-		print('%"Drop Indicator Cauldron".array has ',each.ingredient.name, each.rune.name)
+	#for each in %"Drop Indicator Cauldron".array:
+		#print('%"Drop Indicator Cauldron".array has ',each.ingredient.name, each.rune.name)
 	ingredientRuneArray.clear();
 	%"Drop Area Rune".array.clear();
 	%RuneTableIngredient.texture = null;

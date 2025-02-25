@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 	if Dialogic.VAR.gameOver:
 		Dialogic.end_timeline()
 		get_tree().change_scene_to_file("res://project/scenes/main_menu.tscn");
+		return
 	if level_tracker > len(gameData.level_list):
 		print("LEVELS COMPLETE")
 		Dialogic.start("res://project/scripts/dialogic/timeline_win.dtl")

@@ -5,7 +5,7 @@ if {success} == true:
 	character_oldMan (Positive): OHOHOHOHOOOO. GIMME DAT!
 	character_oldMan (Positive): I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
 	Godman Dave consumes the potion with gusto His less than flattering body starts to contort and transform
-leave character_player
+	leave character_player
 	character_oldMan (Positive): WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... ROCK SOLID!
 	character_oldMan (Positive): GIMME A MIRROR! Lemme have a look at dat' looker.
 	character_oldMan (Positive): *Godman Dave grabs the mirror. And tears streak down his face*

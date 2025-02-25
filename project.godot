@@ -69,7 +69,7 @@ variables={
 },
 "gameOver": false,
 "gameWin": false,
-"success": true
+"success": false
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
