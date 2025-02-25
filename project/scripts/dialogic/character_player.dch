@@ -8,12 +8,130 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "",
+"default_portrait": "FailAntivisibility",
 "description": "",
 "display_name": "You",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {},
+"portraits": {
+"Base": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Base.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"FailAntivisibility": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - AntiVisibility Fail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"FailChiseled": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Variant 1 Fail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"FailEekayman": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Variant 3 Fail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"FailFuture": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Variant 2 Fail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"FailKing": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Kingly Fail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"FailPerfume": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Perfume Fail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"SuccessAntivisibility": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - AntiVisibility Success.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"SuccessChiseled": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Variant 1 Success.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"SuccessEekayman": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Variant 3 Success.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"SuccessFuture": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Variant 2 Success.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"SuccessKing": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Kingly Success.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+},
+"SuccessPerfume": {
+"export_overrides": {
+"image": "\"res://project/arts/internal/sprites/potions/Potion - Perfume Success.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -180),
+"scale": 0.25,
+"scene": ""
+}
+},
 "scale": 1.0
 }

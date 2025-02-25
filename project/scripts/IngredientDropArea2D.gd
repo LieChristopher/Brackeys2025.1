@@ -118,10 +118,6 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 	return true;
 
 func potion_complete() -> void:
-	%GameEnd.visible = true;
-	await get_tree().create_timer(2.65).timeout;
-	%GameEnd.visible = false;
-	get_parent().get_parent().complete = true;
 	if _drawing_canvas == null: return;
 	_drawing_canvas.visible = true;
 	_drawing_canvas.process_mode = Node.PROCESS_MODE_INHERIT;

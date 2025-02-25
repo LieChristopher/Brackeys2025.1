@@ -1,14 +1,16 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_poorGuy center
-character_poorGuy: And so it is done....
-character_poorGuy: To think one could attain the right to rule from a concotion....
-character_poorGuy: Nay...Mineself has learned, friend. mineself need not the potion to reclaim mine right to rule nor to rebuild mine kingdom
-character_poorGuy: What mineself needed was conviction! And worthy subjects.
-character_poorGuy: Bear witness friend..This tribute that you have gifted me. Shall be the beginning.
-character_poorGuy (Positive): A vow of brotherhood. Together we shall rebuild mine-, nay the people's kingdom. In the name of mine father.
-character_poorGuy (Positive): As the gods have ordained mineself shall reclaim my birthright!
-character_poorGuy (Positive): In the name of my father King Gut Mor Netterman! Mineself swears To be a divine, just and magnanimous king
 if {success} == true:
+	join character_player (SuccessKing)
+	character_poorGuy: And so it is done....
+	character_poorGuy: To think one could attain the right to rule from a concotion....
+	character_poorGuy: Nay...Mineself has learned, friend. mineself need not the potion to reclaim mine right to rule nor to rebuild mine kingdom
+	character_poorGuy: What mineself needed was conviction! And worthy subjects.
+	character_poorGuy: Bear witness friend..This tribute that you have gifted me. Shall be the beginning.
+	character_poorGuy (Positive): A vow of brotherhood. Together we shall rebuild mine-, nay the people's kingdom. In the name of mine father.
+	character_poorGuy (Positive): As the gods have ordained mineself shall reclaim my birthright!
+	character_poorGuy (Positive): In the name of my father King Gut Mor Netterman! Mineself swears To be a divine, just and magnanimous king
+	leave character_player
 	Humphrey drinks the concoction but nothing happens
 	character_poorGuy: As mineself expected...nothing more than a tall tale for the greedy and desperate...
 	character_poorGuy: A part of mineself is relieved. If it was that simple to attain the right to rule then there could be no true king.
@@ -17,6 +19,16 @@ if {success} == true:
 	character_poorGuy: But before mineself leaves....It is time I found mine fair lady.
 	Humphrey walks away and doesn't turn back, his conviction and demeanor seemed almost divine
 else:
+	join character_player (FailKing)
+	character_poorGuy: And so it is done....
+	character_poorGuy: To think one could attain the right to rule from a concotion....
+	character_poorGuy: Nay...Mineself has learned, friend. mineself need not the potion to reclaim mine right to rule nor to rebuild mine kingdom
+	character_poorGuy: What mineself needed was conviction! And worthy subjects.
+	character_poorGuy: Bear witness friend..This tribute that you have gifted me. Shall be the beginning.
+	character_poorGuy (Positive): A vow of brotherhood. Together we shall rebuild mine-, nay the people's kingdom. In the name of mine father.
+	character_poorGuy (Positive): As the gods have ordained mineself shall reclaim my birthright!
+	character_poorGuy (Positive): In the name of my father King Gut Mor Netterman! Mineself swears To be a divine, just and magnanimous king
+	leave character_player
 	Humphrey drinks the concoction and a glorious crown of lettuce sprouts atop his noble head
 	............
 	character_poorGuy: It appears that there is now quite the blemish upon the future kingdoms chief alchemist's record...

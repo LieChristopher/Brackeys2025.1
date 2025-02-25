@@ -1,8 +1,10 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_poorGuy center
-character_poorGuy (Positive): Oh your offering is ready? Then I shall partake...this wondrous looking potion!
-character_poorGuy: *drinks potion and pulls out a shard of glass*
 if {success} == true:
+	join character_player (SuccessEekayman)
+	character_poorGuy (Positive): Oh your offering is ready? Then I shall partake...this wondrous looking potion!
+	character_poorGuy: *drinks potion and pulls out a shard of glass*
+	leave character_player
 	set {MoodGood.poorGuy} = true
 	character_poorGuy: Hmm...
 	Humphrey drinks more of the potion
@@ -23,6 +25,10 @@ if {success} == true:
 	leave character_poorGuy
 	Humphrey walks away, a beaming smile on his face, brimming with confidence
 else:
+	join character_player (FailEekayman)
+	character_poorGuy (Positive): Oh your offering is ready? Then I shall partake...this wondrous looking potion!
+	character_poorGuy: *drinks potion and pulls out a shard of glass*
+	leave character_player
 	set {MoodGood.poorGuy} = false
 	Humphrey's face blur's, becoming more and more defined. Turning into one not of this world
 	character_poorGuy (Fail): ......

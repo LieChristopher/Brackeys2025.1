@@ -1,9 +1,11 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_oldMan center
-character_oldMan (Positive): OHOHOHOHOOOO. GIMME DAT!
-character_oldMan (Positive): I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
-Godman Dave consumes the potion with gusto His less than flattering body starts to contort and transform
 if {success} == true:
+	join character_player (SuccessChiseled)
+	character_oldMan (Positive): OHOHOHOHOOOO. GIMME DAT!
+	character_oldMan (Positive): I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
+	Godman Dave consumes the potion with gusto His less than flattering body starts to contort and transform
+leave character_player
 	character_oldMan (Positive): WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... ROCK SOLID!
 	character_oldMan (Positive): GIMME A MIRROR! Lemme have a look at dat' looker.
 	character_oldMan (Positive): *Godman Dave grabs the mirror. And tears streak down his face*
@@ -20,6 +22,11 @@ if {success} == true:
 	Godman Dave starts running off shouting nonsensical things as he does
 	character_oldMan: WHOOOO! Let's see em get away from GODMAN DAVE now!
 else:
+	join character_player (FailChiseled)
+	character_oldMan (Positive): OHOHOHOHOOOO. GIMME DAT!
+	character_oldMan (Positive): I's can feel it! HOLD ON LADIES! FLEXMAN DAVE IS COMIN' TA TOWN!
+	Godman Dave consumes the potion with gusto His less than flattering body starts to contort and transform
+	leave character_player
 	character_oldMan: WHOA-HO-HO. I FEEL. DIFFERENT. I FEEL..... WiErd.....
 	character_oldMan (Fail): WhAt DA' hEck hAppENeD tA mE!
 	character_oldMan (Fail): GImMe A mIRrOr!

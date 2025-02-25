@@ -1,11 +1,13 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_richGirl center
-character_richGirl: So... all I have to do is... find a way for him to drink this right? Okay, I'll be right back.
-leave character_richGirl
-Lady Rey disappears in a haste, leaving your shop.
-join character_richGirl center
-Not long after, the noble comes back. For a while, you got a bit nervous that you got swindled
 if {success} == true:
+	join character_player (SuccessAntivisibility)
+	character_richGirl: So... all I have to do is... find a way for him to drink this right? Okay, I'll be right back.
+	leave character_player
+	leave character_richGirl
+	Lady Rey disappears in a haste, leaving your shop.
+	join character_richGirl center
+	Not long after, the noble comes back. For a while, you got a bit nervous that you got swindled
 	set {MoodGood.richGirl} = true
 	character_richGirl (Positive): Oh. My. God... It worked... and it was basically an instant effect! I got the chance to slap him and he had no clue I was even there!-
 	character_richGirl: Ahem, sorry I got carried away-
@@ -17,6 +19,10 @@ if {success} == true:
 	character_richGirl (Positive): Erm- Anyway! Thanks for your services sir!
 	leave character_richGirl
 else:
+	join character_player (SuccessAntivisibility)
+	character_richGirl: So... all I have to do is... find a way for him to drink this right? Okay, I'll be right back.
+	leave character_player
+	leave character_richGirl
 	set {MoodGood.richGirl} = false
 	character_richGirl (Negative): DIDN'T I SAY NO POISON?! He started foaming in the mouth MINUTES after ingesting whatever the hell you gave me...
 	character_richGirl: It's an impressive poison sure, but I've never had to run so fast in my life before...
