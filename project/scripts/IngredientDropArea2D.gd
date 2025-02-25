@@ -23,7 +23,11 @@ extends Area2D
 # Runtime variable data.
 var _temp_content: Dictionary;
 var _indicator_active: bool = false;
-var array = [];
+var _temp_expected_ingredient: RecipeIngredient;
+var _temp_real_ingredient: RecipeIngredient;
+var _temp_expected_rune: RecipeRune;
+var _temp_real_rune: RecipeRune;
+var array: Array[Variant] = [];
 
 #func _on_area_entered(area: Area2D) -> void:
 	#print("Ingredient entered area and is added to array")
@@ -71,33 +75,41 @@ func _on_pointer_control_on_pointer_released(pos: Vector2, detected_contents: Ar
 		_anim.stop();
 
 func _on_make_cauldron_potion_button_pressed() -> bool:
-	var cauldronArray = %"Drop Indicator Cauldron".array
-	var expectedIngredientRunes = _target_potion.listOfIngredientRunes
-	var i: int = 0;
-	while i < len(expectedIngredientRunes):
-		var j: int = 0;
-		var ingredientExists: bool = false;
-		while j < len(cauldronArray):
-			if expectedIngredientRunes[i].ingredient.name == cauldronArray[j].ingredient.name  && expectedIngredientRunes[i].rune.name  == cauldronArray[j].rune.name :
-				ingredientExists = true;
-				print(cauldronArray[j].ingredient.name)
-				cauldronArray.remove_at(j);
-				i += 1;
-				j = 0;
-			j += 1;
-		if ingredientExists == false:
-			print("Wrong potion");
-			potion_complete();
-			Dialogic.VAR.set_variable("success",false);
-			return false; #potion fail
+	var cauldronArray = %"Drop Indicator Cauldron".array;
+	var expectedIngredientRunes: Array[RecipeIngredientRune] = _target_potion.listOfIngredientRunes;
+	var i: int = 0; var is_failed: bool = false;
+	var szca: int = cauldronArray.size();
+	var sze: int = expectedIngredientRunes.size();
+	if szca != sze:
+		is_failed = true;
+	else:
+		var max_sz: int = maxi(szca, sze);
+		while i < max_sz:
+			_temp_expected_ingredient = expectedIngredientRunes[i].ingredient;
+			_temp_real_ingredient = cauldronArray[i].ingredient;
+			_temp_expected_rune = expectedIngredientRunes[i].rune;
+			_temp_real_rune = cauldronArray[i].rune;
+			# TODO: Calculate sum precentage of success and reputation.
+			if _temp_expected_ingredient.name != _temp_real_ingredient.name:
+				is_failed = true;
+				break;
+			if _temp_expected_rune.name != _temp_real_rune.name:
+				is_failed = true;
+				break;
+			i += 1;
+	if is_failed:
+		print("Wrong potion");
+		potion_complete();
+		Dialogic.VAR.set_variable("success", false);
+		return false; #potion fail
 	print("Correct potion");
 	potion_complete();
-	Dialogic.VAR.set_variable("success",true);
+	Dialogic.VAR.set_variable("success", true);
 	return true;
 
 func potion_complete() -> void:
 	%GameEnd.visible = true;
-	await get_tree().create_timer(1.0).timeout;
+	await get_tree().create_timer(2.65).timeout;
 	%GameEnd.visible = false;
 	get_parent().get_parent().complete = true;
 	if _drawing_canvas == null: return;
@@ -124,12 +136,9 @@ func create_potion_with_same_rune(runeType:int) -> void:
 	var chosenRune = 0;
 	var ingredientRuneArray = []
 	
-	if runeType == 0:
-		chosenRune = _neutral_rune
-	elif runeType == 1:
-		chosenRune = _powder_rune
-	elif runeType == 2 :
-		chosenRune = _goo_rune
+	if runeType == 0: chosenRune = _neutral_rune
+	elif runeType == 1: chosenRune = _powder_rune
+	elif runeType == 2 : chosenRune = _goo_rune
 		
 	for ingredient in %"Drop Area Rune".array:
 		var newIngredientRune=RecipeIngredientRune.new()
