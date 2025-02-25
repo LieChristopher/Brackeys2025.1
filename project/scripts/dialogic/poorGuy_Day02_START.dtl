@@ -1,4 +1,4 @@
-join character_overlay center [animation="Instant In"]
+join character_overlay center [animation="Instant In" z_index="5"]
 join character_poorGuy center
 if {MoodGood.poorGuy} == true:
 	character_poorGuy (Positive): Mine friend! Is it not a glorious day!

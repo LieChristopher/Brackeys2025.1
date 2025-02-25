@@ -1,4 +1,4 @@
-join character_overlay center [animation="Instant In"]
+join character_overlay center [animation="Instant In" z_index="5"]
 It's been a while that you've worked this shop..
 You really feel like a part of the community
 join character_poorGuy right

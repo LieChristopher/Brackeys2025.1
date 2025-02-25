@@ -1,4 +1,4 @@
-join character_overlay center [animation="Instant In"]
+join character_overlay center [animation="Instant In" z_index="5"]
 join character_poorGuy center
 character_poorGuy (Positive): Oh your offering is ready? Then I shall partake...this wondrous looking potion!
 character_poorGuy: *drinks potion and pulls out a shard of glass*
