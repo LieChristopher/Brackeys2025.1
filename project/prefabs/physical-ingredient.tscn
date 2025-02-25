@@ -8,8 +8,9 @@
 [ext_resource type="Shape2D" uid="uid://uj45g6vlaai0" path="res://project/resources/physics/standard-ingredient-collider-shape.tres" id="6_ath57"]
 [ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="7_yayp2"]
 
-[node name="Physical Ingredient" type="Node2D"]
+[node name="Physical Ingredient" type="Node2D" node_paths=PackedStringArray("_draggable")]
 script = ExtResource("1_31okb")
+_draggable = NodePath("Draggable Area")
 
 [node name="Draggable Area" parent="." instance=ExtResource("1_p7at3")]
 position = Vector2(0, 0)

@@ -1,6 +1,8 @@
 class_name IngredientDropArea2D
 extends Area2D
 
+signal on_filled_amount(amount: int);
+
 # Variables.
 @export_group("Target Potion (changes needed)")
 @export var _target_potion: RecipePotion = null;
@@ -15,6 +17,7 @@ extends Area2D
 @export var _on_ingredient_hovered: Color = Color.CYAN;
 @export var _on_ingredient_unhovered: Color = Color.WHITE;
 @export var _drawing_canvas: CanvasLayer = null;
+@export var _placeholder_container: PhysicalIngredientPlaceholderContainer2D = null;
 
 @export_group("Animations")
 @export var _anim: AnimationPlayer = null;
@@ -44,20 +47,27 @@ var array: Array[Variant] = [];
 	##area.queue_free()
 	##area.get_node("CollisionShape2D").queue_free()
 
-func _process(delta: float) -> void:
+func _ready() -> void:
 	_target_potion = load(get_parent().get_parent().potion_path)
+	# Call initial event.
+	on_filled_amount.emit(array.size());
 
 func on_ingredient_hovered_ev() -> void:
-	modulate = _on_ingredient_hovered;
+	_indicator.modulate = _on_ingredient_hovered;
 
 func on_ingredient_unhovered_ev() -> void:
-	modulate = _on_ingredient_unhovered;
+	_indicator.modulate = _on_ingredient_unhovered;
 
 func add_ingredient(ingredient: PhysicalIngredient2D) -> void:
 	print(self.name," has added ",ingredient._ingredient_id.name)
 	array.push_back(ingredient._ingredient_id);
 	print(self.name," now has ",array);
-	modulate = _on_ingredient_unhovered;
+	_indicator.modulate = _on_ingredient_unhovered;
+	on_filled_amount.emit(array.size());
+	if _placeholder_container == null: return;
+	_placeholder_container.add_ingredient_placeholder(
+		ingredient.get_ingredient_sprite(),
+		ingredient.get_draggable_global_pos());
 
 func _on_pointer_control_on_pointer_pressed(pos: Vector2, detected_contents: Array[Dictionary]) -> void:
 	var sz: int = detected_contents.size();

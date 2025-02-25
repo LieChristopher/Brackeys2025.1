@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0sbah8xymy8m"]
+
+[ext_resource type="Texture2D" uid="uid://cb82laasdu385" path="res://project/arts/internal/sprites/ingredients/Cabbage.png" id="1_ci2qb"]
+[ext_resource type="Script" path="res://project/scripts/PhysicalIngredientPlaceholder2D.gd" id="2_ou8t7"]
+
+[node name="Ingredient Placeholder" type="Sprite2D"]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_ci2qb")
+script = ExtResource("2_ou8t7")
