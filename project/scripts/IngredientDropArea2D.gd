@@ -164,4 +164,3 @@ func create_potion_with_same_rune(runeType:int) -> void:
 	ingredientRuneArray.clear();
 	%"Drop Area Rune".array.clear();
 	%RuneTableIngredient.texture = null;
-	%TableNotification.visible = false;

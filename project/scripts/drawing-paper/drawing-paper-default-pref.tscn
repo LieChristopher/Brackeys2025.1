@@ -220,8 +220,8 @@ bbcode_enabled = true
 text = "[center]XXX"
 fit_content = true
 
-[connection signal="pressed" from="Drawing Paper/Submit Button" to="." method="set_process_mode" binds= [4]]
 [connection signal="pressed" from="Drawing Paper/Submit Button" to="." method="set_visible" binds= [false]]
+[connection signal="pressed" from="Drawing Paper/Submit Button" to="." method="set_process_mode" binds= [4]]
 [connection signal="pressed" from="Colors/White" to="Drawing Paper" method="set_brush_color" binds= [Color(1, 1, 1, 1)]]
 [connection signal="pressed" from="Colors/Red" to="Drawing Paper" method="set_brush_color" binds= [Color(0.931333, 0, 0.242856, 1)]]
 [connection signal="pressed" from="Colors/Blue" to="Drawing Paper" method="set_brush_color" binds= [Color(0.215686, 0.458824, 1, 1)]]
