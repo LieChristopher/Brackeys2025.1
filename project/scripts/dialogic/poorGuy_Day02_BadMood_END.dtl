@@ -1,4 +1,4 @@
-join character_overlay center [animation="Instant In"]
+join character_overlay center [animation="Instant In" z_index="5"]
 join character_poorGuy center
 character_poorGuy (Positive): It is done!
 character_poorGuy: The right to rule! All in this bottle!
@@ -31,26 +31,11 @@ else:
 	character_poorGuy (Fail): LOOK WHAT YOUR CONCOCTION HAS DONE!
 	character_poorGuy (Fail): MINE DIVINE AND HEAVENLY APPEARANCE! RUINED, AGAIN! HOW HUMILIATING!
 	character_poorGuy (Fail): TURN MINESELF BACK! RIGHT THIS INSTANT PEASANT! 
-	You hear loud footsteps approaching
-	join character_oldMan left
-	character_oldMan (Positive): WHOA-HO! THERE! Did some sad bucko decide to shake the bee's trees and take the kingly rights potion?.
-	character_poorGuy (Fail): CAN'T YOU SEE MINE SITUATION YOU UGLY WRETCH! LEAVE!
-	character_oldMan (Positive): You's fell for the oooool' kingly potion bait, EH? Couldn't help it? AM I's RIGHT!
-	character_poorGuy (Fail): WHAT ARE YOU IMPLYING WRETCH!?
-	character_oldMan (Negative): SUCKERS LIKE YOU'S ARE EVERYWHERE. AND NOW THAT YOU'S TOOK DA BAIT! I'S GET TA BLAST YA!
-	character_oldMan (Negative): TA SMITHEREENS!!
-	character_poorGuy (Fail): YOU DARE! I AM A KING, DESTINED FOR GREATNESS! THE LIKES OF YOU-
-	character_oldMan: Yada yada yada! SHOULDA READ DA TERMS AND CONDITIONS ON DA BACK PAGE, BUCKO!
-	character_poorGuy (Fail): THERE WAS NO SUCH THING!
-	character_oldMan: WHOOPS! Uhhhh....my bad! BUT ANYWAY!
-	Godman Dave lifts his fingers to Humphrey
-	character_oldMan (Negative): ET ABIERUNT! YA SOURPUSS! KABLOOEY!!!
-	character_poorGuy (Fail): ARGHHH! IT SMELLS LIKE COW DUUUUUUUNG!
+	character_poorGuy (Fail): I WON'T STAND FOR THIS! You have forced my hand, I must not let your wicked potions ruin more lives.
+	character_poorGuy (Fail): I SHALL LEAVE YOU A BAD REVIEW!
+	character_poorGuy (Fail): And with that, YOU SHALL SHUT YOUR STORE DOWN!
 	leave character_poorGuy
-	Humphrey was blasted to smithereens
-	character_oldMan: Terms and conditions kid' remember that. It'll be REAL important later on. 
-	character_oldMan: Now dat dat's over. I gotta run kid.
-	character_oldMan (Postitive): The ladies 'rouind 'ere. Wait for no one. Not even ME! And I'm worth the wait!
-	character_oldMan: HOLD ON LADIES! DAVEY IS ON DA WAY AND HE'S ALL WARMED UP! WHOOOO!
-	Godman Dave runs off. Though Humphrey may be gone, it feels like he may return....
-
+	You almost didn't believe him, but customers stopped coming not long after this interaction
+	Perhaps this Humphrey fellow was more powerful than he led on
+	GAME OVER
+	set {gameOver} = true

@@ -50,7 +50,8 @@ directories/dtl_directory={
 "richGirl_Day01_START": "res://project/scripts/dialogic/richGirl_Day01_START.dtl",
 "richGirl_Day02_BadMood_END": "res://project/scripts/dialogic/richGirl_Day02_BadMood_END.dtl",
 "richGirl_Day02_GoodMood_END": "res://project/scripts/dialogic/richGirl_Day02_GoodMood_END.dtl",
-"richGirl_Day02_START": "res://project/scripts/dialogic/richGirl_Day02_START.dtl"
+"richGirl_Day02_START": "res://project/scripts/dialogic/richGirl_Day02_START.dtl",
+"timeline_win": "res://project/scripts/dialogic/timeline_win.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://project/scenes/samples/New_File.tres"]
@@ -67,6 +68,7 @@ variables={
 "richGirl": true
 },
 "gameOver": false,
+"gameWin": false,
 "success": true
 }
 extensions_folder="res://addons/dialogic_additions"
