@@ -1,31 +1,217 @@
-[gd_scene load_steps=6 format=3 uid="uid://2qeg40es6e21"]
+[gd_scene load_steps=11 format=3 uid="uid://2qeg40es6e21"]
 
 [ext_resource type="Script" path="res://recipe_ui.gd" id="1_hvi3n"]
 [ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="1_jrvj5"]
 [ext_resource type="Texture2D" uid="uid://pf804ub7mwt0" path="res://project/arts/internal/sprites/recipes/PotionChiseled.png" id="2_blyb5"]
-[ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="2_xf2h8"]
+[ext_resource type="StyleBox" uid="uid://bnweyxwvcb6b7" path="res://project/arts/internal/user-interface/main-menu/boxes/tersiery-btn.tres" id="3_0aj1q"]
+[ext_resource type="AudioStream" uid="uid://bl027w4f63vbe" path="res://project/arts/external/sound/paper-flutter-5933 (by freesound_community, pixabay_com).ogg" id="5_ibgqb"]
+[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="6_1dyca"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jgd0"]
-bg_color = Color(0.599376, 0.48251, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-corner_detail = 16
+[sub_resource type="Animation" id="Animation_opvqp"]
+resource_name = "Open Recipe"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecipeScreen:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RecipeScreen/Paper:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RecipeScreen/Paper:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.482968, 0.435275),
+"update": 0,
+"values": [Vector2(256, 200), Vector2(256, 72)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RecipeScreen/ColorRect:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Show Recipe Button")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_process"
+}, {
+"args": [true],
+"method": &"set_process"
+}]
+}
 
-[node name="Recipe UI" type="Control"]
+[sub_resource type="Animation" id="Animation_hfkei"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecipeScreen:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RecipeScreen/Paper:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RecipeScreen/Paper:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 200)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RecipeScreen/ColorRect:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ag886"]
+resource_name = "ANIM_CloseRecipe"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RecipeScreen:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RecipeScreen/ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RecipeScreen/Paper:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 72), Vector2(256, 200)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RecipeScreen/Paper:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Show Recipe Button")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_process"
+}, {
+"args": [true],
+"method": &"set_process"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5kyw"]
+_data = {
+"ANIM_CloseRecipe": SubResource("Animation_ag886"),
+"ANIM_OpenRecipe": SubResource("Animation_opvqp"),
+"RESET": SubResource("Animation_hfkei")
+}
+
+[node name="Recipe UI" type="Control" node_paths=PackedStringArray("_animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme = ExtResource("1_jrvj5")
 script = ExtResource("1_hvi3n")
+_animation = NodePath("Animation")
 
 [node name="Show Recipe Button" type="Button" parent="."]
 process_mode = 3
@@ -41,12 +227,13 @@ offset_right = -24.0
 offset_bottom = 94.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_4jgd0")
+theme_override_styles/normal = ExtResource("3_0aj1q")
 text = "SHOW RECIPE
 "
 clip_text = true
 
 [node name="RecipeScreen" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,8 +242,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Background" type="TextureRect" parent="RecipeScreen"]
-self_modulate = Color(0.370364, 0.370364, 0.370364, 1)
+[node name="ColorRect" type="ColorRect" parent="RecipeScreen"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,22 +251,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_xf2h8")
-expand_mode = 1
-stretch_mode = 6
-flip_h = true
+color = Color(0, 0, 0, 0.392157)
 
 [node name="Paper" type="TextureRect" parent="RecipeScreen"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
 anchor_top = 0.1
 anchor_right = 0.8
 anchor_bottom = 0.9
+offset_top = 128.0
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_blyb5")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l5kyw")
+}
+
+[node name="Paper Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ibgqb")
+script = ExtResource("6_1dyca")
+
 [connection signal="pressed" from="Show Recipe Button" to="." method="_on_show_recipe_button_pressed"]
+[connection signal="pressed" from="Show Recipe Button" to="Paper Sound" method="play" binds= [0.0]]

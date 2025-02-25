@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh5n8k13hs61f"]
+[gd_scene load_steps=8 format=3 uid="uid://bh5n8k13hs61f"]
 
 [ext_resource type="Script" path="res://project/scripts/PhysicalIngredient2D.gd" id="1_31okb"]
 [ext_resource type="PackedScene" uid="uid://cchwg152iv3ip" path="res://project/prefabs/draggable_area_template (works).tscn" id="1_p7at3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bpngfrfiknk51" path="res://project/arts/internal/sprites/ingredients/Beast Fang.png" id="3_f53hc"]
 [ext_resource type="Script" path="res://project/scripts/glowing-sprites/OutlineGlowControl.gd" id="4_nuixn"]
 [ext_resource type="Shape2D" uid="uid://uj45g6vlaai0" path="res://project/resources/physics/standard-ingredient-collider-shape.tres" id="6_ath57"]
+[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="7_yayp2"]
 
 [node name="Physical Ingredient" type="Node2D"]
 script = ExtResource("1_31okb")
@@ -22,6 +23,10 @@ script = ExtResource("4_nuixn")
 
 [node name="Collider" parent="Draggable Area" index="1"]
 shape = ExtResource("6_ath57")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource("7_yayp2")
+_audio_type = "SFX"
 
 [connection signal="area_entered" from="Draggable Area" to="." method="_on_draggable_area_entered"]
 [connection signal="area_exited" from="Draggable Area" to="." method="_on_draggable_area_exited"]

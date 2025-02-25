@@ -19,7 +19,7 @@ void fragment() {
 
 	vec2 limit_uv = clamp(scaled_uv, vec2(0.0), vec2(1.0));
 	vec2 limit_uv_outline = clamp(scaled_uv_outline, vec2(0.0), vec2(1.0));
-	
+
 	vec4 color = texture(TEXTURE, limit_uv);
 	vec4 sampled_outline = texture(TEXTURE, limit_uv_outline);
 
@@ -27,6 +27,6 @@ void fragment() {
 
 	float outline_alpha_only = max(outline.a - color.a, 0.0);
 	vec4 alpha_colored_outline = outline * outline_alpha_only;
-	
+
 	COLOR = outline_alpha_only > 0.0 ? (outline_color * outline_opacity) : color;
 }

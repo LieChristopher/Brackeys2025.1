@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c4wetv8ydlaqc" path="res://project/arts/external/sound/click-ui (by Rusu Gabriel, pixabay_com).ogg" id="4_q6cyf"]
 [ext_resource type="PackedScene" uid="uid://duo7tgjytmfy2" path="res://project/scripts/audio-system/audio_manager.tscn" id="5_ch5aw"]
 [ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="5_jrmgv"]
-[ext_resource type="PackedScene" path="res://project/scenes/credits_page.tscn" id="8_yi1kr"]
+[ext_resource type="PackedScene" uid="uid://5nsyacj4u08s" path="res://project/scenes/credits_page.tscn" id="8_yi1kr"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3

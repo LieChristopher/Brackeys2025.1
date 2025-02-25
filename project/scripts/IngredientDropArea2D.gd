@@ -14,11 +14,11 @@ extends Area2D
 @export var _indicator: Sprite2D = null;
 @export var _on_ingredient_hovered: Color = Color.CYAN;
 @export var _on_ingredient_unhovered: Color = Color.WHITE;
+@export var _drawing_canvas: CanvasLayer = null;
 
 @export_group("Animations")
 @export var _anim: AnimationPlayer = null;
 @export var _bleeping_anim_key: StringName = &"ANIM_IndicatorBleeping";
-
 
 # Runtime variable data.
 var _temp_content: Dictionary;
@@ -86,42 +86,40 @@ func _on_make_cauldron_potion_button_pressed() -> bool:
 				j = 0;
 			j += 1;
 		if ingredientExists == false:
-			print("Wrong potion")
-			potion_complete()
-			Dialogic.VAR.set_variable("success",false)
-			return false #potion fail
-	print("Correct potion")
-	potion_complete()
-	Dialogic.VAR.set_variable("success",true)
-	return true
+			print("Wrong potion");
+			potion_complete();
+			Dialogic.VAR.set_variable("success",false);
+			return false; #potion fail
+	print("Correct potion");
+	potion_complete();
+	Dialogic.VAR.set_variable("success",true);
+	return true;
 
-func potion_complete()-> void:
-	%GameEnd.visible=true
-	await get_tree().create_timer(1.0).timeout
-	%GameEnd.visible=false
-	get_parent().get_parent().complete = true
-	pass
-	
+func potion_complete() -> void:
+	%GameEnd.visible = true;
+	await get_tree().create_timer(1.0).timeout;
+	%GameEnd.visible = false;
+	get_parent().get_parent().complete = true;
+	if _drawing_canvas == null: return;
+	_drawing_canvas.visible = true;
+	_drawing_canvas.process_mode = Node.PROCESS_MODE_INHERIT;
+
 func _on_clear_cauldron_button_pressed() -> void:
 	array.clear();
 	print(self.name,"ARRAY CLEARED!",array)
-	pass
 
 func _on_make_neutral_button_pressed() -> void:
 	print(self.name, "neutral !!")
 	create_potion_with_same_rune(0)
-	pass
 	
 func _on_make_powder_button_pressed() -> void:
 	print(self.name, "powder rune added!!")
 	create_potion_with_same_rune(1)
-	pass
-	
+
 func _on_make_goo_button_pressed() -> void:
 	print(self.name, "goo rune added!!")
 	create_potion_with_same_rune(2)
-	pass
-	
+
 func create_potion_with_same_rune(runeType:int) -> void:
 	var chosenRune = 0;
 	var ingredientRuneArray = []
