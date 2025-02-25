@@ -8,7 +8,7 @@ Life is hard out here as a dropout alchemist, but it isn't all that bad
 You have a store at least, and your scribbled notes (although they may not be as legible as you'd like)
 Well, there's nowhere to go but up. This is the start of your life as a potion seller.
 You suddenly hear footsteps getting louder. In the distance, a man hurriedly approaches you.
-join character_oldMan center
+join character_oldMan (Negative) center
 character_oldMan (Negative): Well well well. Whadda we 'ave here. A random stranger setting up shop on GODMAN DAVE'S LAND.
 character_oldMan (Negative): You's see anyone else round 'ere! I'm talkin' to you's!
 character_oldMan: So? Whaddya plannin on doin' here with your dinky shack eh?

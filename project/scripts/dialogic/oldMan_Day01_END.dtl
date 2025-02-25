@@ -1,8 +1,10 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_oldMan center
-character_oldMan: Bout time. Gimme it.
-Godman Dave sprays the perfume on himself. His glistening skin and incredible pecs show the peak male form.
 if {success} == true:
+	join character_player (SuccessPerfume)
+	character_oldMan: Bout time. Gimme it.
+	Godman Dave sprays the perfume on himself. His glistening skin and incredible pecs show the peak male form.
+	leave character_player
 	set {MoodGood.oldMan} = true
 	character_oldMan (Positive): WHOA-HO-HO. MAMA! I smell amazin'. Like a newborn baby showered in flowers and surrounded by angels.
 	character_oldMan (Positive): You's good! Real good! This is some good stuff!
@@ -19,6 +21,10 @@ if {success} == true:
 	character_oldMan: Don't let me down, kid!
 	character_oldMan: HOLD ON LADIES! GODMAN DAVE is on the way! HEHE! RAUR!
 else:
+	join character_player (FailPerfume)
+	character_oldMan: Bout time. Gimme it.
+	Godman Dave sprays the perfume on himself. His glistening skin and incredible pecs show the peak male form.
+	leave character_player
 	set {MoodGood.oldMan} = false
 	character_oldMan (Negative): BLEGH! I smell like grass! Not da good kind either!
 	character_oldMan (Negative): I smell like cow dung IN DA GRASS.

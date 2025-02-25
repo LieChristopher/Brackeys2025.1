@@ -1,10 +1,12 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_poorGuy center
-character_poorGuy (Positive): It is done!
-character_poorGuy: The right to rule! All in this bottle!
-character_poorGuy (Positive): At long last! MINE BIRTHRIGHT! AS THE GODS HAD ORDAINED!
-Humphrey greedily drinks the potion
 if {success} == true:
+	join character_player (SuccessKing)
+	character_poorGuy (Positive): It is done!
+	character_poorGuy: The right to rule! All in this bottle!
+	character_poorGuy (Positive): At long last! MINE BIRTHRIGHT! AS THE GODS HAD ORDAINED!
+	Humphrey greedily drinks the potion
+	leave character_player
 	character_poorGuy (Positive): YES! NOW WITH THIS! MINESELF IS...mineself is....no different.....
 	Humphrey sighs and crumples to the floor
 	character_poorGuy: Mineself does not blame you, alchemist. What fool would believe one could attain the right to rule through a concoction....
@@ -21,6 +23,12 @@ if {success} == true:
 	character_poorGuy (Positive): She gleams like the sun! I may not be worthy now but perhaps...
 	Humphrey continues to describe his "lady" with incredible zeal. He looks as if he has finally become honest with himself
 else:
+	join character_player (SuccessKing)
+	character_poorGuy (Positive): It is done!
+	character_poorGuy: The right to rule! All in this bottle!
+	character_poorGuy (Positive): At long last! MINE BIRTHRIGHT! AS THE GODS HAD ORDAINED!
+	Humphrey greedily drinks the potion
+	leave character_player
 	character_poorGuy (Positive): YES! NOW WITH THIS! MINESELF IS...mineself is....what is.....! Happening....!
 	Humphrey's head starts to swell
 	character_poorGuy (Negative): What have you done!?

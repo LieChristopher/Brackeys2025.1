@@ -1,9 +1,11 @@
 join character_overlay center [animation="Instant In" z_index="5"]
 join character_oldMan center
-character_richGirl: So once I take this, I'll get a vision of when I wish to see the most?
-character_richGirl: Sounds straightforward enough, no use waiting any longer then!
-She chugs the potion
 if {success} == true:
+	join character_player (SuccessFuture)
+	character_richGirl: So once I take this, I'll get a vision of when I wish to see the most?
+	character_richGirl: Sounds straightforward enough, no use waiting any longer then!
+	She chugs the potion
+	leave character_player
 	character_richGirl: ...
 	character_richGirl (Negative): Ah... So that's how it is.
 	character_richGirl: ...
@@ -16,6 +18,11 @@ if {success} == true:
 	character_richGirl: Thanks again for your service, impressive as ever!
 	character_richGirl: I'll be sure to return the favor one day.
 else:
+	join character_player (FailFuture)
+	character_richGirl: So once I take this, I'll get a vision of when I wish to see the most?
+	character_richGirl: Sounds straightforward enough, no use waiting any longer then!
+	She chugs the potion
+	leave character_player
 	character_richGirl: *cough cough*
 	character_richGirl (Negative): Gah, my head-
 	character_richGirl: Wait that's...
