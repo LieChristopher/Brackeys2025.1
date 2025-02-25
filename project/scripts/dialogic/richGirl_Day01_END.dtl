@@ -19,10 +19,13 @@ if {success} == true:
 	character_richGirl (Positive): Erm- Anyway! Thanks for your services sir!
 	leave character_richGirl
 else:
-	join character_player (SuccessAntivisibility)
+	join character_player (FailAntivisibility)
 	character_richGirl: So... all I have to do is... find a way for him to drink this right? Okay, I'll be right back.
 	leave character_player
 	leave character_richGirl
+	Lady Rey disappears in a haste, leaving your shop.
+	join character_richGirl center
+	Not long after, the noble comes back. For a while, you got a bit nervous that you got swindled
 	set {MoodGood.richGirl} = false
 	character_richGirl (Negative): DIDN'T I SAY NO POISON?! He started foaming in the mouth MINUTES after ingesting whatever the hell you gave me...
 	character_richGirl: It's an impressive poison sure, but I've never had to run so fast in my life before...
