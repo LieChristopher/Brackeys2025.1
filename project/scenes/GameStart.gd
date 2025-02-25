@@ -11,6 +11,10 @@ func _on_pause_button_pressed() -> void:
 	get_tree().paused = paused;
 
 func _on_submit_button_pressed() -> void:
+	#Dialogic.Portraits.find_child()
+	var x : ImageTexture = load("res://project/resources/game_objects/new_image_texture.tres")
+	x.set_image($"Drawing Paper Default Pref/Drawing Paper".get_drawn_texture())
+	ResourceSaver.save(x, "res://project/resources/game_objects/new_image_texture.tres")
 	%GameEnd.visible = true;
 	await get_tree().create_timer(2.65).timeout;
 	%GameEnd.visible = false;

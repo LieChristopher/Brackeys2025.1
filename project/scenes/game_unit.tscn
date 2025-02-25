@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bapwd3d6jpvby"]
+[gd_scene load_steps=10 format=3 uid="uid://bapwd3d6jpvby"]
 
 [ext_resource type="Script" path="res://project/scenes/game_unit.gd" id="1_0gb6s"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="2_0byt8"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="3_iscbc"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_input.gd" id="4_at4q5"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="5_a7qhd"]
+[ext_resource type="Texture2D" uid="uid://bpmfy5kkh61bq" path="res://project/resources/game_objects/new_image_texture.tres" id="5_xuch5"]
 
 [node name="GameUnit" type="Node"]
 script = ExtResource("1_0gb6s")
@@ -105,6 +106,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_at4q5")
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer3"]
+offset_left = 544.0
+offset_top = 306.0
+offset_right = 712.0
+offset_bottom = 365.0
+texture = ExtResource("5_xuch5")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 5
