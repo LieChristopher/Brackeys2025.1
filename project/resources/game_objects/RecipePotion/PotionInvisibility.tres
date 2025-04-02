@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="RecipePotion" load_steps=11 format=3 uid="uid://1qxjxvkct7y"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_0jbe0"]
+[ext_resource type="Script" uid="uid://dgkpjyjebhcpm" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_0jbe0"]
 [ext_resource type="Resource" uid="uid://b41a3w7dek54u" path="res://project/resources/game_objects/RecipeIngredients/GOAT EYE.tres" id="2_lwt2c"]
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_m4mk8"]
+[ext_resource type="Script" uid="uid://dthjvk7bnk71e" path="res://project/resources/resource_script/recipe_potion.gd" id="2_m4mk8"]
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="3_lds63"]
 [ext_resource type="Resource" uid="uid://ci5f7wv8x5h3p" path="res://project/resources/game_objects/RecipeIngredients/RASPBERRY LEAF.tres" id="4_1yq4q"]
 [ext_resource type="Texture2D" uid="uid://dntis4jro14kp" path="res://project/arts/internal/sprites/recipes/Invisibility Potion Recipe.png" id="5_qnl7p"]

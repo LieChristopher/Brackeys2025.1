@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://cp4mgq8sqg211" path="res://project/scripts/glowing-sprites/glowing-sprites-material.tres" id="1_qpey8"]
 [ext_resource type="Texture2D" uid="uid://bl7e2d41t5qhs" path="res://project/arts/external/NicePng_potions-png_9423693.png" id="2_d01us"]
-[ext_resource type="Script" path="res://project/scripts/glowing-sprites/OutlineGlowControl.gd" id="3_pp2e8"]
+[ext_resource type="Script" uid="uid://bpx4y6hmlbw25" path="res://project/scripts/glowing-sprites/OutlineGlowControl.gd" id="3_pp2e8"]
 
 [node name="Glowing-sprites-sample" type="Node2D"]
 

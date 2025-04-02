@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ShopCustomerRequest" load_steps=4 format=3 uid="uid://bfhn7scpdesng"]
 
 [ext_resource type="Resource" uid="uid://c8xsfnrxumt5k" path="res://project/resources/game_objects/ShopCustomers/oldMan.tres" id="1_2mujf"]
-[ext_resource type="Script" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_ft4yq"]
+[ext_resource type="Script" uid="uid://mvwqgt6if4bf" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_ft4yq"]
 [ext_resource type="Resource" uid="uid://crp44darb3af6" path="res://project/resources/game_objects/RecipePotion/PotionChiseled.tres" id="2_k5jwc"]
 
 [resource]

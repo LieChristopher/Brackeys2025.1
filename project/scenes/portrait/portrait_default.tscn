@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cjqyhlarrs71l"]
 
-[ext_resource type="Script" path="res://project/scenes/portrait/portrait_control.gd" id="1_pqvag"]
+[ext_resource type="Script" uid="uid://d340xv0y8biig" path="res://project/scenes/portrait/portrait_control.gd" id="1_pqvag"]
 
 [node name="PortraitTest" type="Control"]
 layout_mode = 3

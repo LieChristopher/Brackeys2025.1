@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://2qeg40es6e21"]
 
-[ext_resource type="Script" path="res://recipe_ui.gd" id="1_hvi3n"]
+[ext_resource type="Script" uid="uid://bo0ayfudqfwba" path="res://recipe_ui.gd" id="1_hvi3n"]
 [ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="1_jrvj5"]
 [ext_resource type="Texture2D" uid="uid://pf804ub7mwt0" path="res://project/arts/internal/sprites/recipes/PotionChiseled.png" id="2_blyb5"]
 [ext_resource type="StyleBox" uid="uid://bnweyxwvcb6b7" path="res://project/arts/internal/user-interface/main-menu/boxes/tersiery-btn.tres" id="3_0aj1q"]
 [ext_resource type="AudioStream" uid="uid://bl027w4f63vbe" path="res://project/arts/external/sound/paper-flutter-5933 (by freesound_community, pixabay_com).ogg" id="5_ibgqb"]
-[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="6_1dyca"]
+[ext_resource type="Script" uid="uid://2wqcoa7m00hq" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="6_1dyca"]
 
 [sub_resource type="Animation" id="Animation_ag886"]
 resource_name = "ANIM_CloseRecipe"
@@ -196,9 +196,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l5kyw"]
 _data = {
-"ANIM_CloseRecipe": SubResource("Animation_ag886"),
-"ANIM_OpenRecipe": SubResource("Animation_opvqp"),
-"RESET": SubResource("Animation_hfkei")
+&"ANIM_CloseRecipe": SubResource("Animation_ag886"),
+&"ANIM_OpenRecipe": SubResource("Animation_opvqp"),
+&"RESET": SubResource("Animation_hfkei")
 }
 
 [node name="Recipe UI" type="Control" node_paths=PackedStringArray("_animation")]

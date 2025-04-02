@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bd4wts53q3cf6"]
 
-[ext_resource type="Script" path="res://project/scripts/pointer-controller/DraggableSprite.gd" id="1_4u6eu"]
-[ext_resource type="Script" path="res://project/scripts/pointer-controller/structures/PointerTintColoredSprite.gd" id="2_qshxn"]
+[ext_resource type="Script" uid="uid://dede8c0mwfutp" path="res://project/scripts/pointer-controller/DraggableSprite.gd" id="1_4u6eu"]
+[ext_resource type="Script" uid="uid://boemgay4xne7t" path="res://project/scripts/pointer-controller/structures/PointerTintColoredSprite.gd" id="2_qshxn"]
 [ext_resource type="Texture2D" uid="uid://r8kem0w1eulu" path="res://icon.svg" id="3_2y48j"]
 
 [sub_resource type="Resource" id="Resource_kb8tg"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ShopCustomerRequest" load_steps=4 format=3 uid="uid://beqgwdopnbds6"]
 
 [ext_resource type="Resource" uid="uid://drnevdhwgjfwe" path="res://project/resources/game_objects/ShopCustomers/richGirl.tres" id="1_v7a06"]
-[ext_resource type="Script" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_w2lgs"]
+[ext_resource type="Script" uid="uid://mvwqgt6if4bf" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_w2lgs"]
 [ext_resource type="Resource" uid="uid://1qxjxvkct7y" path="res://project/resources/game_objects/RecipePotion/PotionInvisibility.tres" id="2_p6roo"]
 
 [resource]

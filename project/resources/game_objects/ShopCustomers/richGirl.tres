@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ShopCustomer" load_steps=3 format=3 uid="uid://drnevdhwgjfwe"]
 
-[ext_resource type="Resource" path="res://project/scripts/dialogic/character_richGirl.dch" id="1_62abx"]
-[ext_resource type="Script" path="res://project/resources/resource_script/shop_customer.gd" id="1_muotg"]
+[ext_resource type="Resource" uid="uid://cnho2d8ifbm0a" path="res://project/scripts/dialogic/character_richGirl.dch" id="1_62abx"]
+[ext_resource type="Script" uid="uid://baml45shwm2ou" path="res://project/resources/resource_script/shop_customer.gd" id="1_muotg"]
 
 [resource]
 script = ExtResource("1_muotg")

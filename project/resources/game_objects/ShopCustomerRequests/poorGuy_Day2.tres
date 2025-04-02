@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ShopCustomerRequest" load_steps=4 format=3 uid="uid://yiko6iaebugn"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_t3yb5"]
+[ext_resource type="Script" uid="uid://mvwqgt6if4bf" path="res://project/resources/resource_script/shop_customer_request.gd" id="1_t3yb5"]
 [ext_resource type="Resource" uid="uid://bfop0rn8t07av" path="res://project/resources/game_objects/ShopCustomers/poorGuy.tres" id="1_tqd6g"]
 [ext_resource type="Resource" uid="uid://bululi08u65vg" path="res://project/resources/game_objects/RecipePotion/PotionKinglyRights.tres" id="2_4qxba"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://buy7voa0rxb0i"]
 
 [ext_resource type="Texture2D" uid="uid://r8kem0w1eulu" path="res://icon.svg" id="1_37upv"]
-[ext_resource type="Script" path="res://project/scripts/drawing-paper/UI_DrawingPaper.gd" id="2_dmb8y"]
+[ext_resource type="Script" uid="uid://cr3sr6tt7jlmf" path="res://project/scripts/drawing-paper/UI_DrawingPaper.gd" id="2_dmb8y"]
 
 [node name="Drawing Paper" type="TextureRect" node_paths=PackedStringArray("_placeholder")]
 custom_minimum_size = Vector2(800, 240)

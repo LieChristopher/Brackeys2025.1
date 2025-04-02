@@ -1,30 +1,58 @@
-[gd_scene load_steps=25 format=3 uid="uid://bweeko2kwgqj6"]
+[gd_scene load_steps=26 format=3 uid="uid://bweeko2kwgqj6"]
 
-[ext_resource type="Texture2D" uid="uid://co06ovenka13q" path="res://project/arts/external/Images/Props/wall.jpg" id="1_q11f1"]
-[ext_resource type="Texture2D" uid="uid://dn0wggkigsma1" path="res://project/arts/external/Images/Props/table.png" id="2_cv4p2"]
-[ext_resource type="Texture2D" uid="uid://mv4yqtb4yrik" path="res://project/arts/external/Images/Props/pngimg.com - cauldron_PNG39.png" id="3_ltbf5"]
-[ext_resource type="Texture2D" uid="uid://bv0mu2a872mnl" path="res://project/arts/external/Images/Props/9c422cd845f1fdc2ac64511260852b11.jpg" id="4_lvog5"]
-[ext_resource type="Texture2D" uid="uid://3amje3ixbnee" path="res://project/arts/external/Images/Props/shelf.png" id="5_ffm6d"]
-[ext_resource type="Texture2D" uid="uid://b7qxrva1lcdrb" path="res://project/arts/external/Images/Props/recipe.png" id="6_g48gy"]
-[ext_resource type="Texture2D" uid="uid://b4knp4maicd76" path="res://project/arts/external/Images/Props/book.png" id="7_yuffr"]
-[ext_resource type="Texture2D" uid="uid://dnlc1f1mm4ubl" path="res://project/arts/external/Images/Runes/ansuzRune.png" id="8_83ru7"]
-[ext_resource type="Texture2D" uid="uid://dgikfbhyh8dvc" path="res://project/arts/external/Images/Runes/BluetoothRune.png" id="9_xik71"]
-[ext_resource type="Texture2D" uid="uid://no0v6kko27je" path="res://project/arts/external/Images/Props/bookmark.png" id="10_ejhf0"]
-[ext_resource type="Texture2D" uid="uid://bg5n0i1el3a7w" path="res://project/arts/external/Images/Props/download.png" id="10_xbwwe"]
-[ext_resource type="Texture2D" uid="uid://c4xfcl2opf08h" path="res://project/arts/external/Images/Ingredients/pngtree-hanging-plant-growing-in-pots-png-image_13127488.png" id="11_tt6qq"]
-[ext_resource type="Texture2D" uid="uid://bypt57ufwsyrc" path="res://project/arts/external/Images/Ingredients/Beast Fang.png" id="12_5h8se"]
-[ext_resource type="Texture2D" uid="uid://b7pvsvxmmfqe0" path="res://project/arts/external/Images/Ingredients/Fish Scale.png" id="13_rhrhy"]
-[ext_resource type="Texture2D" uid="uid://bumdyam166dxj" path="res://project/arts/external/Images/Ingredients/Frog Eyes.png" id="14_tsinv"]
-[ext_resource type="Texture2D" uid="uid://bnkmw0g748xj7" path="res://project/arts/external/Images/Ingredients/Goat Eye.png" id="15_67qkh"]
-[ext_resource type="Texture2D" uid="uid://vwfed3f7goj5" path="res://project/arts/external/Images/Ingredients/Horn.png" id="16_s2a8u"]
-[ext_resource type="Texture2D" uid="uid://cs61g1ieo03gb" path="res://project/arts/external/Images/Ingredients/Ingredient - Algae Fish.png" id="17_oljks"]
-[ext_resource type="Texture2D" uid="uid://dc5ywvi0l12ax" path="res://project/arts/external/Images/Ingredients/Ingredient - Beans.png" id="18_ouy4h"]
-[ext_resource type="Texture2D" uid="uid://dpxreugo3irp" path="res://project/arts/external/Images/Ingredients/Ingredient - Stone Fish.png" id="19_gxelr"]
-[ext_resource type="Texture2D" uid="uid://cod2g2ga7kj1e" path="res://project/arts/external/Images/Ingredients/Ingredient - Worms.png" id="20_6k8lr"]
-[ext_resource type="Texture2D" uid="uid://cgww1woe25ic5" path="res://project/arts/external/Images/Ingredients/Poison Ivy.png" id="21_2gkli"]
-[ext_resource type="Texture2D" uid="uid://dhvs06uvubo40" path="res://project/arts/external/Images/Ingredients/Raspberry Leaf.png" id="22_flo6e"]
-[ext_resource type="Texture2D" uid="uid://cimtcck4l3c4m" path="res://project/arts/external/Images/Ingredients/Turtle Scute.png" id="23_oitl1"]
+[ext_resource type="Texture2D" uid="uid://co06ovenka13q" path="res://project/arts/external/placeholder images/Props/wall.jpg" id="1_q11f1"]
+[ext_resource type="Texture2D" uid="uid://dn0wggkigsma1" path="res://project/arts/external/placeholder images/Props/table.png" id="2_cv4p2"]
+[ext_resource type="Texture2D" uid="uid://mv4yqtb4yrik" path="res://project/arts/external/placeholder images/Props/pngimg.com - cauldron_PNG39.png" id="3_ltbf5"]
+[ext_resource type="Texture2D" uid="uid://bv0mu2a872mnl" path="res://project/arts/external/placeholder images/Props/9c422cd845f1fdc2ac64511260852b11.jpg" id="4_lvog5"]
+[ext_resource type="Texture2D" uid="uid://3amje3ixbnee" path="res://project/arts/external/placeholder images/Props/shelf.png" id="5_ffm6d"]
+[ext_resource type="Texture2D" uid="uid://b7qxrva1lcdrb" path="res://project/arts/external/placeholder images/Props/recipe.png" id="6_g48gy"]
+[ext_resource type="Texture2D" uid="uid://b4knp4maicd76" path="res://project/arts/external/placeholder images/Props/book.png" id="7_yuffr"]
+[ext_resource type="Texture2D" uid="uid://dnlc1f1mm4ubl" path="res://project/arts/external/placeholder images/Runes/ansuzRune.png" id="8_83ru7"]
+[ext_resource type="Texture2D" uid="uid://dgikfbhyh8dvc" path="res://project/arts/external/placeholder images/Runes/BluetoothRune.png" id="9_xik71"]
+[ext_resource type="Texture2D" uid="uid://no0v6kko27je" path="res://project/arts/external/placeholder images/Props/bookmark.png" id="10_ejhf0"]
+[ext_resource type="Texture2D" uid="uid://bg5n0i1el3a7w" path="res://project/arts/external/placeholder images/Props/download.png" id="10_xbwwe"]
 
+[sub_resource type="Resource" id="Resource_4tyud"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/pngtree-hanging-plant-growing-in-pots-png-image_13127488.png"
+
+[sub_resource type="Resource" id="Resource_rnsnw"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/pngtree-hanging-plant-growing-in-pots-png-image_13127488.png"
+
+[sub_resource type="Resource" id="Resource_ue2f3"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Beast Fang.png"
+
+[sub_resource type="Resource" id="Resource_qlqwi"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Fish Scale.png"
+
+[sub_resource type="Resource" id="Resource_q4dqv"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Frog Eyes.png"
+
+[sub_resource type="Resource" id="Resource_aqga6"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Goat Eye.png"
+
+[sub_resource type="Resource" id="Resource_7qdt6"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Horn.png"
+
+[sub_resource type="Resource" id="Resource_lavi4"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Ingredient - Algae Fish.png"
+
+[sub_resource type="Resource" id="Resource_jgelv"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Ingredient - Beans.png"
+
+[sub_resource type="Resource" id="Resource_4w0re"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Ingredient - Stone Fish.png"
+
+[sub_resource type="Resource" id="Resource_onyae"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Ingredient - Worms.png"
+
+[sub_resource type="Resource" id="Resource_x02mg"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Poison Ivy.png"
+
+[sub_resource type="Resource" id="Resource_uolhl"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Raspberry Leaf.png"
+
+[sub_resource type="Resource" id="Resource_pkxxv"]
+metadata/__load_path__ = "res://project/arts/external/Images/Ingredients/Turtle Scute.png"
 
 [node name="Node2D" type="Node2D"]
 
@@ -97,76 +125,76 @@ texture = ExtResource("10_ejhf0")
 z_index = -1
 position = Vector2(281, 77)
 scale = Vector2(0.459167, 0.459167)
-texture = ExtResource("11_tt6qq")
+texture = SubResource("Resource_4tyud")
 
 [node name="Pngtree-hanging-plant-growing-in-pots-png-image13127488" type="Sprite2D" parent="TableArea/Pngtree-hanging-plant-growing-in-pots-png-image13127488"]
 z_index = -1
 position = Vector2(1017.06, -10.8893)
 scale = Vector2(0.832124, 0.832124)
-texture = ExtResource("11_tt6qq")
+texture = SubResource("Resource_rnsnw")
 
 [node name="Ingredients" type="Area2D" parent="."]
 
 [node name="BeastFang" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1409, 699)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("12_5h8se")
+texture = SubResource("Resource_ue2f3")
 
 [node name="FishScale" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1164, 108)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("13_rhrhy")
+texture = SubResource("Resource_qlqwi")
 
 [node name="FrogEyes" type="Sprite2D" parent="Ingredients"]
 position = Vector2(576, 660)
 scale = Vector2(0.2505, 0.2475)
-texture = ExtResource("14_tsinv")
+texture = SubResource("Resource_q4dqv")
 
 [node name="GoatEye" type="Sprite2D" parent="Ingredients"]
 position = Vector2(539, 741)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("15_67qkh")
+texture = SubResource("Resource_aqga6")
 
 [node name="Horn" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1178, 697)
 scale = Vector2(0.2025, 0.195)
-texture = ExtResource("16_s2a8u")
+texture = SubResource("Resource_7qdt6")
 
 [node name="Ingredient-AlgaeFish" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1397, 405)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("17_oljks")
+texture = SubResource("Resource_lavi4")
 
 [node name="Ingredient-Beans" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1402, 563)
 scale = Vector2(0.1725, 0.1725)
-texture = ExtResource("18_ouy4h")
+texture = SubResource("Resource_jgelv")
 
 [node name="Ingredient-StoneFish" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1167, 408)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("19_gxelr")
+texture = SubResource("Resource_4w0re")
 
 [node name="Ingredient-Worms" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1178, 567)
 scale = Vector2(0.13825, 0.13825)
-texture = ExtResource("20_6k8lr")
+texture = SubResource("Resource_onyae")
 
 [node name="PoisonIvy" type="Sprite2D" parent="Ingredients"]
 position = Vector2(629, 42)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("21_2gkli")
+texture = SubResource("Resource_x02mg")
 
 [node name="RaspberryLeaf" type="Sprite2D" parent="Ingredients"]
 position = Vector2(435, 86)
 rotation = 3.35103
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("22_flo6e")
+texture = SubResource("Resource_uolhl")
 
 [node name="TurtleScute" type="Sprite2D" parent="Ingredients"]
 position = Vector2(1409, 100)
 scale = Vector2(0.195, 0.195)
-texture = ExtResource("23_oitl1")
+texture = SubResource("Resource_pkxxv")
 
 [node name="Button" type="Button" parent="."]
 z_index = 5

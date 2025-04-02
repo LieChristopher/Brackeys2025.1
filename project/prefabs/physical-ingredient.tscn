@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bh5n8k13hs61f"]
 
-[ext_resource type="Script" path="res://project/scripts/PhysicalIngredient2D.gd" id="1_31okb"]
+[ext_resource type="Script" uid="uid://c70iyxgviqvra" path="res://project/scripts/PhysicalIngredient2D.gd" id="1_31okb"]
 [ext_resource type="PackedScene" uid="uid://cchwg152iv3ip" path="res://project/prefabs/draggable_area_template (works).tscn" id="1_p7at3"]
 [ext_resource type="Material" uid="uid://cp4mgq8sqg211" path="res://project/scripts/glowing-sprites/glowing-sprites-material.tres" id="2_utefg"]
 [ext_resource type="Texture2D" uid="uid://bpngfrfiknk51" path="res://project/arts/internal/sprites/ingredients/Beast Fang.png" id="3_f53hc"]
-[ext_resource type="Script" path="res://project/scripts/glowing-sprites/OutlineGlowControl.gd" id="4_nuixn"]
+[ext_resource type="Script" uid="uid://bpx4y6hmlbw25" path="res://project/scripts/glowing-sprites/OutlineGlowControl.gd" id="4_nuixn"]
 [ext_resource type="Shape2D" uid="uid://uj45g6vlaai0" path="res://project/resources/physics/standard-ingredient-collider-shape.tres" id="6_ath57"]
-[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="7_yayp2"]
+[ext_resource type="Script" uid="uid://2wqcoa7m00hq" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="7_yayp2"]
 
 [node name="Physical Ingredient" type="Node2D" node_paths=PackedStringArray("_draggable")]
 script = ExtResource("1_31okb")

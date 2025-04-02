@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://blgk6uvwsy20f"]
 
-[ext_resource type="Script" path="res://project/scenes/main_menu.gd" id="1_sg0my"]
+[ext_resource type="Script" uid="uid://bje6jj8dbtjqc" path="res://project/scenes/main_menu.gd" id="1_sg0my"]
 [ext_resource type="Theme" uid="uid://8du60s7v5nus" path="res://project/arts/internal/user-interface/main-menu/main-menu-theme.tres" id="2_622jy"]
 [ext_resource type="PackedScene" uid="uid://c8cl7q634kt5l" path="res://project/scenes/options_menu.tscn" id="2_oske0"]
 [ext_resource type="Texture2D" uid="uid://bsjn86acwpmpr" path="res://project/arts/internal/sprites/scenes/Main Menu Brackeys.png" id="3_v7wxp"]
 [ext_resource type="AudioStream" uid="uid://c4wetv8ydlaqc" path="res://project/arts/external/sound/click-ui (by Rusu Gabriel, pixabay_com).ogg" id="4_q6cyf"]
 [ext_resource type="PackedScene" uid="uid://duo7tgjytmfy2" path="res://project/scripts/audio-system/audio_manager.tscn" id="5_ch5aw"]
-[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="5_jrmgv"]
+[ext_resource type="Script" uid="uid://2wqcoa7m00hq" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="5_jrmgv"]
 [ext_resource type="PackedScene" uid="uid://5nsyacj4u08s" path="res://project/scenes/credits_page.tscn" id="8_yi1kr"]
 [ext_resource type="AudioStream" uid="uid://b46hrpjygbt6w" path="res://project/arts/external/sound/BGM/Minstrels-Song(by keys_of_moon, chosic_com).ogg" id="9_px67y"]
 

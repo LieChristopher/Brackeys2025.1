@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="RecipePotion" load_steps=17 format=3 uid="uid://crp44darb3af6"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_gwfm5"]
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_hqayx"]
+[ext_resource type="Script" uid="uid://dgkpjyjebhcpm" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_gwfm5"]
+[ext_resource type="Script" uid="uid://dthjvk7bnk71e" path="res://project/resources/resource_script/recipe_potion.gd" id="2_hqayx"]
 [ext_resource type="Resource" uid="uid://338me5n68mvn" path="res://project/resources/game_objects/RecipeIngredients/STONE FISH.tres" id="2_rl32h"]
 [ext_resource type="Resource" uid="uid://dqaa388v0nl6t" path="res://project/resources/game_objects/RecipeRunes/RunePowder.tres" id="3_8n8gl"]
 [ext_resource type="Resource" uid="uid://g0fmwqxqsauj" path="res://project/resources/game_objects/RecipeIngredients/TURTLE SCUTE.tres" id="4_itwm0"]

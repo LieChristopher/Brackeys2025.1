@@ -31,7 +31,7 @@
 [ext_resource type="StyleBox" uid="uid://cst1j1e7se0mn" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn-pressed.tres" id="25_r54k7"]
 [ext_resource type="StyleBox" uid="uid://d144whlsokata" path="res://project/arts/internal/user-interface/drawing-canvas/boxes/black-color-btn.tres" id="26_2v3hi"]
 [ext_resource type="Texture2D" uid="uid://ko2ruukb06eg" path="res://project/arts/external/icons/reset-icon (by inkubators, flaticon_com).png" id="27_8cqym"]
-[ext_resource type="Script" path="res://project/scripts/drawing-paper/UI_BrushSizer.gd" id="28_m7gvm"]
+[ext_resource type="Script" uid="uid://dbkvxwkhwwsbo" path="res://project/scripts/drawing-paper/UI_BrushSizer.gd" id="28_m7gvm"]
 
 [node name="Drawing Paper Default Pref" type="CanvasLayer"]
 
@@ -220,8 +220,8 @@ bbcode_enabled = true
 text = "[center]XXX"
 fit_content = true
 
-[connection signal="pressed" from="Drawing Paper/Submit Button" to="." method="set_visible" binds= [false]]
 [connection signal="pressed" from="Drawing Paper/Submit Button" to="." method="set_process_mode" binds= [4]]
+[connection signal="pressed" from="Drawing Paper/Submit Button" to="." method="set_visible" binds= [false]]
 [connection signal="pressed" from="Colors/White" to="Drawing Paper" method="set_brush_color" binds= [Color(1, 1, 1, 1)]]
 [connection signal="pressed" from="Colors/Red" to="Drawing Paper" method="set_brush_color" binds= [Color(0.931333, 0, 0.242856, 1)]]
 [connection signal="pressed" from="Colors/Blue" to="Drawing Paper" method="set_brush_color" binds= [Color(0.215686, 0.458824, 1, 1)]]

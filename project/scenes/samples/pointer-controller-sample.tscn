@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwk6pb325m8ts"]
 
 [ext_resource type="PackedScene" uid="uid://diy5bt6u5gxss" path="res://project/prefabs/pressable_area_template.tscn" id="1_f3u3g"]
-[ext_resource type="Script" path="res://project/scripts/pointer-controller/DraggableSprite.gd" id="2_xy2g8"]
+[ext_resource type="Script" uid="uid://dede8c0mwfutp" path="res://project/scripts/pointer-controller/DraggableSprite.gd" id="2_xy2g8"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="3_ltq14"]
 [ext_resource type="PackedScene" uid="uid://cchwg152iv3ip" path="res://project/prefabs/draggable_area_template (works).tscn" id="4_jmlpv"]
 

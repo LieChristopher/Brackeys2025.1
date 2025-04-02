@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvnh5agrixnuv"]
 
-[ext_resource type="Script" path="res://project/scenes/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Script" uid="uid://broeuhjdgq7rm" path="res://project/scenes/custom_layered_portrait.gd" id="1_uubi5"]
 
 [node name="LayeredPortrait" type="CanvasGroup"]
 script = ExtResource("1_uubi5")

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="RecipeRune" load_steps=2 format=3 uid="uid://d05ah0gco7vkm"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_rune.gd" id="1_hcew2"]
+[ext_resource type="Script" uid="uid://b6bdgyykqbl3l" path="res://project/resources/resource_script/recipe_rune.gd" id="1_hcew2"]
 
 [resource]
 script = ExtResource("1_hcew2")
 name = "Gooify Rune"
 adjective = "Gooey"
-gooiness = 5
+gooeyness = 0

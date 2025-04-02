@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="RecipePotion" load_steps=14 format=3 uid="uid://bululi08u65vg"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_ej85m"]
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_potion.gd" id="2_t1kea"]
+[ext_resource type="Script" uid="uid://dgkpjyjebhcpm" path="res://project/resources/resource_script/recipe_ingredient_rune.gd" id="1_ej85m"]
+[ext_resource type="Script" uid="uid://dthjvk7bnk71e" path="res://project/resources/resource_script/recipe_potion.gd" id="2_t1kea"]
 [ext_resource type="Resource" uid="uid://b41a3w7dek54u" path="res://project/resources/game_objects/RecipeIngredients/GOAT EYE.tres" id="2_yhwxo"]
 [ext_resource type="Resource" uid="uid://d05ah0gco7vkm" path="res://project/resources/game_objects/RecipeRunes/RuneGooify.tres" id="3_ypbw6"]
 [ext_resource type="Resource" uid="uid://cgd7wqtfgxf3m" path="res://project/resources/game_objects/RecipeIngredients/HORN.tres" id="4_ivpa6"]

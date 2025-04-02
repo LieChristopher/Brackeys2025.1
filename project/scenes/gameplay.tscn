@@ -1,6 +1,6 @@
 [gd_scene load_steps=59 format=3 uid="uid://dcolix4rx84pb"]
 
-[ext_resource type="Script" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
+[ext_resource type="Script" uid="uid://dr80y6vkrhfvl" path="res://project/scenes/GameStart.gd" id="1_nrl2g"]
 [ext_resource type="PackedScene" uid="uid://by1f80f206bou" path="res://project/prefabs/pointer_control.tscn" id="2_gwq1t"]
 [ext_resource type="Texture2D" uid="uid://bg2vohoensa78" path="res://project/arts/internal/sprites/scenes/Cauldron screen (frame 1).png" id="3_50hjj"]
 [ext_resource type="PackedScene" uid="uid://2qeg40es6e21" path="res://project/scenes/recipe_ui.tscn" id="3_g3kw6"]
@@ -40,14 +40,14 @@
 [ext_resource type="Texture2D" uid="uid://b0qkf42g1463n" path="res://project/arts/internal/sprites/runes/RUNE BOOK.png" id="34_admkp"]
 [ext_resource type="Texture2D" uid="uid://7is1hfl8v1dv" path="res://project/arts/internal/sprites/circle-ind.png" id="34_fgihm"]
 [ext_resource type="Theme" uid="uid://bah3qycv6ybwf" path="res://project/arts/internal/user-interface/gameplay/default-gameplay.tres" id="35_h1njv"]
-[ext_resource type="Script" path="res://project/scripts/PhysicalIngredientPlaceholderContainer2D.gd" id="36_lx3el"]
+[ext_resource type="Script" uid="uid://brmv2fde48phd" path="res://project/scripts/PhysicalIngredientPlaceholderContainer2D.gd" id="36_lx3el"]
 [ext_resource type="PackedScene" uid="uid://d0sbah8xymy8m" path="res://project/prefabs/ingredient_placeholder_2d.tscn" id="37_u8en2"]
-[ext_resource type="Script" path="res://project/scripts/main_gameplay_ui.gd" id="39_1lyoe"]
+[ext_resource type="Script" uid="uid://b75mblbetvlc7" path="res://project/scripts/main_gameplay_ui.gd" id="39_1lyoe"]
 [ext_resource type="Texture2D" uid="uid://c8sc6fod5fcav" path="res://project/arts/internal/sprites/runes/powder.png" id="39_vnyom"]
 [ext_resource type="Texture2D" uid="uid://bo1g0j005lbou" path="res://project/arts/internal/sprites/runes/goo.png" id="40_xkeae"]
 [ext_resource type="Texture2D" uid="uid://d4deybxu5ck1d" path="res://project/arts/internal/sprites/Cauldron_screen_wip.png" id="41_11auw"]
 [ext_resource type="Texture2D" uid="uid://dmafcjjdp256k" path="res://project/arts/internal/sprites/runes/neutral.png" id="41_yinhb"]
-[ext_resource type="Script" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="44_0br6i"]
+[ext_resource type="Script" uid="uid://2wqcoa7m00hq" path="res://project/scripts/audio-system/AudioSyncer2D.gd" id="44_0br6i"]
 [ext_resource type="AudioStream" uid="uid://bpabq3m2uhexi" path="res://project/arts/external/sound/splash (freesound_community, pixabay_com).ogg" id="44_glv4l"]
 [ext_resource type="PackedScene" uid="uid://56sns8fwwth2" path="res://project/scripts/drawing-paper/drawing-paper-default-pref.tscn" id="44_kid1s"]
 [ext_resource type="AudioStream" uid="uid://cd00yg57pyv85" path="res://project/arts/external/sound/BGM/a-robust-crew(by Darren Curtischosic_com).ogg" id="51_pmoxh"]
@@ -85,8 +85,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cs1nj"]
 _data = {
-"ANIM_IndicatorBleeping": SubResource("Animation_l4vn4"),
-"RESET": SubResource("Animation_4qsee")
+&"ANIM_IndicatorBleeping": SubResource("Animation_l4vn4"),
+&"RESET": SubResource("Animation_4qsee")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8s0c7"]
@@ -125,8 +125,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yn20m"]
 _data = {
-"ANIM_IndicatorBleeping": SubResource("Animation_uniaf"),
-"RESET": SubResource("Animation_4ufa4")
+&"ANIM_IndicatorBleeping": SubResource("Animation_uniaf"),
+&"RESET": SubResource("Animation_4ufa4")
 }
 
 [node name="Gameplay" type="Node2D"]

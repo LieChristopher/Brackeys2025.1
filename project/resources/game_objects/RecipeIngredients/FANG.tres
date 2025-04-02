@@ -1,8 +1,7 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://cpdpyugla8q1"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_n1anu"]
-[ext_resource type="Texture2D" path="../../../arts/internal/sprites/ingredients/Beast Fang.png" id="2_55q8u"]
-
+[ext_resource type="Script" uid="uid://dad8q2223rd3q" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_n1anu"]
+[ext_resource type="Texture2D" uid="uid://bpngfrfiknk51" path="res://project/arts/internal/sprites/ingredients/Beast Fang.png" id="2_55q8u"]
 
 [resource]
 script = ExtResource("1_n1anu")

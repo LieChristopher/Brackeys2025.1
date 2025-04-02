@@ -8,8 +8,7 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.4, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_tri0v"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, -200), 0.0, 560.0, 0, 0, Vector2(1, 200), 0.0, 0.0, 0, 0]
 point_count = 2
 

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RecipeIngredient" load_steps=3 format=3 uid="uid://b6gtef5x5l6l1"]
 
-[ext_resource type="Script" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_mogh1"]
+[ext_resource type="Script" uid="uid://dad8q2223rd3q" path="res://project/resources/resource_script/recipe_ingredient.gd" id="1_mogh1"]
 [ext_resource type="Texture2D" uid="uid://bopokne8iem6b" path="res://project/arts/internal/sprites/ingredients/Worms.png" id="2_8j061"]
 
 [resource]

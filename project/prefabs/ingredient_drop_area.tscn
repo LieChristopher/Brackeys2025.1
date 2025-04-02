@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfbyjw2lwgigk"]
 
-[ext_resource type="Script" path="res://project/scripts/IngredientDropArea2D.gd" id="1_jdfhg"]
+[ext_resource type="Script" uid="uid://b3t4o5mf3i7e7" path="res://project/scripts/IngredientDropArea2D.gd" id="1_jdfhg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i232g"]
 size = Vector2(240, 240)
